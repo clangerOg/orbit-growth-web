@@ -25,7 +25,7 @@ export const typographyVariants = cva('antialiased', {
       h4: 'text-lg leading-8 text-neutral-600 max-w-2xl',
       h5: 'text-base max-w-prose text-slate-900 font-semibold',
       h6: '',
-      p: 'leading-7 font-normal text-neutral-700 text-base',
+      p: 'leading-7 font-normal text-neutral-700 text-base max-w-prose',
       span: '',
       small: '',
       em: '',

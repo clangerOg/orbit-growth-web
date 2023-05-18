@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import HeroBackground from '../../public/landing/HeroBackground.png';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Section>
