@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Button from '../Button';
 import Logo from '../Logo/Logo';
 import { HeaderProps } from './Header.types';
 
@@ -38,6 +39,17 @@ const Header: React.FC<HeaderProps> = () => {
               </Link>
             );
           })}
+          <Button href="/contact">
+            <span className="antialiased">
+              Browse components
+              <span
+                aria-hidden="true"
+                className="hidden text-slate-400 sm:inline"
+              >
+                →
+              </span>
+            </span>
+          </Button>
         </div>
       </div>
     </div>
