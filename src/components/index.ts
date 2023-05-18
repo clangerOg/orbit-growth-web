@@ -7,3 +7,6 @@ export { default as Header } from './Header';
 export * from './Logo';
 export { default as Logo } from './Logo';
 // -----------------------------------------------------
+export * from './Section';
+export { default as Section } from './Section';
+// -----------------------------------------------------

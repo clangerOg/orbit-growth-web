@@ -1,9 +1,15 @@
+import { Section } from '@/components';
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-6xl font-extrabold underline text-brand">
-        Hello world!
-      </h1>
-    </main>
+    <>
+      <Section>
+        <Section.Wrapper>
+          <Section.Content>
+            <h1>Hello World!</h1>
+          </Section.Content>
+        </Section.Wrapper>
+      </Section>
+    </>
   );
 }
