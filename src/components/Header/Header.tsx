@@ -1,58 +1,46 @@
+import classNames from 'classnames';
 import Link from 'next/link';
 import Button from '../Button';
+import HeaderDropdown from '../HeaderDropdown/HeaderDropdown';
 import Logo from '../Logo/Logo';
+import Section from '../Section/Section';
 import { HeaderProps } from './Header.types';
 
-const links: { title: string; href: string }[] = [
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'About',
-    href: '/about',
-  },
-  {
-    title: 'Projects',
-    href: '/projects',
-  },
-  {
-    title: 'Skills',
-    href: '/skills',
-  },
-];
-
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC<HeaderProps> = ({ links, className, ...props }) => {
   return (
-    <div className="border-b border-neutral-200 flex justify-center items-center">
-      <div className="max-w-screen-xl w-full py-8 flex justify-between items-center">
-        <div className="h-10 w-fit flex-shrink-0">
-          <Logo />
-        </div>
-        <div className="flex items-center gap-x-8">
-          {links.map((l, key) => {
-            return (
-              <Link href={l.href} key={key}>
-                <p className="text-sm leading-6 font-semibold text-neutral-900">
-                  {l.title}
-                </p>
-              </Link>
-            );
-          })}
-          <Button href="/contact">
-            <span className="antialiased">
-              Browse components
-              <span
-                aria-hidden="true"
-                className="hidden text-slate-400 sm:inline"
-              >
-                →
-              </span>
-            </span>
-          </Button>
-        </div>
-      </div>
-    </div>
+    <Section
+      {...props}
+      className={classNames('border-b border-neutral-200', className)}
+    >
+      <Section.Wrapper>
+        <Section.Content className="py-8 flex justify-between items-center ">
+          {/* <div className="h-10 block sm:hidden bg-blue-700">
+            <Logo />
+          </div> */}
+          <div className="h-10 w-fit block">
+            <Logo woodmark />
+          </div>
+          <div className="items-center gap-x-8 hidden md:flex">
+            {links &&
+              links.map((link, key) => {
+                return (
+                  <Link href={link.target} key={key}>
+                    <p className="text-sm leading-6 font-semibold text-neutral-900">
+                      {link.title}
+                    </p>
+                  </Link>
+                );
+              })}
+            <Button href="/contact" size={'sm'}>
+              Kontakt aufnehmen
+            </Button>
+          </div>
+          <div className="flex items-center gap-x-8 md:hidden">
+            <HeaderDropdown links={links} />
+          </div>
+        </Section.Content>
+      </Section.Wrapper>
+    </Section>
   );
 };
 
