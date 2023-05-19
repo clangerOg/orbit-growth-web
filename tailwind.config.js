@@ -20,7 +20,7 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        neutral: colors.slate,
+        neutral: colors.blue,
         brand: {
           ...colors.blue,
           DEFAULT: '#3b82f6',

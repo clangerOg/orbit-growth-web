@@ -1,6 +1,9 @@
 export * from './Button';
 export { default as Button } from './Button';
 // -----------------------------------------------------
+export * from './CTA';
+export { default as CTA } from './CTA';
+// -----------------------------------------------------
 export * from './Footer';
 export { default as Footer } from './Footer';
 // -----------------------------------------------------

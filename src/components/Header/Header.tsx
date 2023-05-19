@@ -10,7 +10,7 @@ const Header: React.FC<HeaderProps> = ({ links, className, ...props }) => {
   return (
     <Section
       {...props}
-      className={classNames('border-b border-neutral-200', className)}
+      className={classNames('border-b border-slate-200', className)}
     >
       <Section.Wrapper>
         <Section.Content className="py-8 flex justify-between items-center ">
@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ links, className, ...props }) => {
               links.map((link, key) => {
                 return (
                   <Link href={link.target} key={key}>
-                    <p className="text-sm leading-6 font-semibold text-neutral-900">
+                    <p className="text-sm leading-6 font-semibold text-slate-900">
                       {link.title}
                     </p>
                   </Link>

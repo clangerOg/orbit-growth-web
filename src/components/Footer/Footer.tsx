@@ -33,19 +33,19 @@ const Template: React.FC<TemplateProps> = () => {
   return (
     <Section>
       <Section.Wrapper>
-        <Section.Content className="border-t border-neutral-200 py-16">
-          <div className="flex flex-wrap gap-8 text-base text-neutral-500 mb-8 font-normal justify-center items-center">
+        <Section.Content className="border-t border-slate-200 py-16">
+          <div className="flex flex-wrap gap-8 text-base text-slate-500 mb-8 font-normal justify-center items-center">
             {footerLinks.map((link, key) => {
               return (
                 <Link href={link.href} key={key}>
-                  <span className="hover:text-neutral-700 transition-colors">
+                  <span className="hover:text-slate-700 transition-colors">
                     {link.title}
                   </span>
                 </Link>
               );
             })}
           </div>
-          <p className="text-center text-sm text-neutral-400">
+          <p className="text-center text-sm text-slate-400">
             © 2020 Your Company, Inc. All rights reserved.
           </p>
         </Section.Content>

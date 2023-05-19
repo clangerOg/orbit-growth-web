@@ -6,7 +6,7 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-neutral-900 text-white hover:bg-neutral-700',
+        default: 'bg-slate-900 text-white hover:bg-slate-700',
         secondary: '',
       },
       size: {

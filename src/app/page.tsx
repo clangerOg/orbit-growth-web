@@ -21,7 +21,7 @@ export default function HomePage() {
             <div className="flex flex-col items-center justify-center">
               <div className="w-full mb-8 flex justify-center items-center">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 w-fit border border-slate-200">
-                  <p className="text-sm text-neutral-600">
+                  <p className="text-sm text-slate-600">
                     How we transformed this website.{' '}
                     <Link href={'/'}>
                       <span className="font-semibold text-blue-600">

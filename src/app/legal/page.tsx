@@ -5,12 +5,12 @@ export default function LegalPage() {
     <>
       <Section>
         <Section.Wrapper>
-          <Section.Content className="py-32 border-b border-neutral-200">
+          <Section.Content className="py-32 border-b border-slate-200">
             <Typography variant={'h3'}>Impressum</Typography>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-16">
               <div>
-                <p className="mb-6 text-neutral-600 text-base leading-7">
-                  <span className="font-semibold text-neutral-900">
+                <p className="mb-6 text-slate-600 text-base leading-7">
+                  <span className="font-semibold text-slate-900">
                     OrbitGrowth Media GmbH
                   </span>
                   <br />
@@ -27,8 +27,8 @@ export default function LegalPage() {
                 </Button>
               </div>
               <div>
-                <p className="mb-8 text-neutral-600 text-base leading-7">
-                  <span className="font-semibold text-neutral-900">
+                <p className="mb-8 text-slate-600 text-base leading-7">
+                  <span className="font-semibold text-slate-900">
                     Alleinvertretungsberechtigter Geschäftsführer:
                   </span>
                   <br />
@@ -37,8 +37,8 @@ export default function LegalPage() {
                   Handelsregisternummer 123456 HB <br />
                   Ust-ID: DE123456789
                 </p>
-                <p className="mb-8 text-neutral-600 text-base leading-7">
-                  <span className="font-semibold text-neutral-900">
+                <p className="mb-8 text-slate-600 text-base leading-7">
+                  <span className="font-semibold text-slate-900">
                     Verantwortliche im Sinne von § 55 Abs. 2 RStV:
                   </span>
                   <br />

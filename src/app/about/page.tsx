@@ -1,4 +1,4 @@
-import { Section, Typography } from '@/components';
+import { CTA, Section, Typography } from '@/components';
 import Image from 'next/image';
 import DusBridge from '../../../public/about/DusBridge.jpg';
 import HeroBackground from '../../../public/about/HeroBackground.png';
@@ -70,20 +70,18 @@ export default function AboutPage() {
               </div>
               <div className="gap-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1">
                 <div>
-                  <p className="text-5xl text-neutral-900 font-medium">2023</p>
-                  <p className="mt-1 text-neutral-500 text-base">gegründet</p>
+                  <p className="text-5xl text-slate-900 font-medium">2023</p>
+                  <p className="mt-1 text-slate-500 text-base">gegründet</p>
                 </div>
                 <div>
-                  <p className="text-5xl text-neutral-900 font-medium">+130</p>
-                  <p className="mt-1 text-neutral-500 text-base">
+                  <p className="text-5xl text-slate-900 font-medium">+130</p>
+                  <p className="mt-1 text-slate-500 text-base">
                     zufriedene Kunden
                   </p>
                 </div>
                 <div>
-                  <p className="text-5xl text-neutral-900 font-medium">
-                    46,000
-                  </p>
-                  <p className="mt-1 text-neutral-500 text-base">
+                  <p className="text-5xl text-slate-900 font-medium">46,000</p>
+                  <p className="mt-1 text-slate-500 text-base">
                     Erreichte Kunden
                   </p>
                 </div>
@@ -132,10 +130,10 @@ export default function AboutPage() {
                     className="object-cover object-center rounded-lg"
                   />
                 </div>
-                <p className="text-base font-semibold text-neutral-900 mt-6">
+                <p className="text-base font-semibold text-slate-900 mt-6">
                   Paul Kosche
                 </p>
-                <p className="text-sm text-neutral-600 mt-1">
+                <p className="text-sm text-slate-600 mt-1">
                   Kundenbetreuung, Projektleitung
                 </p>
               </div>
@@ -148,10 +146,10 @@ export default function AboutPage() {
                     className="object-cover object-center rounded-lg"
                   />
                 </div>
-                <p className="text-base font-semibold text-neutral-900 mt-6">
+                <p className="text-base font-semibold text-slate-900 mt-6">
                   Christoph Langer
                 </p>
-                <p className="text-sm text-neutral-600 mt-1">
+                <p className="text-sm text-slate-600 mt-1">
                   Designer, Front-End Developer
                 </p>
               </div>
@@ -159,6 +157,8 @@ export default function AboutPage() {
           </Section.Content>
         </Section.Wrapper>
       </Section>
+      <div className=" w-full h-96" />
+      <CTA />
       <div className=" w-full h-96" />
     </>
   );
