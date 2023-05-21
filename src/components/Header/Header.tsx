@@ -10,7 +10,10 @@ const Header: React.FC<HeaderProps> = ({ links, className, ...props }) => {
   return (
     <Section
       {...props}
-      className={classNames('border-b border-slate-200', className)}
+      className={classNames(
+        'border-b border-slate-200 sticky top-0 bg-white z-30',
+        className
+      )}
     >
       <Section.Wrapper>
         <Section.Content className="py-8 flex justify-between items-center ">
