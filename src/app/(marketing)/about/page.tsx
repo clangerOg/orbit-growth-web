@@ -1,9 +1,9 @@
 import { CTA, Section, Typography } from '@/components';
 import Image from 'next/image';
-import DusBridge from '../../../public/about/DusBridge.jpg';
-import HeroBackground from '../../../public/about/HeroBackground.png';
-import TeamBackground from '../../../public/about/TeamBackground.png';
-import ChrisProfile from '../../../public/about/chris.jpg';
+import DusBridge from '../../../../public/about/DusBridge.jpg';
+import HeroBackground from '../../../../public/about/HeroBackground.png';
+import TeamBackground from '../../../../public/about/TeamBackground.png';
+import ChrisProfile from '../../../../public/about/chris.jpg';
 
 export default function AboutPage() {
   return (

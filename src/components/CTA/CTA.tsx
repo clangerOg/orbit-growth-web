@@ -11,10 +11,10 @@ const CTA: React.FC<CTAProps> = () => {
       <Section.Wrapper>
         <Section.Content>
           <div className="max-w-6xl bg-slate-900 rounded-lg shadow-lg px-8 py-12 md:p-14 flex flex-col items-center justify-center relative">
-            <div className="absolute bottom-0 left-0 rounded-bl-lg overflow-hidden z-0 opacity-70 sm:opacity-100">
+            <div className="absolute bottom-0 left-0 rounded-bl-lg overflow-hidden z-0 opacity-10 md:opacity-30">
               <CircleLeft />
             </div>
-            <div className="absolute bottom-0 right-0 rounded-br-lg overflow-hidden z-0 opacity-70 sm:opacity-100">
+            <div className="absolute bottom-0 right-0 rounded-br-lg overflow-hidden z-0 opacity-10 md:opacity-30">
               <CircleRight />
             </div>
             <div className="relative z-30">
@@ -64,7 +64,7 @@ const CircleLeft: React.FC = () => {
         rx="423.5"
         ry="325.5"
         fill="url(#paint0_radial_31_557)"
-        fill-opacity="0.25"
+        stopOpacity="0.25"
       />
       <defs>
         <radialGradient
@@ -75,8 +75,8 @@ const CircleLeft: React.FC = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(91.5 325.5) rotate(90) scale(325.5 423.5)"
         >
-          <stop stop-color="#9747FF" />
-          <stop offset="1" stop-color="#9747FF" stop-opacity="0" />
+          <stop stopColor="#9747FF" />
+          <stop offset="1" stopColor="#9747FF" stopOpacity="0" />
         </radialGradient>
       </defs>
     </svg>
@@ -98,7 +98,7 @@ const CircleRight: React.FC = () => {
         rx="423.5"
         ry="325.5"
         fill="url(#paint0_radial_31_558)"
-        fill-opacity="0.25"
+        stopOpacity="0.25"
       />
       <defs>
         <radialGradient
@@ -109,8 +109,8 @@ const CircleRight: React.FC = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(423.5 325.5) rotate(90) scale(325.5 423.5)"
         >
-          <stop stop-color="#2563EB" />
-          <stop offset="1" stop-color="#2563EB" stop-opacity="0" />
+          <stop stopColor="#2563EB" />
+          <stop offset="1" stopColor="#2563EB" stopOpacity="0" />
         </radialGradient>
       </defs>
     </svg>
