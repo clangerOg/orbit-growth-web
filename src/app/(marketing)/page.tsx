@@ -21,7 +21,7 @@ export default function HomePage() {
             <div className="flex flex-col items-center justify-center">
               <div className="w-full mb-8 flex justify-center items-center">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 w-fit border border-slate-200">
-                  <p className="text-sm text-slate-600">
+                  <p className="text-sm text-slate-600 text-center">
                     How we transformed this website.{' '}
                     <Link href={'/'}>
                       <span className="font-semibold text-blue-600">
@@ -42,7 +42,7 @@ export default function HomePage() {
                 lässt auf sich warten. Damit das Layout nun nicht nackt im Raume
                 steht und sich klein und leer vorkommt, springe ich ein.
               </Typography>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
+              <div className="mt-10 flex items-center justify-center flex-wrap gap-6">
                 <Button href="/">Kontakt aufnehmen</Button>
                 <Button href="/" variant={'secondary'}>
                   Kontakt aufnehmen

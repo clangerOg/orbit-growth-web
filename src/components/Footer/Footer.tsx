@@ -27,6 +27,10 @@ const footerLinks: { title: string; href: string }[] = [
     title: 'Legal',
     href: '/legal',
   },
+  {
+    title: 'CMS',
+    href: '/studio',
+  },
 ];
 
 const Template: React.FC<TemplateProps> = () => {

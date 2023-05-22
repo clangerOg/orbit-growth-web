@@ -38,7 +38,10 @@ const Header: React.FC<HeaderProps> = ({ links, className, ...props }) => {
               Kontakt aufnehmen
             </Button>
           </div>
-          <div className="flex items-center gap-x-8 md:hidden">
+          <div className="flex items-center gap-x-4 md:hidden">
+            <Button href="/contact" size={'sm'}>
+              Kontakt
+            </Button>
             <HeaderDropdown links={links} />
           </div>
         </Section.Content>

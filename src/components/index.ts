@@ -16,6 +16,9 @@ export { default as Logo } from './Logo';
 export * from './Section';
 export { default as Section } from './Section';
 // -----------------------------------------------------
+export * from './StaffCard';
+export { default as StaffCard } from './StaffCard';
+// -----------------------------------------------------
 export * from './Typography';
 export { default as Typography } from './Typography';
 // -----------------------------------------------------

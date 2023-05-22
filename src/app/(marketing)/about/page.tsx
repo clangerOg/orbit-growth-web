@@ -1,11 +1,13 @@
-import { CTA, Section, Typography } from '@/components';
+import { CTA, Section, StaffCard, Typography } from '@/components';
+import { getStaff } from '@/lib/sanity/sanity.methods';
 import Image from 'next/image';
 import DusBridge from '../../../../public/about/DusBridge.jpg';
 import HeroBackground from '../../../../public/about/HeroBackground.png';
 import TeamBackground from '../../../../public/about/TeamBackground.png';
-import ChrisProfile from '../../../../public/about/chris.jpg';
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const staffMembers = await getStaff();
+
   return (
     <>
       <Section>
@@ -121,7 +123,11 @@ export default function AboutPage() {
               </Typography>
             </div>
             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
+              {staffMembers &&
+                staffMembers.map((contributor, key) => {
+                  return <StaffCard staff={contributor} key={key} />;
+                })}
+              {/* <div>
                 <div className="w-full relative h-96 group">
                   <Image
                     src={ChrisProfile}
@@ -152,7 +158,7 @@ export default function AboutPage() {
                 <p className="text-sm text-slate-600 mt-1">
                   Designer, Front-End Developer
                 </p>
-              </div>
+              </div> */}
             </div>
           </Section.Content>
         </Section.Wrapper>
