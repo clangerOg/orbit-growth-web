@@ -68,7 +68,16 @@ export default async function ProjectPage({
           </Section.Content>
         </Section.Wrapper>
       </Section>
-      <Section className="mt-96">
+      <div className="w-full h-72" />
+      <article className="prose prose-slate prose-base md:prose-lg max-w-none prose-img:m-0 flex justify-center items-center flex-col prose-p:px-6 prose-p:max-w-prose">
+        <PortableText
+          value={project.content}
+          components={myPortableTextComponents}
+        />
+      </article>
+      <div className="w-full h-72" />
+
+      {/* <Section className="mt-96">
         <Section.Wrapper>
           <Section.Content className="flex flex-col items-center justify-center">
             <div className="bg-red-400 flex flex-col justify-center items-start">
@@ -79,7 +88,7 @@ export default async function ProjectPage({
             </div>
           </Section.Content>
         </Section.Wrapper>
-      </Section>
+      </Section> */}
     </>
   );
 }
@@ -88,28 +97,31 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
   types: {
     image: ({ value }: { value: any }) => (
       <>
-        <div className=" bg-yellow-300 not-prose max-w-none w-full">
-          <Image
-            src={value.asset.url}
-            alt=""
-            width={900}
-            height={1200}
-            className="rounded-lg border border-slate-200"
-          />
+        <div className="bg-slate-100 w-full flex justify-center items-center border-y border-slate-200 overflow-hidden">
+          <div className="max-w-6xl w-full">
+            <Image
+              src={value.asset.url}
+              alt=""
+              width={900}
+              height={1200}
+              quality={100}
+              className="w-full shadow-lg"
+            />
+          </div>
         </div>
       </>
     ),
   },
   block: {
     h3: ({ children }) => (
-      <div className="prose">
+      <div className="max-w-prose w-full px-6">
         <h3>{children}</h3>
       </div>
     ),
-    normal: ({ children }) => (
-      <div className="prose">
-        <p>{children}</p>
-      </div>
-    ),
+    // normal: ({ children }) => (
+    //   <div className="prose">
+    //     <p>{children}</p>
+    //   </div>
+    // ),
   },
 };
