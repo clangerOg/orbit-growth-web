@@ -71,3 +71,7 @@ export type Project = {
   publishedAt: string;
   content: any;
 };
+
+export type ThumbnailProjectType = NonNullable<
+  Pick<Project, 'thumbnailSrc' | 'slug' | 'title' | 'tags'>
+>;

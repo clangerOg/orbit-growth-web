@@ -11,16 +11,13 @@ const Header: React.FC<HeaderProps> = ({ links, className, ...props }) => {
     <Section
       {...props}
       className={classNames(
-        'border-b border-slate-200 sticky top-0 bg-white z-30',
+        'border-b border-slate-200 sticky top-0 bg-white z-40',
         className
       )}
     >
       <Section.Wrapper>
-        <Section.Content className="py-8 flex justify-between items-center ">
-          {/* <div className="h-10 block sm:hidden bg-blue-700">
-            <Logo />
-          </div> */}
-          <div className="h-10 w-fit block">
+        <Section.Content className="py-6 flex justify-between items-center ">
+          <div className="h-8 w-fit block">
             <Logo woodmark />
           </div>
           <div className="items-center gap-x-8 hidden md:flex">
@@ -42,7 +39,9 @@ const Header: React.FC<HeaderProps> = ({ links, className, ...props }) => {
             <Button href="/contact" size={'sm'}>
               Kontakt
             </Button>
-            <HeaderDropdown links={links} />
+            <div className="mt-1">
+              <HeaderDropdown links={links} />
+            </div>
           </div>
         </Section.Content>
       </Section.Wrapper>

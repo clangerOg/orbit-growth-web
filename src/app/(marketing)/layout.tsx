@@ -1,4 +1,10 @@
 import { Footer, Header, HeaderLink } from '@/components';
+import {
+  ClipboardDocumentIcon,
+  FireIcon,
+  HomeIcon,
+  UserIcon,
+} from '@heroicons/react/24/solid';
 import { Inter } from 'next/font/google';
 import '../globals.css';
 
@@ -13,18 +19,22 @@ const HeaderLinks: HeaderLink[] = [
   {
     target: '/',
     title: 'Home',
+    icon: <HomeIcon className="w-full" />,
   },
   {
     target: '/about',
     title: 'About',
+    icon: <UserIcon className="w-full" />,
   },
   {
     target: '/projects',
     title: 'Projects',
+    icon: <ClipboardDocumentIcon className="w-full" />,
   },
   {
     target: '/skills',
     title: 'Skills',
+    icon: <FireIcon className="w-full" />,
   },
 ];
 

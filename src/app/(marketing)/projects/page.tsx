@@ -1,9 +1,12 @@
-import { Section, Typography } from '@/components';
+import { CTA, Section, Typography } from '@/components';
+import ProjectThumbnail from '@/components/ProjectThumbnail/ProjectThumbnail';
+import { getThumbnailProjects } from '@/lib/sanity/sanity.methods';
+import { ThumbnailProjectType } from '@/lib/sanity/types/project.type';
 import Image from 'next/image';
 import HeroBackground from '../../../../public/about/HeroBackground.png';
 
 export default async function ProjectsPage() {
-  // const projects = await getProjects();
+  const projects: ThumbnailProjectType[] = await getThumbnailProjects();
 
   return (
     <>
@@ -37,7 +40,18 @@ export default async function ProjectsPage() {
           </Section.Content>
         </Section.Wrapper>
       </Section>
-      <div className=" w-full h-28" />
+      <Section>
+        <Section.Wrapper>
+          <Section.Content className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            {projects.map((project, index) => {
+              return <ProjectThumbnail key={index} project={project} />;
+            })}
+          </Section.Content>
+        </Section.Wrapper>
+      </Section>
+      <div className=" w-full h-96" />
+      <CTA />
+      <div className=" w-full h-96" />
     </>
   );
 }

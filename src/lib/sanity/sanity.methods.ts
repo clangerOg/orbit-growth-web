@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity';
-import { clientFetch } from './sanity.client';
+import { client, clientFetch } from './sanity.client';
 import { Contributor } from './types/contributor.type';
-import { Project } from './types/project.type';
+import { Project, ThumbnailProjectType } from './types/project.type';
 
 export async function getStaff(): Promise<Contributor[]> {
   const query = groq`
@@ -31,7 +31,6 @@ export async function getProject(slug: string): Promise<Project> {
   const query = groq`
   *[_type == 'project' && slug.current == "${slug}"] {
     'mainImageSrc': mainImage.asset->url,
-    'thumbnailSrc': thumbnail.asset->url,
     tags,
     title,
     subTitle,
@@ -51,4 +50,19 @@ export async function getProject(slug: string): Promise<Project> {
   const project: Promise<Project> = clientFetch(query);
 
   return project;
+}
+
+export async function getThumbnailProjects(): Promise<ThumbnailProjectType[]> {
+  const query = groq`
+  *[_type == 'project'] {
+    'thumbnailSrc': thumbnail.asset->url,
+    'slug': slug.current,
+    title,
+    tags,
+  }`;
+
+  const res: Promise<ThumbnailProjectType[]> =
+    client.fetch<ThumbnailProjectType[]>(query);
+
+  return res;
 }

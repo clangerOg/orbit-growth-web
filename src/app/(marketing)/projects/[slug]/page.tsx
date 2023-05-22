@@ -1,6 +1,7 @@
 import { Section, Typography } from '@/components';
 import { getProject, getProjectSlugs } from '@/lib/sanity/sanity.methods';
 import { Project } from '@/lib/sanity/types/project.type';
+import { formatDate } from '@/lib/utils';
 import { PortableText, PortableTextReactComponents } from '@portabletext/react';
 import Image from 'next/image';
 
@@ -24,30 +25,37 @@ export default async function ProjectPage({
 
   return (
     <>
-      <div className="w-full relative h-96">
+      <div className="w-full relative h-72 md:h-96">
         <Image
           src={project.mainImageSrc}
           fill
           alt="Project Main Image"
           className="object-cover object-center"
+          quality={100}
         />
       </div>
       <Section>
         <Section.Wrapper>
           <Section.Content>
-            <div className="text-sm text-slate-500 flex justify-start items-center divide-x divide-slate-200">
-              <div className="p-8 pb-4">
+            <div className="text-sm text-slate-500 flex justify-start items-center border-slate-200">
+              <div className="p-4 pb-2 md:p-8 md:pb-4 border-l border-inherit">
                 <p className="mb-1.5 font-semibold text-slate-900">Date</p>
-                <p>{project.publishedAt}</p>
+                <p>{formatDate(project.publishedAt)}</p>
               </div>
-              <div className="p-8 pb-4">
+              <div className="p-4 pb-2 md:p-8 md:pb-4 border-l border-inherit">
                 <p className="mb-1.5 font-semibold text-slate-900">Tags</p>
-
                 <p>{project.tags.map((tag) => `${tag}, `)}</p>
               </div>
             </div>
 
-            <div className="my-12 flex flex-col justify-center items-center">
+            <Typography variant={'h1'} className="mt-20">
+              {project.title}
+            </Typography>
+            <Typography variant={'h2'} className="mt-4">
+              {project.subTitle}
+            </Typography>
+
+            {/* <div className="my-12 flex flex-col justify-center items-center">
               <div className="max-w-3xl">
                 <Typography variant={'h3'} className="">
                   {project.title}
@@ -56,11 +64,11 @@ export default async function ProjectPage({
                   {project.subTitle}
                 </Typography>
               </div>
-            </div>
+            </div> */}
           </Section.Content>
         </Section.Wrapper>
       </Section>
-      <Section>
+      <Section className="mt-96">
         <Section.Wrapper>
           <Section.Content className="flex flex-col items-center justify-center">
             <div className="bg-red-400 flex flex-col justify-center items-start">

@@ -7,23 +7,23 @@ import { CTAProps } from './CTA.types';
 
 const CTA: React.FC<CTAProps> = () => {
   return (
-    <Section>
+    <Section className="overflow-hidden">
       <Section.Wrapper>
         <Section.Content>
           <div className="max-w-6xl bg-slate-900 rounded-lg shadow-lg px-8 py-12 md:p-14 flex flex-col items-center justify-center relative">
-            <div className="absolute bottom-0 left-0 rounded-bl-lg overflow-hidden z-0 opacity-10 md:opacity-30">
+            <div className="absolute bottom-0 left-0 rounded-bl-lg overflow-hidden z-0 opacity-20 md:opacity-30">
               <CircleLeft />
             </div>
-            <div className="absolute bottom-0 right-0 rounded-br-lg overflow-hidden z-0 opacity-10 md:opacity-30">
+            <div className="absolute bottom-0 right-0 rounded-br-lg overflow-hidden z-0 opacity-10 sm:opacity-20 md:opacity-30">
               <CircleRight />
             </div>
-            <div className="relative z-30">
+            <div className="relative z-20">
               <Typography variant={'h3'} className="text-center !text-white">
                 Ready for takeoff?
               </Typography>
               <Typography
                 variant={'h4'}
-                className="text-center text-slate-400 mt-4"
+                className="text-center text-slate-400 mt-4 text-base sm:text-lg"
               >
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
