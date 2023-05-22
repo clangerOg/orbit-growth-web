@@ -1,5 +1,5 @@
 import { groq } from 'next-sanity';
-import { client, clientFetch } from './sanity.client';
+import { clientFetch } from './sanity.client';
 import { Contributor } from './types/contributor.type';
 import { Project, ThumbnailProjectType } from './types/project.type';
 
@@ -62,7 +62,21 @@ export async function getThumbnailProjects(): Promise<ThumbnailProjectType[]> {
   }`;
 
   const res: Promise<ThumbnailProjectType[]> =
-    client.fetch<ThumbnailProjectType[]>(query);
+    clientFetch<ThumbnailProjectType[]>(query);
+
+  return res;
+}
+
+export async function getOGProject(
+  slug: string
+): Promise<Pick<Project, 'thumbnailSrc'>> {
+  const query = groq`
+  *[_type == 'project' && slug.current == "${slug}"] {
+    'thumbnailSrc': thumbnail.asset->url,
+  }[0]`;
+
+  const res: Promise<Pick<Project, 'thumbnailSrc'>> =
+    clientFetch<Pick<Project, 'thumbnailSrc'>>(query);
 
   return res;
 }
