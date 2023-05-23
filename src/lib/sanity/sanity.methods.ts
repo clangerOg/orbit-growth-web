@@ -69,14 +69,14 @@ export async function getThumbnailProjects(): Promise<ThumbnailProjectType[]> {
 
 export async function getOGProject(
   slug: string
-): Promise<Pick<Project, 'thumbnailSrc'>> {
+): Promise<Pick<Project, 'title'>> {
   const query = groq`
   *[_type == 'project' && slug.current == "${slug}"] {
-    'thumbnailSrc': thumbnail.asset->url,
+    title,
   }[0]`;
 
-  const res: Promise<Pick<Project, 'thumbnailSrc'>> =
-    clientFetch<Pick<Project, 'thumbnailSrc'>>(query);
+  const res: Promise<Pick<Project, 'title'>> =
+    clientFetch<Pick<Project, 'title'>>(query);
 
   return res;
 }
