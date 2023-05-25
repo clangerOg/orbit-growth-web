@@ -5,6 +5,7 @@ import { getThumbnailProjects } from '@/lib/sanity/sanity.methods';
 import { ThumbnailProjectType } from '@/lib/sanity/types/project.type';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { BoltIcon } from '@heroicons/react/24/solid';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import HeroBackground from '../../../public/landing/HeroBackground.png';
@@ -35,6 +36,9 @@ const FAQ: { q: string; a: string }[] = [
     a: 'Our agency has a team of highly skilled and experienced web designers and developers who are dedicated to providing personalized and innovative web solutions to our clients. We also place a strong emphasis on communication, collaboration, and customer satisfaction.',
   },
 ];
+export const metadata: Metadata = {
+  title: 'Home | OrbitGrowth',
+};
 
 export default async function HomePage() {
   const projects: ThumbnailProjectType[] = await getThumbnailProjects();
@@ -177,6 +181,14 @@ export default async function HomePage() {
                 </span>
               </Button>
             </div>
+          </Section.Content>
+        </Section.Wrapper>
+      </Section>
+      <div className=" w-full h-96" />
+      <Section className="border-y border-slate-200 bg-slate-100">
+        <Section.Wrapper>
+          <Section.Content>
+            <p>Hello World</p>
           </Section.Content>
         </Section.Wrapper>
       </Section>

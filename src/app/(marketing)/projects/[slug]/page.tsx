@@ -3,7 +3,12 @@ import { getProject, getProjectSlugs } from '@/lib/sanity/sanity.methods';
 import { Project } from '@/lib/sanity/types/project.type';
 import { formatDate } from '@/lib/utils';
 import { PortableText, PortableTextReactComponents } from '@portabletext/react';
+import { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
+
+type Props = {
+  params: { slug: string };
+};
 
 export const revalidate = 216000;
 
@@ -16,11 +21,18 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ProjectPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = params.slug;
+
+  return {
+    title: 'Project',
+  };
+}
+
+export default async function Page({ params }: Props) {
   const project: Project = await getProject(params.slug);
 
   return (

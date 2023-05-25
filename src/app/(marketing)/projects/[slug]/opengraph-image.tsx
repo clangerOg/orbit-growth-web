@@ -79,6 +79,9 @@ export default async function Image({ params }: { params: { slug: string } }) {
         <div
           style={{
             color: '#0f172a',
+            fontWeight: '600',
+            fontSize: '1.25rem',
+            lineHeight: '1.75rem',
           }}
         >
           {project.title}

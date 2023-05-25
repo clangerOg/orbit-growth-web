@@ -1,9 +1,14 @@
 import { CTA, Section, StaffCard, Typography } from '@/components';
 import { getStaff } from '@/lib/sanity/sanity.methods';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import DusBridge from '../../../../public/about/DusBridge.jpg';
 import HeroBackground from '../../../../public/about/HeroBackground.png';
 import TeamBackground from '../../../../public/about/TeamBackground.png';
+
+export const metadata: Metadata = {
+  title: 'About',
+};
 
 export default async function AboutPage() {
   const staffMembers = await getStaff();
