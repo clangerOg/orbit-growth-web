@@ -19,6 +19,7 @@
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
     "@portabletext/react": "^3.0.0",
+    "@radix-ui/react-form": "^0.0.2",
     "@sanity/icons": "^2.0.0",
     "@sanity/image-url": "1",
     "@sanity/types": "^3.0.0",
@@ -47,6 +48,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
+    "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.14",
     "cross-env": "^7.0.3",
     "husky": "^8.0.3",

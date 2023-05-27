@@ -4,6 +4,9 @@ export { default as Button } from './Button';
 export * from './CTA';
 export { default as CTA } from './CTA';
 // -----------------------------------------------------
+export * from './ContactForm';
+export { default as ContactForm } from './ContactForm';
+// -----------------------------------------------------
 export * from './Footer';
 export { default as Footer } from './Footer';
 // -----------------------------------------------------
