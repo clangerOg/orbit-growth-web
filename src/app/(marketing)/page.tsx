@@ -1,4 +1,4 @@
-import { Button, ContactForm, Section } from '@/components';
+import { Button, ContactForm, Section, SkillCard } from '@/components';
 import { getThumbnailProjects } from '@/lib/sanity/sanity.methods';
 import { ThumbnailProjectType } from '@/lib/sanity/types/project.type';
 import {
@@ -96,40 +96,25 @@ export default async function Page() {
               </h4>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-8">
-              <div className="p-6 rounded-md bg-slate-100 h-fit col-span-1 md:col-span-2 lg:col-span-1 ">
-                <p className="text-base text-slate-600 leading-7">
-                  <span className="font-semibold text-slate-900">
-                    Pixelperfect Design.
-                  </span>{' '}
-                  Als junges Team sind wir in der Lage, frische und kreative
-                  Ideen zu entwicklen, die sich von der Masse abheben und auf
-                  deine Bedürfnisse amßgeschneidert sind.
-                </p>
-              </div>
-              <div className="p-6 rounded-md border border-slate-200 h-fit">
-                <p className="text-base text-slate-500 leading-7">
-                  <span className="font-semibold text-slate-900">
-                    High-End-Webentwicklung.
-                  </span>{' '}
-                  Unsere Agentur setzt auf moderne Webtechnologien, wie Webflow,
-                  mit denen wir sicherstellen können, dass du immer eine
-                  technisch einwandfreie und optimierte Webseite erhalten wirst.
-                  {/* Als Webentwickler können wir sicherstellen, dass Sie eine
-                  technisch einwandfreie und optimierte Webseite erhalten, die
-                  auf die individuellen Bedürfnisse ihrer Zielgruppe
-                  zugeschnitten ist. */}
-                </p>
-              </div>
-              <div className="p-6 rounded-md border border-slate-200 h-fit">
-                <p className="text-base text-slate-500 leading-7">
-                  <span className="font-semibold text-slate-900">
-                    Schnelle Umsetzung.
-                  </span>{' '}
-                  Als junges und agiles Team können wir Projekte schnell und
-                  effizient umsetzen, ohne Kompromisse bei der Qualität
-                  einzugehen.
-                </p>
-              </div>
+              <SkillCard
+                highlighted
+                title="Pixelperfect Design."
+                className="col-span-1 md:col-span-2 lg:col-span-1"
+              >
+                Als junges Team sind wir in der Lage, frische und kreative Ideen
+                zu entwicklen, die sich von der Masse abheben und auf deine
+                Bedürfnisse amßgeschneidert sind.
+              </SkillCard>
+              <SkillCard title="High-End-Webentwicklung.">
+                Unsere Agentur setzt auf moderne Webtechnologien, wie Webflow,
+                mit denen wir sicherstellen können, dass du immer eine technisch
+                einwandfreie und optimierte Webseite erhalten wirst.
+              </SkillCard>
+              <SkillCard title="Schnelle Umsetzung.">
+                Als junges und agiles Team können wir Projekte schnell und
+                effizient umsetzen, ohne Kompromisse bei der Qualität
+                einzugehen.
+              </SkillCard>
             </div>
           </Section.Content>
         </Section.Wrapper>
