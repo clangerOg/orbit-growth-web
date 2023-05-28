@@ -1,4 +1,4 @@
-import { Section } from '@/components/common';
+import { Section, Typography } from '@/components/common';
 import { SkillCard } from '..';
 import { SkillsSectionProps } from './SkillsSection.types';
 
@@ -8,14 +8,14 @@ const SkillsSection: React.FC<SkillsSectionProps> = () => {
       <Section.Wrapper className="py-52 border-0 md:border-x border-dashed border-inherit">
         <Section.Content>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <h3 className="sm:text-4xl text-3xl text-slate-900 font-bold tracking-tight max-w-2xl text-left">
+            <Typography variant={'h3'}>
               Gute Webseiten waren noch nie so einfach.
-            </h3>
-            <h4 className="text-lg leading-8 text-slate-500 max-w-3xl text-left mt-0.5">
+            </Typography>
+            <Typography variant={'h4'} className="mt-0.5">
               Als eine junge Webdesign Agentur bieten wir Qualitäten, die andere
               Agenturen nicht erreichen können. Unser Ziel ist es preiswerte
               Webseiten für jeden zu ermöglichen.
-            </h4>
+            </Typography>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-8">
             <SkillCard

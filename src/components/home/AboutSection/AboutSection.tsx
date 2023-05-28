@@ -1,4 +1,4 @@
-import { Button, Section } from '@/components/common';
+import { Button, Section, Typography } from '@/components/common';
 import Image from 'next/image';
 import { AboutSectionProps } from './AboutSection.types';
 
@@ -8,16 +8,16 @@ const AboutSection: React.FC<AboutSectionProps> = () => {
       <Section.Wrapper className="py-52 border-0 md:border-x border-dashed border-inherit">
         <Section.Content className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h3 className="sm:text-4xl text-3xl text-slate-900 font-bold tracking-tight max-w-2xl">
-              Über uns
-            </h3>
-            <h4 className="text-lg leading-8 text-slate-500 max-w-3xl mt-4">
+            <Typography variant={'h3'}>Über uns</Typography>
+
+            <Typography variant={'h4'} className="mt-4">
               Entdecken Sie unsere beeindruckende Webdesign-Arbeit und lassen
               Sie sich von unseren vielfältigen Projekten inspirieren. Von
               eleganten Unternehmenswebsites bis hin zu benutzerfreundlichen
               E-Commerce-Plattformen
-            </h4>
-            <p className="leading-7 font-normal text-slate-700 text-base max-w-prose mt-9">
+            </Typography>
+
+            <Typography variant={'p'} className="mt-9">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
               soluta temporibus necessitatibus, rem consequatur magni ullam
               debitis adipisci repellendus alias recusandae veniam impedit
@@ -26,8 +26,14 @@ const AboutSection: React.FC<AboutSectionProps> = () => {
               fugiat consequuntur eum officiis! At possimus ut, tenetur eius
               dicta error. Dolor, quo obcaecati? Dolorem repellendus aut
               laboriosam?
-            </p>
-            <Button href="/about" variant={'secondary'} className="px-0 mt-6">
+            </Typography>
+
+            <Button
+              href="/about"
+              variant={'secondary'}
+              className="px-0 mt-6"
+              useDefaultArrow
+            >
               Mehr Über uns
             </Button>
           </div>

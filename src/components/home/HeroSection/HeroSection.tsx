@@ -1,4 +1,4 @@
-import { Button, Section } from '@/components/common';
+import { Button, Section, Typography } from '@/components/common';
 import Detail from './Detail';
 import { HeroSectionProps } from './HeroSection.types';
 
@@ -12,9 +12,11 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             size={'md'}
             direction={'vertical'}
           />
+          {/* Spacer with overlay */}
           <div className="h-24 border-x border-dashed border-inherit relative">
             <div className="h-full absolute botttom-0 -left-[1px] -right-[1px] bg-gradient-to-b from-white to-white/0" />
           </div>
+          {/* H1 Wrapper */}
           <div className="border border-slate-200/90 border-dashed p-6 flex justify-center items-center relative">
             <Detail
               className="-top-px -left-24"
@@ -26,16 +28,18 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               size={'md'}
               direction={'vertical'}
             />
-            <h1 className="sm:text-6xl sm:leading-none text-4xl leading-10 text-slate-900 font-bold tracking-tight max-w-3xl text-center">
+            <Typography variant={'h1'} className="max-w-3xl text-center">
               Gute Webseiten waren noch nie so einfach
-            </h1>
+            </Typography>
           </div>
+
+          {/* H2 Wrapper */}
           <div className="border border-t-0 border-slate-200/90 border-dashed p-6 flex justify-center items-center">
-            <h2 className="text-lg leading-8 text-slate-500 max-w-2xl text-center">
+            <Typography variant="h2" className="text-center">
               OrbitGrowth ist eine Webdesign Agentur aus Ratingen, die sich auf
               das Designen und Entwickeln von Webseiten für lokale Unternehmen
               spezialisiert hat.
-            </h2>
+            </Typography>
           </div>
           <div className="border border-t-0 border-slate-200/90 border-dashed flex justify-center items-center relative">
             <Detail
@@ -43,12 +47,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               size={'md'}
               direction={'horizontal'}
             />
-            {/* <div
-              className={classNames(
-                'absolute w-80 h-[2px] bg-gradient-to-r from-sky-500/0 via-sky-500 to-fuchsia-500 z-30 opacity-40',
-                styles.animateHorizontal2
-              )}
-            /> */}
+            {/* Button Wrapper */}
             <div className="border-x border-slate-200/90 border-dashed p-4 md:p-6 flex justify-center items-center gap-6 flex-wrap">
               <Button href={'#contact'}>Kontakt aufnehmen</Button>
               <Button href="/projects" variant={'secondary'} useDefaultArrow>
