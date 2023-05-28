@@ -1,4 +1,4 @@
-import { Section } from '@/components';
+import { Section } from '@/components/common';
 import { getThumbnailProjects } from '@/lib/sanity/sanity.methods';
 import { ThumbnailProjectType } from '@/lib/sanity/types/project.type';
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid';

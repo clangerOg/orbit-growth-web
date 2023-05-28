@@ -1,6 +1,6 @@
-import { Button, CTA, Section, Typography } from '@/components';
-import FAQDisclosure from '@/components/FAQDisclosure/FAQDisclosure';
-import ProjectThumbnail from '@/components/ProjectThumbnail/ProjectThumbnail';
+import { Button, CTA, Section, Typography } from '@/components/common';
+import ProjectThumbnail from '@/components/common/ProjectThumbnail/ProjectThumbnail';
+import FAQDisclosure from '@/components/home/FAQDisclosure/FAQDisclosure';
 import { getThumbnailProjects } from '@/lib/sanity/sanity.methods';
 import { ThumbnailProjectType } from '@/lib/sanity/types/project.type';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';

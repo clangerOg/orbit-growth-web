@@ -1,4 +1,4 @@
-import { Button, Section, Typography } from '@/components';
+import { Button, Section, Typography } from '@/components/common';
 
 export default function LegalPage() {
   return (

@@ -1,9 +1,9 @@
 import classNames from 'classnames';
 import Link from 'next/link';
-import Button from '../Button';
+import Button from '../../common/Button';
+import Logo from '../../common/Logo/Logo';
+import Section from '../../common/Section/Section';
 import HeaderDropdown from '../HeaderDropdown/HeaderDropdown';
-import Logo from '../Logo/Logo';
-import Section from '../Section/Section';
 import { HeaderProps } from './Header.types';
 
 const Header: React.FC<HeaderProps> = ({ links, className, ...props }) => {

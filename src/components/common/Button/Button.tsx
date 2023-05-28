@@ -1,6 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
 import { ButtonProps, buttonVariants } from './Button.types';
 
@@ -9,6 +10,7 @@ const Button: React.FC<ButtonProps> = ({
   size,
   variant,
   children,
+  useDefaultArrow,
   ...props
 }) => {
   return (
@@ -18,6 +20,11 @@ const Button: React.FC<ButtonProps> = ({
       className={cn(buttonVariants({ variant, size, className }))}
     >
       {children}
+      {useDefaultArrow && (
+        <span>
+          <ArrowRightIcon className="w-4" />
+        </span>
+      )}
     </Link>
   );
 };

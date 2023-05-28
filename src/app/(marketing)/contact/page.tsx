@@ -1,4 +1,4 @@
-import { Section } from '@/components';
+import { Section } from '@/components/common';
 
 export default function ContactPage() {
   return (

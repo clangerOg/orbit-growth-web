@@ -4,7 +4,7 @@ import { Menu } from '@headlessui/react';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Bars3Icon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
-import Button from '../Button/Button';
+import Button from '../../common/Button/Button';
 import { HeaderLink } from '../Header';
 import { HeaderDropdownProps } from './HeaderDropdown.types';
 

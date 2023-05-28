@@ -1,30 +1,30 @@
-export * from './Button';
-export { default as Button } from './Button';
-// -----------------------------------------------------
-export * from './CTA';
-export { default as CTA } from './CTA';
-// -----------------------------------------------------
-export * from './ContactForm';
-export { default as ContactForm } from './ContactForm';
-// -----------------------------------------------------
-export * from './Footer';
-export { default as Footer } from './Footer';
-// -----------------------------------------------------
-export * from './Header';
-export { default as Header } from './Header';
-// -----------------------------------------------------
-export * from './Logo';
-export { default as Logo } from './Logo';
-// -----------------------------------------------------
-export * from './Section';
-export { default as Section } from './Section';
-// -----------------------------------------------------
-export * from './SkillCard';
-export { default as SkillCard } from './SkillCard';
-// -----------------------------------------------------
-export * from './StaffCard';
-export { default as StaffCard } from './StaffCard';
-// -----------------------------------------------------
-export * from './Typography';
-export { default as Typography } from './Typography';
-// -----------------------------------------------------
+// // -----------------------------------------------------
+// // -----------------------------------------------------
+// // -----------------------------------------------------
+// // -----------------------------------------------------
+// // -----------------------------------------------------
+// export * from './about/StaffCard';
+// export { default as StaffCard } from './about/StaffCard';
+// export * from './common/Button';
+// export { default as Button } from './common/Button';
+// export * from './common/CTA';
+// export { default as CTA } from './common/CTA';
+// export * from './common/Logo';
+// export { default as Logo } from './common/Logo';
+// export * from './common/Section';
+// export { default as Section } from './common/Section';
+// // -----------------------------------------------------
+// export * from './common/Typography';
+// export { default as Typography } from './common/Typography';
+// // -----------------------------------------------------
+// export * from './home/ContactForm';
+// export { default as ContactForm } from './home/ContactForm';
+// export * from './home/SkillCard';
+// export { default as SkillCard } from './home/SkillCard';
+// // -----------------------------------------------------
+// export * from './layout/Footer';
+// export { default as Footer } from './layout/Footer';
+// // -----------------------------------------------------
+// export * from './layout/Header';
+// export { default as Header } from './layout/Header';
+// // -----------------------------------------------------

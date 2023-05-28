@@ -1,4 +1,4 @@
-import { Section, Typography } from '@/components';
+import { Section, Typography } from '@/components/common';
 import { getProject, getProjectSlugs } from '@/lib/sanity/sanity.methods';
 import { Project } from '@/lib/sanity/types/project.type';
 import { formatDate } from '@/lib/utils';
@@ -22,8 +22,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-// { params }: Props,
-// parent: ResolvingMetadata
+  // { params }: Props,
+  // parent: ResolvingMetadata
   // const slug = params.slug;
 
   return {

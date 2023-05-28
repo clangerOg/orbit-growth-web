@@ -1,4 +1,4 @@
-import { Footer, Header, HeaderLink } from '@/components';
+import { Footer, Header, HeaderLink } from '@/components/layout';
 import {
   ClipboardDocumentIcon,
   FireIcon,

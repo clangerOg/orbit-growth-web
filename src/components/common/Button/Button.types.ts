@@ -27,4 +27,5 @@ export const buttonVariants = cva(
 export type ButtonProps = React.HtmlHTMLAttributes<HTMLAnchorElement> &
   VariantProps<typeof buttonVariants> & {
     href: string;
+    useDefaultArrow?: boolean;
   };

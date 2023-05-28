@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Button from '../Button/Button';
-import Section from '../Section/Section';
+import Button from '../../common/Button/Button';
+import Section from '../../common/Section/Section';
 import { TemplateProps } from './Footer.types';
 
 const footerLinks: { title: string; href: string }[] = [

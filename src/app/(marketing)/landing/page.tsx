@@ -1,4 +1,5 @@
-import { Button, ContactForm, Section } from '@/components';
+import { Button, Section } from '@/components/common';
+import { ContactForm } from '@/components/home';
 import { getThumbnailProjects } from '@/lib/sanity/sanity.methods';
 import { ThumbnailProjectType } from '@/lib/sanity/types/project.type';
 import {

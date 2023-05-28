@@ -1,4 +1,5 @@
-import { Section, StaffCard, Typography } from '@/components';
+import { StaffCard } from '@/components/about';
+import { Section, Typography } from '@/components/common';
 import { getStaff } from '@/lib/sanity/sanity.methods';
 import { Metadata } from 'next';
 import Image from 'next/image';

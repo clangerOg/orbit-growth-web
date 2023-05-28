@@ -1,14 +1,14 @@
-import classNames from "classnames";
-import { SectionProps } from "./";
-import SectionContent from "./SectionContent";
-import SectionWrapper from "./SectionWrapper";
+import classNames from 'classnames';
+import { SectionProps } from '.';
+import SectionContent from './SectionContent';
+import SectionWrapper from './SectionWrapper';
 
 const SectionComponent: React.FC<SectionProps> = ({ className, ...props }) => {
   return (
     <div
       {...props}
       className={classNames(
-        "relative flex w-full flex-col items-center justify-center",
+        'relative flex w-full flex-col items-center justify-center',
         className
       )}
     >
@@ -17,7 +17,7 @@ const SectionComponent: React.FC<SectionProps> = ({ className, ...props }) => {
   );
 };
 
-SectionComponent.displayName = "Section";
+SectionComponent.displayName = 'Section';
 
 const Section = Object.assign(SectionComponent, {
   Wrapper: SectionWrapper,
