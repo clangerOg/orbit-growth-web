@@ -3,7 +3,7 @@ import { getProject, getProjectSlugs } from '@/lib/sanity/sanity.methods';
 import { Project } from '@/lib/sanity/types/project.type';
 import { formatDate } from '@/lib/utils';
 import { PortableText, PortableTextReactComponents } from '@portabletext/react';
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 import Image from 'next/image';
 
 type Props = {
@@ -21,11 +21,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const slug = params.slug;
+export async function generateMetadata(): Promise<Metadata> {
+// { params }: Props,
+// parent: ResolvingMetadata
+  // const slug = params.slug;
 
   return {
     title: 'Project',
@@ -46,15 +45,15 @@ export default async function Page({ params }: Props) {
           quality={100}
         />
       </div>
-      <Section>
-        <Section.Wrapper>
+      <Section className="antialiased border-b border-slate-200/90 border-dashed">
+        <Section.Wrapper className="pb-20 border-0 md:border-x border-dashed border-inherit">
           <Section.Content>
-            <div className="text-sm text-slate-500 flex justify-start items-center border-slate-200">
-              <div className="p-4 pb-2 md:p-8 md:pb-4 border-l border-inherit">
+            <div className="text-sm text-slate-500 flex justify-start items-center border-slate-200 flex-wrap gap-12 pt-10">
+              <div className="">
                 <p className="mb-1.5 font-semibold text-slate-900">Date</p>
                 <p>{formatDate(project.publishedAt)}</p>
               </div>
-              <div className="p-4 pb-2 md:p-8 md:pb-4 border-l border-inherit">
+              <div className="">
                 <p className="mb-1.5 font-semibold text-slate-900">Tags</p>
                 <p>{project.tags.map((tag) => `${tag}, `)}</p>
               </div>
@@ -63,7 +62,7 @@ export default async function Page({ params }: Props) {
             <Typography variant={'h1'} className="mt-20">
               {project.title}
             </Typography>
-            <Typography variant={'h2'} className="mt-4">
+            <Typography variant={'h2'} className="mt-4 text-slate-500">
               {project.subTitle}
             </Typography>
 
@@ -80,14 +79,13 @@ export default async function Page({ params }: Props) {
           </Section.Content>
         </Section.Wrapper>
       </Section>
-      <div className="w-full h-72" />
-      <article className="prose prose-slate prose-base md:prose-lg max-w-none prose-img:m-0 flex justify-center items-center flex-col prose-p:px-6 prose-p:max-w-prose">
+      <article className="border-b border-slate-200/90 border-dashed relative py-24 prose prose-slate prose-base md:prose-lg max-w-none prose-img:m-0 flex justify-center items-center flex-col prose-p:px-6 prose-p:max-w-prose">
+        <div className="-z-20 absolute border-0 md:border-x border-dashed border-slate-200/90 w-full max-w-6xl h-full top-0" />
         <PortableText
           value={project.content}
           components={myPortableTextComponents}
         />
       </article>
-      <div className="w-full h-72" />
 
       {/* <Section className="mt-96">
         <Section.Wrapper>

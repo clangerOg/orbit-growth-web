@@ -1,10 +1,7 @@
-import { CTA, Section, StaffCard, Typography } from '@/components';
+import { Section, StaffCard, Typography } from '@/components';
 import { getStaff } from '@/lib/sanity/sanity.methods';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import DusBridge from '../../../../public/about/DusBridge.jpg';
-import HeroBackground from '../../../../public/about/HeroBackground.png';
-import TeamBackground from '../../../../public/about/TeamBackground.png';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -15,6 +12,62 @@ export default async function AboutPage() {
 
   return (
     <>
+      {/* Hero */}
+      <Section>
+        <Image
+          alt=""
+          src={
+            'https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          }
+          fill
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="w-full h-full absolute bg-slate-900/70" />
+        <Section.Wrapper>
+          <Section.Content className="pb-44 pt-72 lg:pt-[30rem] lg:pb-52 relative z-30">
+            <h1 className="sm:text-6xl sm:leading-none text-4xl leading-10 text-white font-bold tracking-tight max-w-3xl text-left">
+              Gute Webseiten waren noch nie so einfach
+            </h1>
+            <h2 className="mt-6 text-lg leading-8 text-slate-200 max-w-2xl text-left">
+              OrbitGrowth ist eine Webdesign Agentur aus Ratingen, die sich auf
+              das Designen und Entwickeln von Webseiten für lokale Unternehmen
+              spezialisiert hat.
+            </h2>
+          </Section.Content>
+        </Section.Wrapper>
+      </Section>
+      {/* <Section className="mt-0 md:mt-6 xl:mt-24 overflow-hidden">
+        <Section.Wrapper>
+          <Section.Content className="relative">
+            <div className="h-24 border-x border-dashed border-inherit relative">
+              <div className="h-full absolute botttom-0 -left-[1px] -right-[1px] bg-gradient-to-b from-white to-white/0" />
+            </div>
+            <div className="border border-slate-200/90 border-dashed p-6 flex justify-center items-center relative">
+              <h1 className="sm:text-6xl sm:leading-none text-4xl leading-10 text-slate-900 font-bold tracking-tight max-w-3xl text-center">
+                Gute Webseiten waren noch nie so einfach
+              </h1>
+            </div>
+            <div className="border border-t-0 border-slate-200/90 border-dashed p-6 flex justify-center items-center">
+              <h2 className="text-lg leading-8 text-slate-500 max-w-2xl text-center">
+                OrbitGrowth ist eine Webdesign Agentur aus Ratingen, die sich
+                auf das Designen und Entwickeln von Webseiten für lokale
+                Unternehmen spezialisiert hat.
+              </h2>
+            </div>
+            <div className="border border-t-0 border-slate-200/90 border-dashed flex justify-center items-center relative">
+              <div className="border-x border-slate-200/90 border-dashed p-6 flex justify-center items-center gap-6 flex-wrap">
+                <Button href={'#contact'}>Kontakt aufnehmen</Button>
+                <Button href="/projects" variant={'secondary'}>
+                  Referenzen{' '}
+                  <span>
+                    <ArrowRightIcon className="w-4" />
+                  </span>
+                </Button>
+              </div>
+            </div>
+          </Section.Content>
+        </Section.Wrapper>
+      </Section>
       <Section>
         <div className="absolute w-full h-full -z-20">
           <Image
@@ -44,10 +97,10 @@ export default async function AboutPage() {
             </div>
           </Section.Content>
         </Section.Wrapper>
-      </Section>
-      <div className=" w-full h-28" />
-      <Section>
-        <Section.Wrapper>
+      </Section> */}
+      {/* About (Paragraph) */}
+      <Section className="antialiased border-b border-slate-200/90 border-dashed">
+        <Section.Wrapper className="py-52 border-0 md:border-x border-dashed border-inherit">
           <Section.Content>
             <Typography variant={'h3'}>Our mission</Typography>
             <div className="grid grid-cols-1 lg:grid-cols-4 mt-6 gap-x-16 gap-y-24">
@@ -94,29 +147,33 @@ export default async function AboutPage() {
                 </div>
               </div>
             </div>
-            <div className="mt-32 w-full h-60 sm:h-96 relative rounded-xl shadow-xl">
+            {/* <div className="mt-32 w-full h-60 sm:h-96 relative rounded-xl shadow-xl">
               <Image
                 alt=""
                 src={DusBridge}
                 fill
                 className="object-cover object-center rounded-xl"
               />
-            </div>
+            </div> */}
           </Section.Content>
         </Section.Wrapper>
       </Section>
-      <div className="w-full h-96" />
-      <Section>
-        <div className="absolute w-full h-full -z-20">
+      {/* Image */}
+      <Section className="antialiased border-b border-slate-200/90 border-dashed">
+        <Section.Wrapper className="border-0 md:border-x border-dashed border-inherit h-96 relative">
           <Image
-            src={TeamBackground}
+            src={
+              'https://images.pexels.com/photos/361527/pexels-photo-361527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            }
             fill
-            quality={100}
-            alt="Background Image for Team Section"
-            className="object-fill contain object-center"
+            alt=""
+            className="object-cover object-center"
           />
-        </div>
-        <Section.Wrapper>
+        </Section.Wrapper>
+      </Section>
+      {/* Team */}
+      <Section className="antialiased border-b border-slate-200/90 border-dashed">
+        <Section.Wrapper className="pt-72 pb-52 border-0 md:border-x border-dashed border-inherit">
           <Section.Content className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             <div className="lg:col-span-2">
               <Typography variant={'h3'}>Our Team</Typography>
@@ -132,45 +189,13 @@ export default async function AboutPage() {
                 staffMembers.map((contributor, key) => {
                   return <StaffCard staff={contributor} key={key} />;
                 })}
-              {/* <div>
-                <div className="w-full relative h-96 group">
-                  <Image
-                    src={ChrisProfile}
-                    alt="chris"
-                    fill
-                    className="object-cover object-center rounded-lg"
-                  />
-                </div>
-                <p className="text-base font-semibold text-slate-900 mt-6">
-                  Paul Kosche
-                </p>
-                <p className="text-sm text-slate-600 mt-1">
-                  Kundenbetreuung, Projektleitung
-                </p>
-              </div>
-              <div>
-                <div className="w-full relative h-96 group">
-                  <Image
-                    src={ChrisProfile}
-                    alt="chris"
-                    fill
-                    className="object-cover object-center rounded-lg"
-                  />
-                </div>
-                <p className="text-base font-semibold text-slate-900 mt-6">
-                  Christoph Langer
-                </p>
-                <p className="text-sm text-slate-600 mt-1">
-                  Designer, Front-End Developer
-                </p>
-              </div> */}
             </div>
           </Section.Content>
         </Section.Wrapper>
       </Section>
-      <div className=" w-full h-96" />
+      {/* <div className=" w-full h-96" />
       <CTA />
-      <div className=" w-full h-96" />
+      <div className=" w-full h-96" /> */}
     </>
   );
 }

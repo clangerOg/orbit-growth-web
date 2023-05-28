@@ -14,6 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <Link
       {...props}
+      scroll={false}
       className={cn(buttonVariants({ variant, size, className }))}
     >
       {children}

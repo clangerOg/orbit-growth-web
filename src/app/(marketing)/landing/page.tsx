@@ -45,14 +45,14 @@ export default async function Page() {
                 )}
               />
               <h1 className="sm:text-6xl sm:leading-none text-4xl leading-10 text-slate-900 font-bold tracking-tight max-w-3xl text-center">
-                Websites for people that need them.
+                Gute Webseiten waren noch nie so einfach
               </h1>
             </div>
             <div className="border border-t-0 border-slate-200/90 border-dashed p-6 flex justify-center items-center">
-              <h2 className="text-lg leading-8 text-slate-600 max-w-2xl text-center">
-                Experience our top notch website designs which helped other
-                businesses to go from flop to top. Are you ready to be the next
-                one?
+              <h2 className="text-lg leading-8 text-slate-500 max-w-2xl text-center">
+                OrbitGrowth ist eine Webdesign Agentur aus Ratingen, die sich
+                auf das Designen und Entwickeln von Webseiten für lokale
+                Unternehmen spezialisiert hat.
               </h2>
             </div>
             <div className="border border-t-0 border-slate-200/90 border-dashed flex justify-center items-center relative">
@@ -63,9 +63,13 @@ export default async function Page() {
                 )}
               />
               <div className="border-x border-slate-200/90 border-dashed p-6 flex justify-center items-center gap-6 flex-wrap">
-                <Button href={'/'}>Get in touch</Button>
-                <Button href="/" variant={'secondary'}>
-                  See other projects
+                <a href="#contact">Click me</a>
+                <Button href={'#contact'}>Kontakt aufnehmen</Button>
+                <Button href="/projects" variant={'secondary'}>
+                  Referenzen{' '}
+                  <span>
+                    <ArrowRightIcon className="w-4" />
+                  </span>
                 </Button>
               </div>
             </div>
@@ -84,12 +88,12 @@ export default async function Page() {
           <Section.Content>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <h3 className="sm:text-4xl text-3xl text-slate-900 font-bold tracking-tight max-w-2xl text-left">
-                Boost you productivity. Start using our app today.
+                Gute Webseiten waren noch nie so einfach.
               </h3>
               <h4 className="text-lg leading-8 text-slate-500 max-w-3xl text-left mt-0.5">
-                Überall dieselbe alte Leier. Das Layout ist fertig, der Text
-                lässt auf sich warten. Damit das Layout nun nicht nackt im Raume
-                steht und sich klein und leer vorkommt, springe ich ein.
+                Als eine junge Webdesign Agentur bieten wir Qualitäten, die
+                andere Agenturen nicht erreichen können. Unser Ziel ist es
+                preiswerte Webseiten für jeden zu ermöglichen.
               </h4>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-8">
@@ -98,9 +102,9 @@ export default async function Page() {
                   <span className="font-semibold text-slate-900">
                     Pixelperfect Design.
                   </span>{' '}
-                  Als junges Team sind Sie in der Lage, frische und kreative
-                  Ideen zu entwickeln, die den Geschmack Ihrer Kunden treffen
-                  und sich von der Masse abheben.
+                  Als junges Team sind wir in der Lage, frische und kreative
+                  Ideen zu entwicklen, die sich von der Masse abheben und auf
+                  deine Bedürfnisse amßgeschneidert sind.
                 </p>
               </div>
               <div className="p-6 rounded-md border border-slate-200 h-fit">
@@ -108,10 +112,13 @@ export default async function Page() {
                   <span className="font-semibold text-slate-900">
                     High-End-Webentwicklung.
                   </span>{' '}
-                  Als Webentwickler können wir sicherstellen, dass Sie eine
+                  Unsere Agentur setzt auf moderne Webtechnologien, wie Webflow,
+                  mit denen wir sicherstellen können, dass du immer eine
+                  technisch einwandfreie und optimierte Webseite erhalten wirst.
+                  {/* Als Webentwickler können wir sicherstellen, dass Sie eine
                   technisch einwandfreie und optimierte Webseite erhalten, die
                   auf die individuellen Bedürfnisse ihrer Zielgruppe
-                  zugeschnitten ist.
+                  zugeschnitten ist. */}
                 </p>
               </div>
               <div className="p-6 rounded-md border border-slate-200 h-fit">
@@ -119,7 +126,7 @@ export default async function Page() {
                   <span className="font-semibold text-slate-900">
                     Schnelle Umsetzung.
                   </span>{' '}
-                  Als junges und agiles Team können Sie Projekte schnell und
+                  Als junges und agiles Team können wir Projekte schnell und
                   effizient umsetzen, ohne Kompromisse bei der Qualität
                   einzugehen.
                 </p>
@@ -137,10 +144,14 @@ export default async function Page() {
                 Projekte, mit denen wir überzeugen können
               </h3>
               <h4 className="text-lg leading-8 text-slate-500 max-w-3xl mt-4">
-                Entdecken Sie unsere beeindruckende Webdesign-Arbeit und lassen
+                Entdecke unsere Vorzeigeprojekte, mit denen wir verschiedenen
+                Kunden bereits helfen konnten, ihre Webpräsenz zu verbessern.
+                Von eleganten Unternehmenswebsites bis hin zu
+                benutzerfreundlichen E-Commerce-Plattformen
+                {/* Entdecken Sie unsere beeindruckende Webdesign-Arbeit und lassen
                 Sie sich von unseren vielfältigen Projekten inspirieren. Von
                 eleganten Unternehmenswebsites bis hin zu benutzerfreundlichen
-                E-Commerce-Plattformen
+                E-Commerce-Plattformen */}
               </h4>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 mt-20 gap-8 relative">
@@ -250,13 +261,12 @@ export default async function Page() {
               <div className="h-full">
                 <div className="sticky top-52">
                   <h3 className="sm:text-4xl text-3xl text-slate-900 font-bold tracking-tight max-w-2xl">
-                    Projekte, mit denen wir überzeugen können
+                    Ein klarer Plan, der immer zum Ziel führt.
                   </h3>
                   <h4 className="text-lg leading-8 text-slate-500 max-w-3xl mt-4">
-                    Entdecken Sie unsere beeindruckende Webdesign-Arbeit und
-                    lassen Sie sich von unseren vielfältigen Projekten
-                    inspirieren. Von eleganten Unternehmenswebsites bis hin zu
-                    benutzerfreundlichen E-Commerce-Plattformen
+                    Unser Team arbeitet nach einem festen und stukturiertem
+                    Ablauf, damit am Ende alle deine Wünsche erfüllt werden.
+                    Ganz nach dem Motto &quot;Der Weg ist das Ziel&quot;.
                   </h4>
                 </div>
               </div>
@@ -371,7 +381,10 @@ export default async function Page() {
         </Section.Wrapper>
       </Section>
       {/* Contact */}
-      <Section className="antialiased border-b border-slate-200/90 border-dashed">
+      <Section
+        id="contact"
+        className="antialiased border-b border-slate-200/90 border-dashed"
+      >
         <Section.Wrapper className="py-80 border-0 md:border-x border-dashed border-inherit">
           <Section.Content className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="">
