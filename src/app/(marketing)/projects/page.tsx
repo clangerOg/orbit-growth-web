@@ -1,9 +1,6 @@
-import { Section } from '@/components/common';
+import { ProjectThumbnail, Section } from '@/components/common';
 import { getThumbnailProjects } from '@/lib/sanity/sanity.methods';
 import { ThumbnailProjectType } from '@/lib/sanity/types/project.type';
-import { ArrowUpRightIcon } from '@heroicons/react/20/solid';
-import Image from 'next/image';
-import Link from 'next/link';
 
 export default async function ProjectsPage() {
   const projects: ThumbnailProjectType[] = await getThumbnailProjects();
@@ -61,26 +58,7 @@ export default async function ProjectsPage() {
           <Section.Content className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {projects.map((project, index) => {
               return (
-                <Link href={`projects/${project.slug}`} key={`pr-${index}`}>
-                  <div className="w-full h-52 md:h-96 relative group">
-                    <div className="w-full h-full flex justify-center items-center bg-slate-900/50 opacity-0 group-hover:opacity-100 rounded-lg z-20 absolute transition-opacity duration-150 p-8">
-                      <div className="rounded-full border-2 border-slate-400 px-2.5 py-1">
-                        <p className="text-white font-medium inline-flex items-center justify-center gap-2 text-sm">
-                          {project.title}
-                          <span className="w-4">
-                            <ArrowUpRightIcon className="w-full" />
-                          </span>
-                        </p>
-                      </div>
-                    </div>
-                    <Image
-                      src={project.thumbnailSrc}
-                      alt=""
-                      fill
-                      className="object-cover object-center rounded-lg border border-slate-200"
-                    />
-                  </div>
-                </Link>
+                <ProjectThumbnail project={project} key={`#pr-${index}`} />
               );
             })}
           </Section.Content>

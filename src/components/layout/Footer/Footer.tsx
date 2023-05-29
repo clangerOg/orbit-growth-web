@@ -78,8 +78,9 @@ const Template: React.FC<TemplateProps> = () => {
               })}
             </div>
             <div className="px-6">
-              <p className="text-center text-sm text-slate-400">
-                © 2020 Your Company, Inc. All rights reserved.
+              <p className="text-center text-sm text-slate-500">
+                © 2023 Kosche Langer GbR Webdesign Agentur. Alle Rechte
+                vorbehalten.
               </p>
             </div>
           </Section.Content>
