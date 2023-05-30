@@ -7,7 +7,6 @@ import {
 } from '@heroicons/react/24/solid';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
 import { LocalBusiness, WithContext } from 'schema-dts';
 import '../globals.css';
 
@@ -121,8 +120,8 @@ export default function RootLayout({
   return (
     <html lang="de" className={inter.className}>
       <body>
-        <Script
-          id="structuredData"
+        <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <main>

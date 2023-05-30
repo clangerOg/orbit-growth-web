@@ -1,12 +1,16 @@
 import { Section, Typography } from '@/components/common';
+import classNames from 'classnames';
 import React from 'react';
 import { ProcessSectionProps } from './ProcessSection.types';
 
 const StepCard: React.FC<
   React.HtmlHTMLAttributes<HTMLDivElement> & { title: string }
-> = ({ title, children, ...props }) => {
+> = ({ title, children, className, ...props }) => {
   return (
-    <div className="w-full p-6 bg-slate-50 rounded-md">
+    <div
+      {...props}
+      className={classNames('w-full p-6 bg-slate-50 rounded-md', className)}
+    >
       <p className="text-base text-slate-500 leading-7">
         <span className="text-slate-900 font-semibold">{title} </span>{' '}
         {children}
