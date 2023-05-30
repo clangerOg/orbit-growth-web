@@ -20,6 +20,18 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://orbitgrowth.de/',
   },
+  openGraph: {
+    title: 'OrbitGrowth',
+    description: 'Webdesign Agentur aus Ratingen, NRW',
+    url: 'https://orbitgrowth.de',
+    type: 'website',
+    countryName: 'Germany',
+    locale: 'DE',
+  },
+  twitter: {
+    title: 'OrbitGrowth',
+    description: 'Webdesign Agentur aus Ratingen, NRW',
+  },
 };
 
 const HeaderLinks: HeaderLink[] = [
