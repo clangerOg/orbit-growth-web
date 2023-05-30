@@ -1,16 +1,18 @@
 import { Section, Typography } from '@/components/common';
-import { getProject, getProjectSlugs } from '@/lib/sanity/sanity.methods';
+import {
+  getProject,
+  getProjectOGData,
+  getProjectSlugs,
+} from '@/lib/sanity/sanity.methods';
 import { Project } from '@/lib/sanity/types/project.type';
 import { formatDate } from '@/lib/utils';
 import { PortableText, PortableTextReactComponents } from '@portabletext/react';
-import { Metadata } from 'next';
+import { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
 
-type Props = {
+type PageProps = {
   params: { slug: string };
 };
-
-export const revalidate = 216000;
 
 export async function generateStaticParams() {
   const slugs: { slug: string }[] = await getProjectSlugs();
@@ -21,17 +23,47 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata(): Promise<Metadata> {
-  // { params }: Props,
-  // parent: ResolvingMetadata
-  // const slug = params.slug;
+// generate dynamic metadata
+export async function generateMetadata(
+  { params }: PageProps,
+  parent?: ResolvingMetadata
+): Promise<Metadata> {
+  // fetch prvious og image
+  const previousImages =
+    (parent != undefined && (await parent).openGraph?.images) || [];
 
-  return {
-    title: 'Project',
+  // pick slug from params
+  const slug = params.slug;
+
+  // create default (fallback) metadata object
+  let metadata: Metadata = {
+    title: {
+      absolute: 'OrbitGrowth Webdesign Agentur | Projekt',
+    },
+    description:
+      'Ein beispielhaftes Projekt, an dem unsere Agentur bereits gearbeitet hat.',
+    openGraph: {
+      images: [...previousImages],
+    },
   };
+
+  // fetch project from CMS
+  const project: Pick<Project, 'title' | 'subTitle'> = await getProjectOGData(
+    slug
+  );
+
+  // adjust metadata object
+  if (project && project.title != null && project.subTitle != null) {
+    metadata['title'] = {
+      absolute: `${project.title} | OrbitGrowth`,
+    };
+    metadata['description'] = project.subTitle.substring(0, 100).trim() + '...'; // truncate string after 100 characters
+  }
+
+  return metadata;
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: PageProps) {
   const project: Project = await getProject(params.slug);
 
   return (
@@ -65,17 +97,6 @@ export default async function Page({ params }: Props) {
             <Typography variant={'h2'} className="mt-4 text-slate-500">
               {project.subTitle}
             </Typography>
-
-            {/* <div className="my-12 flex flex-col justify-center items-center">
-              <div className="max-w-3xl">
-                <Typography variant={'h3'} className="">
-                  {project.title}
-                </Typography>
-                <Typography variant={'h4'} className="mt-4 !max-w-full">
-                  {project.subTitle}
-                </Typography>
-              </div>
-            </div> */}
           </Section.Content>
         </Section.Wrapper>
       </Section>
@@ -86,19 +107,6 @@ export default async function Page({ params }: Props) {
           components={myPortableTextComponents}
         />
       </article>
-
-      {/* <Section className="mt-96">
-        <Section.Wrapper>
-          <Section.Content className="flex flex-col items-center justify-center">
-            <div className="bg-red-400 flex flex-col justify-center items-start">
-              <PortableText
-                value={project.content}
-                components={myPortableTextComponents}
-              />
-            </div>
-          </Section.Content>
-        </Section.Wrapper>
-      </Section> */}
     </>
   );
 }

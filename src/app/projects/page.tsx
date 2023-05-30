@@ -1,6 +1,13 @@
 import { ProjectThumbnail, Section } from '@/components/common';
 import { getThumbnailProjects } from '@/lib/sanity/sanity.methods';
 import { ThumbnailProjectType } from '@/lib/sanity/types/project.type';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Unsere Projekte',
+  description:
+    'Hier findest du ein paar unserer Projekte an denen wir bereits mitgewirkt haben,',
+};
 
 export default async function ProjectsPage() {
   const projects: ThumbnailProjectType[] = await getThumbnailProjects();

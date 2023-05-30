@@ -5,7 +5,9 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'Über uns',
+  description:
+    'Erfahre mehr über unsere Agentur und welche Werte wir vertreten.',
 };
 
 export default async function AboutPage() {

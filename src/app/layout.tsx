@@ -21,7 +21,7 @@ const jsonLd: WithContext<LocalBusiness> = {
   legalName: 'Kosche und Langer GbR, Webdesign Agentur',
   url: 'https://orbitgrowth.de',
   description:
-    'Webdesign Agentur aus Ratingen, die sich auch lokale Unternehmen spezialisiert hat.',
+    'Webdesign Agentur aus Ratingen, die sich auf die Entwicklung von Webseiten für lokale Unternehmen spezialisiert hat.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Friedrich-List-Straße 4',
@@ -68,17 +68,18 @@ const jsonLd: WithContext<LocalBusiness> = {
 // Metadata
 export const metadata: Metadata = {
   title: {
-    default: 'OrbitGrowth',
-    template: '%s | OrbitGrowth',
+    default: 'OrbitGrowth Webdesign Agentur',
+    template: '%s | OrbitGrowth Webdesign Agentur',
   },
-  description: 'Webdesign Agentur aus Ratingen, NRW',
+  description:
+    'Webdesign Agentur aus Ratingen, die sich auf die Entwicklung von Webseiten für lokale Unternehmen spezialisiert hat.',
   alternates: {
     canonical: 'https://orbitgrowth.de/',
   },
   openGraph: {
     title: {
-      default: 'OrbitGrowth',
-      template: '%s | OrbitGrowth',
+      default: 'OrbitGrowth Webdesign Agentur',
+      template: '%s | OrbitGrowth Webdesign Agentur',
     },
     description: 'Webdesign Agentur aus Ratingen, NRW',
     url: 'https://orbitgrowth.de',
@@ -87,7 +88,7 @@ export const metadata: Metadata = {
     locale: 'DE',
   },
   twitter: {
-    title: 'OrbitGrowth',
+    title: 'OrbitGrowth Webdesign Agentur',
     description: 'Webdesign Agentur aus Ratingen, NRW',
   },
 };
@@ -101,17 +102,17 @@ const HeaderLinks: HeaderLink[] = [
   },
   {
     target: '/about',
-    title: 'About',
+    title: 'Über uns',
     icon: <UserIcon className="w-full" />,
   },
   {
     target: '/projects',
-    title: 'Projects',
+    title: 'Projekte',
     icon: <ClipboardDocumentIcon className="w-full" />,
   },
   {
     target: '/skills',
-    title: 'Skills',
+    title: 'Kompetenzen',
     icon: <FireIcon className="w-full" />,
   },
 ];

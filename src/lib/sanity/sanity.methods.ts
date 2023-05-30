@@ -52,6 +52,19 @@ export async function getProject(slug: string): Promise<Project> {
   return project;
 }
 
+export async function getProjectOGData(
+  slug: string
+): Promise<Pick<Project, 'title' | 'subTitle'>> {
+  const query = groq`
+  *[_type == 'project' && slug.current == "${slug}"] { title, subTitle }[0]
+  `;
+
+  const project: Promise<Pick<Project, 'title' | 'subTitle'>> =
+    clientFetch(query);
+
+  return project;
+}
+
 export async function getThumbnailProjects(): Promise<ThumbnailProjectType[]> {
   const query = groq`
   *[_type == 'project'] {
