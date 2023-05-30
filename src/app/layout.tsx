@@ -8,10 +8,12 @@ import {
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { LocalBusiness, WithContext } from 'schema-dts';
-import '../globals.css';
+import './globals.css';
 
+// Font family
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
+// Structured Data
 const jsonLd: WithContext<LocalBusiness> = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -63,6 +65,7 @@ const jsonLd: WithContext<LocalBusiness> = {
   ],
 };
 
+// Metadata
 export const metadata: Metadata = {
   title: {
     default: 'OrbitGrowth',
@@ -89,6 +92,7 @@ export const metadata: Metadata = {
   },
 };
 
+// Header Links
 const HeaderLinks: HeaderLink[] = [
   {
     target: '/',
@@ -112,6 +116,14 @@ const HeaderLinks: HeaderLink[] = [
   },
 ];
 
+// Route Segment Configuration
+export const dynamic = 'auto'; // cache as much as possible
+export const dynamicParams = true; // dynamic segments not included in generateStaticParams are generated on demand
+export const revalidate = 10800; // revalidate pages every 10800 seconds (3 hours)
+export const runtime = 'nodejs'; // use default runtime (nodejs)
+export const preferredRegion = 'all'; // set preferred region to all
+
+// Layout Component
 export default function RootLayout({
   children,
 }: {
@@ -120,6 +132,7 @@ export default function RootLayout({
   return (
     <html lang="de" className={inter.className}>
       <body>
+        {/* Bind Structured data to page */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
