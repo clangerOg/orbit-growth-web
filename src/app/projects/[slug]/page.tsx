@@ -26,7 +26,7 @@ export async function generateStaticParams() {
 // generate dynamic metadata
 export async function generateMetadata(
   { params }: PageProps,
-  parent?: ResolvingMetadata
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
   // fetch prvious og image
   const previousImages =
@@ -36,16 +36,20 @@ export async function generateMetadata(
   const slug = params.slug;
 
   // create default (fallback) metadata object
-  let metadata: Metadata = {
-    title: {
-      absolute: 'OrbitGrowth Webdesign Agentur | Projekt',
-    },
-    description:
-      'Ein beispielhaftes Projekt, an dem unsere Agentur bereits gearbeitet hat.',
-    openGraph: {
-      images: [...previousImages],
-    },
-  };
+  // let metadata: Metadata = {
+  //   title: {
+  //     absolute: 'OrbitGrowth Webdesign Agentur | Projekt',
+  //   },
+  //   description:
+  //     'Ein beispielhaftes Projekt, an dem unsere Agentur bereits gearbeitet hat.',
+  //   openGraph: {
+  //     images: [...previousImages],
+  //   },
+  // };
+
+  let title = 'OrbitGrowth Webdesign Agentur | Projekt';
+  let description =
+    'Ein beispielhaftes Projekt, an dem unsere Agentur bereits gearbeitet hat.';
 
   // fetch project from CMS
   const project: Pick<Project, 'title' | 'subTitle'> = await getProjectOGData(
@@ -54,13 +58,19 @@ export async function generateMetadata(
 
   // adjust metadata object
   if (project && project.title != null && project.subTitle != null) {
-    metadata['title'] = {
-      absolute: `${project.title} | OrbitGrowth`,
-    };
-    metadata['description'] = project.subTitle.substring(0, 100).trim() + '...'; // truncate string after 100 characters
+    (title = `${project.title} | OrbitGrowth`),
+      (description = project.subTitle.substring(0, 100).trim() + '...'); // truncate string after 100 characters
   }
 
-  return metadata;
+  return {
+    title: {
+      absolute: title,
+    },
+    description,
+    // openGraph: {
+    //   images: [...previousImages],
+    // },
+  };
 }
 
 export default async function Page({ params }: PageProps) {
