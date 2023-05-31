@@ -1,11 +1,12 @@
 import { Section, Typography } from '@/components/common';
+import { ProjectNotFoundError } from '@/lib/exceptions';
 import {
   getProject,
   getProjectOGData,
   getProjectSlugs,
 } from '@/lib/sanity/sanity.methods';
 import { Project } from '@/lib/sanity/types/project.type';
-import { formatDate } from '@/lib/utils';
+import { formatDate, formatTags } from '@/lib/utils';
 import { PortableText, PortableTextReactComponents } from '@portabletext/react';
 import { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
@@ -67,14 +68,20 @@ export async function generateMetadata(
       absolute: title,
     },
     description,
-    // openGraph: {
-    //   images: [...previousImages],
-    // },
+    openGraph: {
+      title: {
+        absolute: title,
+      },
+      description,
+      images: [...previousImages],
+    },
   };
 }
 
 export default async function Page({ params }: PageProps) {
   const project: Project = await getProject(params.slug);
+
+  if (project == null) throw new ProjectNotFoundError();
 
   return (
     <>
@@ -83,7 +90,7 @@ export default async function Page({ params }: PageProps) {
           src={project.mainImageSrc}
           fill
           alt="Project Main Image"
-          className="object-cover object-center"
+          className="object-cover object-center border-b border-dashed border-slate-200/90"
           quality={100}
         />
       </div>
@@ -97,7 +104,7 @@ export default async function Page({ params }: PageProps) {
               </div>
               <div className="">
                 <p className="mb-1.5 font-semibold text-slate-900">Tags</p>
-                <p>{project.tags.map((tag) => `${tag}, `)}</p>
+                <p>{formatTags(project.tags)}</p>
               </div>
             </div>
 
@@ -146,10 +153,5 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
         <h3>{children}</h3>
       </div>
     ),
-    // normal: ({ children }) => (
-    //   <div className="prose">
-    //     <p>{children}</p>
-    //   </div>
-    // ),
   },
 };
