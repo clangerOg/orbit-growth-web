@@ -15,6 +15,7 @@ type PageProps = {
   params: { slug: string };
 };
 
+// generate static routes
 export async function generateStaticParams() {
   const slugs: { slug: string }[] = await getProjectSlugs();
   const routes = slugs.map((slug: { slug: string }) => slug.slug);
@@ -36,18 +37,7 @@ export async function generateMetadata(
   // pick slug from params
   const slug = params.slug;
 
-  // create default (fallback) metadata object
-  // let metadata: Metadata = {
-  //   title: {
-  //     absolute: 'OrbitGrowth Webdesign Agentur | Projekt',
-  //   },
-  //   description:
-  //     'Ein beispielhaftes Projekt, an dem unsere Agentur bereits gearbeitet hat.',
-  //   openGraph: {
-  //     images: [...previousImages],
-  //   },
-  // };
-
+  // fallback title and description
   let title = 'OrbitGrowth Webdesign Agentur | Projekt';
   let description =
     'Ein beispielhaftes Projekt, an dem unsere Agentur bereits gearbeitet hat.';
@@ -78,7 +68,7 @@ export async function generateMetadata(
   };
 }
 
-export default async function Page({ params }: PageProps) {
+export default async function ProjectPage({ params }: PageProps) {
   const project: Project = await getProject(params.slug);
 
   if (project == null) throw new ProjectNotFoundError();

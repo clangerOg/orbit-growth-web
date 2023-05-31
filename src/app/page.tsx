@@ -12,7 +12,7 @@ import { getThumbnailProjects } from '@/lib/sanity/sanity.methods';
 import { ThumbnailProjectType } from '@/lib/sanity/types/project.type';
 import Image from 'next/image';
 
-export default async function Page() {
+export default async function HomePage() {
   const projects: ThumbnailProjectType[] = await getThumbnailProjects();
 
   return (

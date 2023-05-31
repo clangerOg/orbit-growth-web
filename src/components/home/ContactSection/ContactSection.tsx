@@ -14,12 +14,11 @@ const ContactSection: React.FC<ContactSectionProps> = () => {
         <Section.Content className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="">
             <h3 className="sm:text-4xl text-3xl text-slate-900 font-bold tracking-tight max-w-2xl text-left">
-              Boost you productivity. Start using our app today.
+              Vereinbare noch heute ein Gespräch zur kostenlosen Erstberatung.
             </h3>
             <h4 className="text-lg leading-8 text-slate-500 max-w-3xl text-left mt-4">
-              Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt
-              auf sich warten. Damit das Layout nun nicht nackt im Raume steht
-              und sich klein und leer vorkommt, springe ich ein.
+              Hinterlasse uns eine Nachricht oder rufe uns an, damit wir ein
+              gemeinsames Gespräch vereinbaren können. Wir freuen uns auf dich!
             </h4>
             <div className="mt-12 flex flex-col gap-6">
               <Link

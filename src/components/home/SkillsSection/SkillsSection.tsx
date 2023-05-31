@@ -25,16 +25,16 @@ const SkillsSection: React.FC<SkillsSectionProps> = () => {
             >
               Als junges Team sind wir in der Lage, frische und kreative Ideen
               zu entwicklen, die sich von der Masse abheben und auf deine
-              Bedürfnisse amßgeschneidert sind.
+              Bedürfnisse maßgeschneidert sind.
             </SkillCard>
             <SkillCard title="High-End-Webentwicklung.">
-              Unsere Agentur setzt auf moderne Webtechnologien, wie Webflow, mit
-              denen wir sicherstellen können, dass du immer eine technisch
-              einwandfreie und optimierte Webseite erhalten wirst.
+              Wir setzen auf moderne Webtechnologien, wie Webflow, mit denen wir
+              sicherstellen können, dass du immer eine technisch einwandfreie
+              und optimierte Webseite erhalten wirst.
             </SkillCard>
-            <SkillCard title="Schnelle Umsetzung.">
-              Als junges und agiles Team können wir Projekte schnell und
-              effizient umsetzen, ohne Kompromisse bei der Qualität einzugehen.
+            <SkillCard title="Faire Preise.">
+              Wir glauben, dass jedes Unternehmen Zugang zu einer einwandfreien
+              Webseite haben und dass Kosten keine Blockade sein sollten.
             </SkillCard>
           </div>
         </Section.Content>

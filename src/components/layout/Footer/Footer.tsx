@@ -9,23 +9,23 @@ const footerLinks: { title: string; href: string }[] = [
     href: '/',
   },
   {
-    title: 'About',
+    title: 'Über uns',
     href: '/about',
   },
   {
-    title: 'Projects',
+    title: 'Projekte',
     href: '/projects',
   },
   {
-    title: 'Contact',
-    href: '/contact',
+    title: 'Kontakt',
+    href: '/#contact',
   },
   {
-    title: 'Skills',
+    title: 'Kompetenzen',
     href: '/skills',
   },
   {
-    title: 'Legal',
+    title: 'Rechtliches',
     href: '/legal',
   },
   {
@@ -48,7 +48,7 @@ const Template: React.FC<TemplateProps> = () => {
             <div className="bg-slate-900 w-full rounded-lg flex flex-wrap justify-between items-center p-8 md:p-16 shadow-xl gap-16">
               <div>
                 <h3 className="text-center sm:text-left sm:text-4xl text-3xl text-white font-bold tracking-tight max-w-md">
-                  Are you ready for takeoff? We are!
+                  Wodrauf wartest du noch? Wir sind startklar!
                 </h3>
               </div>
               <div className="flex flex-wrap gap-6 md:gap-8 items-center">
@@ -58,7 +58,7 @@ const Template: React.FC<TemplateProps> = () => {
                   className="w-full sm:w-fit"
                   useDefaultArrow
                 >
-                  Kontakt aufnehmen
+                  Jetzt Kontakt aufnehmen
                 </Button>
                 <Button
                   href="/projects"

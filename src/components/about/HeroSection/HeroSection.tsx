@@ -21,9 +21,8 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               Gute Webseiten waren noch nie so einfach
             </Typography>
             <Typography variant={'h2'} className="mt-6 text-slate-200">
-              OrbitGrowth ist eine Webdesign Agentur aus Ratingen, die sich auf
-              das Designen und Entwickeln von Webseiten für lokale Unternehmen
-              spezialisiert hat.
+              Erfahre mehr über unsere Agenturwelche Werte wir vertreten und wie
+              wir arbeiten.
             </Typography>
           </div>
         </Section.Content>

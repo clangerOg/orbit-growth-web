@@ -29,7 +29,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               direction={'vertical'}
             />
             <Typography variant={'h1'} className="max-w-3xl text-center">
-              Gute Webseiten waren noch nie so einfach
+              Herausragende Webseiten für lokale Unternehmen, zu fairen Preisen.
             </Typography>
           </div>
 

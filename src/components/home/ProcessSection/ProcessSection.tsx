@@ -39,18 +39,18 @@ const ProcessSection: React.FC<ProcessSectionProps> = () => {
             </div>
             <div>
               <StepCard title="Kostenlose Erstberatung.">
-                Wir beginnen mit einem persönlichen Gespräch, um Ihre
+                Wir beginnen mit einem persönlichen Gespräch, um deine
                 Anforderungen, Ziele und Vorstellungen zu verstehen.
               </StepCard>
               <div className="w-1/2 h-8 border-r-2 border-dashed border-slate-300" />
               <StepCard title="Konzeptentwicklung.">
-                Unser Team erstellt ein maßgeschneidertes Konzept für Ihre
-                Website, das Ihre Marke und Zielgruppe berücksichtigt.
+                Unser Team erstellt ein maßgeschneidertes Konzept für deine
+                Website, das deine Marke und Zielgruppe berücksichtigt.
               </StepCard>
               <div className="w-1/2 h-8 border-r-2 border-dashed border-slate-300" />
               <StepCard title="Designphase.">
                 Wir gestalten ein ansprechendes und benutzerfreundliches Design,
-                das Ihre Markenidentität widerspiegelt und eine positive
+                das deine Markenidentität widerspiegelt und eine positive
                 Nutzererfahrung bietet.
               </StepCard>
               <div className="w-1/2 h-8 border-r-2 border-dashed border-slate-300" />
@@ -61,15 +61,15 @@ const ProcessSection: React.FC<ProcessSectionProps> = () => {
               </StepCard>
               <div className="w-1/2 h-8 border-r-2 border-dashed border-slate-300" />
               <StepCard title="Feinabstimmung und Optimierung.">
-                Wir nehmen Ihre Anmerkungen und Anpassungswünsche entgegen und
+                Wir nehmen deine Anmerkungen und Anpassungswünsche entgegen und
                 optimieren die Website für ein optimales Ergebnis.
               </StepCard>
               <div className="w-1/2 h-8 border-r-2 border-dashed border-slate-300" />
               <StepCard title="Ongoing Support.">
-                Wir bieten Ihnen kontinuierlichen Support und stehen Ihnen auch
-                nach dem Launch mit Updates, Wartung und technischem Support zur
+                Wir bieten dir kontinuierlichen Support und stehen dir auch nach
+                dem Launch mit Updates, Wartung und technischem Support zur
                 Seite.
-              </StepCard>{' '}
+              </StepCard>
             </div>
           </div>
         </Section.Content>

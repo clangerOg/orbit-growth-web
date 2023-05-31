@@ -32,18 +32,6 @@ const jsonLd: WithContext<LocalBusiness> = {
     addressRegion: 'NRW',
     areaServed: 'DE',
   },
-  review: {
-    '@type': 'Review',
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '4',
-      bestRating: '5',
-    },
-    author: {
-      '@type': 'Person',
-      name: 'Mike Jones',
-    },
-  },
   telephone: '+4917657600680',
   geo: {
     '@type': 'GeoCoordinates',
