@@ -47,15 +47,24 @@ const Template: React.FC<TemplateProps> = () => {
           <Section.Content className="flex justify-center items-center">
             <div className="bg-slate-900 w-full rounded-lg flex flex-wrap justify-between items-center p-8 md:p-16 shadow-xl gap-16">
               <div>
-                <h3 className="sm:text-4xl text-3xl text-white font-bold tracking-tight max-w-md">
+                <h3 className="text-center sm:text-left sm:text-4xl text-3xl text-white font-bold tracking-tight max-w-md">
                   Are you ready for takeoff? We are!
                 </h3>
               </div>
               <div className="flex flex-wrap gap-6 md:gap-8 items-center">
-                <Button href="/contact" variant={'tertiary'}>
+                <Button
+                  href="/#contact"
+                  variant={'tertiary'}
+                  className="w-full sm:w-fit"
+                  useDefaultArrow
+                >
                   Kontakt aufnehmen
                 </Button>
-                <Button href="/projects" variant={'quaternary'}>
+                <Button
+                  href="/projects"
+                  variant={'quaternary'}
+                  className="w-full sm:w-fit"
+                >
                   Projekte betrachten
                 </Button>
               </div>
@@ -79,7 +88,7 @@ const Template: React.FC<TemplateProps> = () => {
             </div>
             <div className="px-6">
               <p className="text-center text-sm text-slate-500">
-                © 2023 Kosche Langer GbR Webdesign Agentur. Alle Rechte
+                © 2023 Kosche Langer GbR, Webdesign Agentur. Alle Rechte
                 vorbehalten.
               </p>
             </div>

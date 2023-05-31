@@ -40,7 +40,7 @@ const HeaderDropdown: React.FC<HeaderDropdownProps> = ({ links }) => {
               Ready for takeoff?
             </p>
             <Menu.Item>
-              <Button href="/contact" size={'sm'} variant={'default'}>
+              <Button href="/#contact" size={'sm'} variant={'default'}>
                 Kontakt
                 <span>
                   <ArrowRightIcon className="w-4" />

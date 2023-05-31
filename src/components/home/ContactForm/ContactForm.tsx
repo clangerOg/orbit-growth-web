@@ -1,5 +1,7 @@
 'use client';
 
+import { buttonVariants } from '@/components/common';
+import { PaperAirplaneIcon } from '@heroicons/react/20/solid';
 import * as Form from '@radix-ui/react-form';
 import classNames from 'classnames';
 import { HTMLInputTypeAttribute } from 'react';
@@ -37,8 +39,17 @@ const ContactForm: React.FC<ContactFormProps> = () => {
         </Form.Control>
       </Form.Field>
       <Form.Submit asChild>
-        <button className="inline-flex justify-center rounded-lg text-sm font-semibold transition-colors w-full col-span-2 items-center gap-2 bg-slate-900 text-white hover:bg-slate-700 py-3 px-4 focus:ring-2 ring-offset-4 ring-blue-500">
+        <button
+          className={buttonVariants({
+            variant: 'default',
+            size: 'default',
+            className: 'w-full col-span-2',
+          })}
+        >
           Absenden
+          <span className="w-4">
+            <PaperAirplaneIcon className="w-full" />
+          </span>
         </button>
       </Form.Submit>
     </Form.Root>

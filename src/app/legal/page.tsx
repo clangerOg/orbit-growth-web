@@ -1243,6 +1243,73 @@ export default function LegalPage() {
           </Section.Content>
         </Section.Wrapper>
       </Section>
+      <Section>
+        <Section.Wrapper>
+          <Section.Content>
+            <h1 className="adsimple-322511285">Impressum</h1>
+            <p className="adsimple-322511285">
+              Angaben gemäß Informationspflicht laut § 5 Telemediengesetz (TMG).
+            </p>
+            <p className="adsimple-322511285">
+              Kosche und Langer GbR, Webdesign Agentur
+              <br />
+              Friedrich-List-Straße 4, <br />
+              40882 Musterhausen, <br />
+              Deutschland
+            </p>
+            <p className="adsimple-322511285">
+              <strong>UID-Nummer:</strong> DE12345678
+              <br />
+              <strong>Wirtschafts-ID:</strong> DE123456789
+            </p>
+            <p className="adsimple-322511285">
+              <strong>Tel.:</strong> 01234/56789
+              <br />
+              <strong>Fax:</strong> 01234/56789-0
+              <br />
+              <strong>E-Mail:</strong>{' '}
+              <a href="mailto:we@orbitgrowth.de">we@orbitgrowth.de</a>
+            </p>
+            <p className="adsimple-322511285">
+              <strong>Aufsichtsbehörde</strong>
+              <br />
+              Bezirkshauptmannschaft Musterhausen
+              <br />
+              <strong>Webseite der Aufsichtsbehörde</strong>
+              <br />
+              <a
+                href="https://www.aufsichtsbeoerde-musterhausen.de/"
+                target="_blank"
+                rel="noopener"
+              >
+                https://www.aufsichtsbeoerde-musterhausen.de/
+              </a>
+              <br />
+              <strong>Anschrift der Aufsichtsbehörde</strong>
+              <br /> Musterweg 1, 12345 Musterhausen
+            </p>
+            <p className="adsimple-322511285">
+              <strong>Berufsbezeichnung:</strong> Webdesigner, Webentwickler
+            </p>
+            <p className="adsimple-322511285">
+              <strong>Vertreten durch die Gesellschafter</strong>
+              <br />
+              Paul Georg Kosche, Christoph Sebastian Langer
+            </p>
+            <p>Alle Texte sind urheberrechtlich geschützt.</p>
+            <p>
+              Quelle: Erstellt mit dem{' '}
+              <a
+                href="https://www.adsimple.de/impressum-generator/"
+                title="Impressum Generator von AdSimple für Deutschland"
+              >
+                Impressum Generator
+              </a>{' '}
+              von AdSimple
+            </p>
+          </Section.Content>
+        </Section.Wrapper>
+      </Section>
     </>
   );
 }

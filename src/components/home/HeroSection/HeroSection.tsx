@@ -49,8 +49,15 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             />
             {/* Button Wrapper */}
             <div className="border-x border-slate-200/90 border-dashed p-4 md:p-6 flex justify-center items-center gap-6 flex-wrap">
-              <Button href={'#contact'}>Kontakt aufnehmen</Button>
-              <Button href="/projects" variant={'secondary'} useDefaultArrow>
+              <Button href={'#contact'} className="w-full sm:w-fit">
+                Kontakt aufnehmen
+              </Button>
+              <Button
+                href="/projects"
+                variant={'secondary'}
+                className="w-full sm:w-fit"
+                useDefaultArrow
+              >
                 Referenzen
               </Button>
             </div>
