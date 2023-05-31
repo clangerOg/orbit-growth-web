@@ -4,12 +4,22 @@ import { getStaff } from '@/lib/sanity/sanity.methods';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
+// store values to prevent redundancies
+const title = 'Über uns';
+const description =
+  'Erfahre mehr über unsere Agenturwelche Werte wir vertreten und wie wir arbeiten.';
+
+// export metadata object
 export const metadata: Metadata = {
-  title: 'Über uns',
-  description:
-    'Erfahre mehr über unsere Agentur und welche Werte wir vertreten.',
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+  },
 };
 
+// export page function
 export default async function AboutPage() {
   const staffMembers = await getStaff();
 

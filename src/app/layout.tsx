@@ -90,6 +90,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'OrbitGrowth Webdesign Agentur',
     description: 'Webdesign Agentur aus Ratingen, NRW',
+    card: 'summary_large_image',
   },
 };
 
