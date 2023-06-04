@@ -5,6 +5,7 @@ import {
   HomeIcon,
   UserIcon,
 } from '@heroicons/react/24/solid';
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { LocalBusiness, WithContext } from 'schema-dts';
@@ -128,9 +129,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <main>
+          {/* <CookieBanner /> */}
           <Header links={HeaderLinks} />
           {children}
           <Footer />
+          <Analytics />
         </main>
       </body>
     </html>

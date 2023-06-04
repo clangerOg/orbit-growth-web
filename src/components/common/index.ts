@@ -5,6 +5,12 @@ export { default as Button } from './Button';
 export * from './CTA';
 export { default as CTA } from './CTA';
 // -----------------------------------------------------
+export * from './CookieBanner';
+export { default as CookieBanner } from './CookieBanner';
+// -----------------------------------------------------
+export * from './GoogleAnalytics';
+export { default as GoogleAnalytics } from './GoogleAnalytics';
+// -----------------------------------------------------
 export * from './Logo';
 export { default as Logo } from './Logo';
 // -----------------------------------------------------
