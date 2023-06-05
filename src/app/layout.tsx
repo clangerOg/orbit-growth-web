@@ -56,6 +56,7 @@ const jsonLd: WithContext<LocalBusiness> = {
 
 // Metadata
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.orbitgrowth.de'),
   title: {
     default: 'OrbitGrowth Webdesign Agentur',
     template: '%s | OrbitGrowth Webdesign Agentur',
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
   description:
     'Webdesign Agentur aus Ratingen, die sich auf die Entwicklung von Webseiten für lokale Unternehmen spezialisiert hat.',
   alternates: {
-    canonical: 'https://orbitgrowth.de/',
+    canonical: '/',
   },
   openGraph: {
     title: {
