@@ -1,6 +1,5 @@
+import { BASE_URL } from '@/lib/consts';
 import { MetadataRoute } from 'next';
-
-const BASE_URL = 'https://www.orbitgrowth.de';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

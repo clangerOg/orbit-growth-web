@@ -1,4 +1,5 @@
 import { Footer, Header, HeaderLink } from '@/components/layout';
+import { BASE_URL } from '@/lib/consts';
 import {
   ClipboardDocumentIcon,
   FireIcon,
@@ -20,7 +21,7 @@ const jsonLd: WithContext<LocalBusiness> = {
   '@type': 'ProfessionalService',
   name: 'Orbitgrowth Webdesign Agentur',
   legalName: 'Kosche und Langer GbR, Webdesign Agentur',
-  url: 'https://orbitgrowth.de',
+  url: BASE_URL,
   description:
     'Webdesign Agentur aus Ratingen, die sich auf die Entwicklung von Webseiten für lokale Unternehmen spezialisiert hat.',
   address: {
@@ -56,7 +57,7 @@ const jsonLd: WithContext<LocalBusiness> = {
 
 // Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.orbitgrowth.de'),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: 'OrbitGrowth Webdesign Agentur aus Ratingen.',
     template: '%s | OrbitGrowth Webdesign Agentur',
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
       template: '%s | OrbitGrowth Webdesign Agentur',
     },
     description: 'Webdesign Agentur aus Ratingen, NRW',
-    url: 'https://orbitgrowth.de',
+    url: BASE_URL,
     type: 'website',
     countryName: 'Germany',
     locale: 'DE',
