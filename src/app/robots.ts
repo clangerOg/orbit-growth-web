@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://orbitgrowth.de';
+const BASE_URL = 'https://www.orbitgrowth.de';
 
 export default function robots(): MetadataRoute.Robots {
   return {

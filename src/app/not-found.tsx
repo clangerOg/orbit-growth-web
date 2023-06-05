@@ -1,4 +1,20 @@
 import { Button, Section, Typography } from '@/components/common';
+import { Metadata } from 'next';
+
+// store values to prevent redundancies
+const title = '404: Diese Seite wurde nicht gefunden!';
+const description =
+  'Tut uns leid, aber diese Seite konnten wir leider nicht finden.';
+
+// export metadata object
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+  },
+};
 
 export default function NotFound() {
   return (
