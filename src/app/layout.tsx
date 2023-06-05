@@ -58,7 +58,7 @@ const jsonLd: WithContext<LocalBusiness> = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.orbitgrowth.de'),
   title: {
-    default: 'OrbitGrowth Webdesign Agentur',
+    default: 'OrbitGrowth Webdesign Agentur aus Ratingen',
     template: '%s | OrbitGrowth Webdesign Agentur',
   },
   description:
