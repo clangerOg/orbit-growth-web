@@ -3,7 +3,7 @@ import { PrivacyPolicyProps } from './PrivacyPolicy.types';
 
 const PrivacyPolicy: React.FC<PrivacyPolicyProps> = () => {
   return (
-    <Section className="antialiased border-b border-slate-200/90 border-dashed">
+    <Section className="antialiased border-b border-slate-200/90 border-dashed max-w-full break-before-auto">
       <Section.Wrapper className="py-32 border-0 md:border-x border-dashed border-inherit">
         <Section.Content className="prose prose-slate">
           <Typography variant={'h3'}>Datenschutzerklärung</Typography>
