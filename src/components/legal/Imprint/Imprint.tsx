@@ -80,7 +80,7 @@ const Imprint: React.FC<ImprintProps> = () => {
                 Noch nicht ausgestellt...
               </p>
             </div>
-            <div className="p-8 rounded-lg border border-slate-200 col-span-2 flex flex-col gap-y-8">
+            <div className="p-8 rounded-lg border border-slate-200 md:col-span-2 flex flex-col gap-y-8">
               <p className="text-slate-900 font-semibold leading-7 text-lg">
                 Haftungsausschluss
               </p>
