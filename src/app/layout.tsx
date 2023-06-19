@@ -132,9 +132,9 @@ export default function RootLayout({
         />
         <main>
           {/* <CookieBanner /> */}
-          <Header links={HeaderLinks} />
+          <Header links={HeaderLinks} className="" />
           {children}
-          <Footer />
+          <Footer className="" />
           <Analytics />
         </main>
       </body>

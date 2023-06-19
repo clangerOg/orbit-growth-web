@@ -1,7 +1,8 @@
+import classNames from 'classnames';
 import Link from 'next/link';
 import Button from '../../common/Button/Button';
 import Section from '../../common/Section/Section';
-import { TemplateProps } from './Footer.types';
+import { FooterProps } from './Footer.types';
 
 const footerLinks: { title: string; href: string }[] = [
   {
@@ -38,11 +39,17 @@ const footerLinks: { title: string; href: string }[] = [
 
 ('inline-flex justify-center rounded-lg text-sm font-semibold transition-colors inline-flex items-center gap-2 bg-tranparent text-white hover:text-slate-300 py-3 px-4');
 
-const Template: React.FC<TemplateProps> = () => {
+const Footer: React.FC<FooterProps> = ({ className, ...props }) => {
   return (
     <>
       {/* About */}
-      <Section className="antialiased border-b border-slate-200/90 border-dashed">
+      <Section
+        {...props}
+        className={classNames(
+          'antialiased border-b border-slate-200/90 border-dashed',
+          className
+        )}
+      >
         <Section.Wrapper className="py-52 border-0 md:border-x border-dashed border-inherit">
           <Section.Content className="flex justify-center items-center">
             <div className="bg-slate-900 w-full rounded-lg flex flex-wrap justify-between items-center p-8 md:p-16 shadow-xl gap-16">
@@ -72,7 +79,13 @@ const Template: React.FC<TemplateProps> = () => {
           </Section.Content>
         </Section.Wrapper>
       </Section>
-      <Section className="antialiased border-slate-200/90 border-dashed">
+      <Section
+        {...props}
+        className={classNames(
+          'antialiased border-slate-200/90 border-dashed',
+          className
+        )}
+      >
         <Section.Wrapper className="border-0 md:border-x border-dashed border-inherit !px-0">
           <Section.Content className="py-16">
             <div className="flex flex-wrap gap-8 text-base text-slate-500 mb-8 font-normal justify-center items-center px-6 border-b border-slate-200/90 border-dashed pb-8">
@@ -99,4 +112,4 @@ const Template: React.FC<TemplateProps> = () => {
   );
 };
 
-export default Template;
+export default Footer;

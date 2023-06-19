@@ -11,6 +11,9 @@ export { default as CookieBanner } from './CookieBanner';
 export * from './Logo';
 export { default as Logo } from './Logo';
 // -----------------------------------------------------
+export * from './PageHeader';
+export { default as PageHeader } from './PageHeader';
+// -----------------------------------------------------
 export * from './ProjectThumbnail';
 export { default as ProjectThumbnail } from './ProjectThumbnail';
 // -----------------------------------------------------

@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export const ContributorSchema = {
   name: 'contributor',
   title: 'Mitarbeiter',
@@ -38,6 +40,6 @@ export const ContributorSchema = {
 export type Contributor = {
   name: string;
   position: string;
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   email: string;
 };
