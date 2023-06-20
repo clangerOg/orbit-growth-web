@@ -1,30 +1,31 @@
 import { PageHeader, Section } from '@/components/common';
+import { Metadata } from 'next';
 import Image from 'next/image';
-import ChrisPB from '../../../public/people/Chris.jpg';
-import PaulPB from '../../../public/people/Paul.jpg';
-import { Content, Team, TeamMember } from './_components';
+import { Content, Team } from './_components';
+import { TEAM } from './_types/About.consts';
 
-const team: TeamMember[] = [
-  {
-    email: 'p.kosche@orbitgrowth.de',
-    imageSrc: PaulPB,
-    name: 'Paul Kosche',
-    position: 'Kundenbetreuung, Projektleitung',
+// store values to prevent redundancies
+const title = 'Über uns';
+const description =
+  'Erfahre mehr über unsere Agenturwelche Werte wir vertreten und wie wir arbeiten.';
+
+// export metadata object
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
   },
-  {
-    email: 'c.langer@orbitgrowth.de',
-    imageSrc: ChrisPB,
-    name: 'Christoph Langer',
-    position: 'Design, Frontendentwicklung',
-  },
-];
+};
 
 export default async function Page() {
   return (
     <>
+      {/* Page Header */}
       <PageHeader
         title="Über uns"
-        desc="Lerne mehr über uns und unser Unternehmen."
+        desc="Erfahre mehr über unsere Agentur und das Team, das hinter den Kulissen arbeitet."
       />
 
       {/* Content Section */}
@@ -47,7 +48,7 @@ export default async function Page() {
       </Section>
 
       {/* Team Section */}
-      <Team team={team} />
+      <Team team={TEAM} />
     </>
   );
 }

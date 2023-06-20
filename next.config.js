@@ -7,14 +7,5 @@ const nextConfig = {
       { hostname: 'images.pexels.com' },
     ],
   },
-  experimental: {
-    mdxRs: true,
-  },
 };
-
-const withMDX = require('@next/mdx')({
-  options: {
-    providerImportSource: '@mdx-js/react',
-  },
-});
-module.exports = withMDX(nextConfig);
+module.exports = nextConfig;

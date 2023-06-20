@@ -17,9 +17,6 @@ export { default as HeroSection } from './HeroSection';
 export * from './ProcessSection';
 export { default as ProcessSection } from './ProcessSection';
 // -----------------------------------------------------
-export * from './ProjectsSection';
-export { default as ProjectsSection } from './ProjectsSection';
-// -----------------------------------------------------
 export * from './SkillCard';
 export { default as SkillCard } from './SkillCard';
 // -----------------------------------------------------
