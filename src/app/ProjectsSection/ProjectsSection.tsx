@@ -1,9 +1,9 @@
 import { Section, Typography } from '@/components/common';
 import Image from 'next/image';
-import SkillsBG from '../../../../../public/landing/Skills_Grid_Bg.png';
-import TECard from '../../../../../public/landing/TE_Card.png';
-import TECard2 from '../../../../../public/landing/TE_Card2.png';
-import TECard3 from '../../../../../public/landing/TE_Card3.png';
+import SkillsBG from '../../../public/landing/Skills_Grid_Bg.png';
+import TECard from '../../../public/landing/TE_Card.png';
+import TECard2 from '../../../public/landing/TE_Card2.png';
+import TECard3 from '../../../public/landing/TE_Card3.png';
 
 const ProjectsSection: React.FC = () => {
   return (

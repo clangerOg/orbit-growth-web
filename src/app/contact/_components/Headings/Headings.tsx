@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { forwardRef } from 'react';
-import ContactBG from '../../../../../../../public/contact/Contact_Bg.png';
+import ContactBG from '../../../../../public/contact/Contact_Bg.png';
 import { HeadingsProps, HeadingsRef } from './Headings.types';
 
 const Headings: React.FC<HeadingsProps> = forwardRef<
@@ -58,7 +58,7 @@ const Headings: React.FC<HeadingsProps> = forwardRef<
           <div className="w-full justify-end items-center flex md:hidden">
             <Button
               variant={'default'}
-              href="/test/contact#contact-form"
+              href="/contact#contact-form"
               className="w-fit border-slate-700 bg-slate-800 text-white border"
             >
               Zum Kontaktformular

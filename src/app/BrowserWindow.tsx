@@ -3,7 +3,7 @@
 import classNames from 'classnames';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import PreviewImage from '../../../../public/landing/Hero_Design_Preview.png';
+import PreviewImage from '../../public/landing/Hero_Design_Preview.png';
 import styles from './BrowserWindow.module.css';
 
 const DEFAULT_ROTATION = 30;

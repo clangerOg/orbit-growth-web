@@ -1,6 +1,6 @@
 import { Project } from './project.type';
 
-import TravelExplorerHeader from '../../../../../../public/projects/travel-explorer/SomeImage.png';
+import TravelExplorerHeader from '../../../../public/projects/travel-explorer/SomeImage.png';
 
 export const PROJECTS: Project[] = [
   {

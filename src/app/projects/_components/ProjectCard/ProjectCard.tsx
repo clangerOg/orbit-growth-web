@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = forwardRef<
   const { id } = project;
 
   return (
-    <Link href={`/test/projects/${id}`}>
+    <Link href={`/projects/${id}`}>
       <div
         {...other}
         ref={ref}

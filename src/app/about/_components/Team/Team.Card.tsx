@@ -1,5 +1,7 @@
+import { BuildingOfficeIcon, EnvelopeIcon } from '@heroicons/react/20/solid';
 import classNames from 'classnames';
 import Image from 'next/image';
+import Link from 'next/link';
 import { forwardRef } from 'react';
 import { TeamMemberCardProps } from './Team.types';
 
@@ -20,10 +22,18 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = forwardRef<
           className="object-cover object-center rounded-lg"
         />
       </div>
-      <p className="text-base font-semibold text-slate-900 mt-6">
-        {name} ({email})
+      <p className="text-base font-semibold text-slate-900 mt-6">{name}</p>
+      <p className="text-sm text-slate-600 mt-1 inline-flex items-center gap-2">
+        <BuildingOfficeIcon className="w-4 text-slate-400" />
+        {position}
       </p>
-      <p className="text-sm text-slate-600 mt-1">{position}</p>
+      <Link
+        href={`mailto:${email}`}
+        className="text-sm text-slate-600 mt-1 inline-flex items-center gap-2"
+      >
+        <EnvelopeIcon className="w-4 text-slate-400" />
+        {email}
+      </Link>
     </div>
   );
 });

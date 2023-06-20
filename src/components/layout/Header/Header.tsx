@@ -31,12 +31,12 @@ const Header: React.FC<HeaderProps> = ({ links, className, ...props }) => {
                   </Link>
                 );
               })}
-            <Button href="/#contact" size={'sm'}>
+            <Button href="/contact" size={'sm'}>
               Kontakt aufnehmen
             </Button>
           </div>
           <div className="flex items-center gap-x-4 md:hidden">
-            <Button href="/#contact" size={'sm'}>
+            <Button href="/contact" size={'sm'}>
               Kontakt
             </Button>
             <div className="mt-1">

@@ -1,52 +1,53 @@
-import { ContentSection, HeroSection, TeamSection } from '@/components/about';
-import { Section } from '@/components/common';
-import { getStaff } from '@/lib/sanity/sanity.methods';
-import { Metadata } from 'next';
+import { PageHeader, Section } from '@/components/common';
 import Image from 'next/image';
+import ChrisPB from '../../../public/people/Chris.jpg';
+import PaulPB from '../../../public/people/Paul.jpg';
+import { Content, Team, TeamMember } from './_components';
 
-// store values to prevent redundancies
-const title = 'Über uns';
-const description =
-  'Erfahre mehr über unsere Agenturwelche Werte wir vertreten und wie wir arbeiten.';
-
-// export metadata object
-export const metadata: Metadata = {
-  title,
-  description,
-  openGraph: {
-    title,
-    description,
+const team: TeamMember[] = [
+  {
+    email: 'p.kosche@orbitgrowth.de',
+    imageSrc: PaulPB,
+    name: 'Paul Kosche',
+    position: 'Kundenbetreuung, Projektleitung',
   },
-};
+  {
+    email: 'c.langer@orbitgrowth.de',
+    imageSrc: ChrisPB,
+    name: 'Christoph Langer',
+    position: 'Design, Frontendentwicklung',
+  },
+];
 
-// export page function
-export default async function AboutPage() {
-  const staffMembers = await getStaff();
-
+export default async function Page() {
   return (
     <>
-      {/* Hero */}
-      <HeroSection />
+      <PageHeader
+        title="Über uns"
+        desc="Lerne mehr über uns und unser Unternehmen."
+      />
 
-      {/* About (Paragraph) */}
-      <ContentSection />
+      {/* Content Section */}
+      <Content />
 
-      {/* Image */}
-      <Section className="antialiased border-b border-slate-200/90 border-dashed">
-        <Section.Wrapper className="border-0 md:border-x border-dashed border-inherit h-96 relative">
-          <Image
-            src={
-              'https://images.pexels.com/photos/361527/pexels-photo-361527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            }
-            fill
-            alt=""
-            className="object-cover object-center"
-          />
+      {/* Image Section */}
+      <Section>
+        <Section.Wrapper className="h-96 relative">
+          <div className="relative w-full h-full">
+            <Image
+              src={
+                'https://images.pexels.com/photos/361527/pexels-photo-361527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+              }
+              fill
+              alt=""
+              className="object-cover object-center shadow-lg rounded-lg"
+            />
+          </div>
         </Section.Wrapper>
       </Section>
 
-      {/* Team */}
-      <TeamSection staffMembers={staffMembers} />
+      {/* Team Section */}
+      <Team team={team} />
     </>
   );
 }

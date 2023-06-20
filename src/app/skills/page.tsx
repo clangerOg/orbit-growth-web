@@ -1,13 +1,12 @@
-import { Metadata } from 'next';
+import { PageHeader } from '@/components/common';
 
-export const metadata: Metadata = {
-  title: 'Skills',
-};
-
-export default function SkillsPage() {
+export default async function Page() {
   return (
-    <div>
-      <p>This is the Skills Page!</p>
-    </div>
+    <>
+      <PageHeader
+        title="Unsere Skills"
+        desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit impedit illum nemo rerum facere, soluta earum dolore excepturi sit non, ipsam aperiam incidunt"
+      />
+    </>
   );
 }

@@ -3,7 +3,7 @@
 import { Typography } from '@/components/common';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import SkillsBrowserWindow from '../../../../public/landing/Skills_Design_Browser.png';
+import SkillsBrowserWindow from '../../public/landing/Skills_Design_Browser.png';
 
 const Card: React.FC = () => {
   const [coords, setCoords] = useState<string>('0 | 0');
