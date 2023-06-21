@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import Link from 'next/link';
-import Button from '../../common/Button/Button';
 import Section from '../../common/Section/Section';
 import { FooterProps } from './Footer.types';
 
@@ -18,20 +17,20 @@ const footerLinks: { title: string; href: string }[] = [
     href: '/projects',
   },
   {
-    title: 'Kontakt',
-    href: '/#contact',
-  },
-  {
     title: 'Kompetenzen',
     href: '/skills',
   },
   {
-    title: 'Rechtliches',
-    href: '/legal',
+    title: 'Kontakt',
+    href: '/contact',
   },
   {
-    title: 'CMS',
-    href: '/studio',
+    title: 'Impressum',
+    href: '/imprint',
+  },
+  {
+    title: 'Datenschutzerklärung',
+    href: '/privacy-policy',
   },
 ];
 
@@ -43,7 +42,7 @@ const Footer: React.FC<FooterProps> = ({ className, ...props }) => {
   return (
     <>
       {/* About */}
-      <Section
+      {/* <Section
         {...props}
         className={classNames(
           'antialiased border-b border-slate-200/90 border-dashed',
@@ -78,7 +77,7 @@ const Footer: React.FC<FooterProps> = ({ className, ...props }) => {
             </div>
           </Section.Content>
         </Section.Wrapper>
-      </Section>
+      </Section> */}
       <Section
         {...props}
         className={classNames(

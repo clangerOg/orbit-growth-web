@@ -1,19 +1,15 @@
-import { Button, Section, Typography } from '@/components/common';
+import { Button, Section } from '@/components/common';
 import Link from 'next/link';
 import { ImprintProps } from './Imprint.types';
 
 const Imprint: React.FC<ImprintProps> = () => {
   return (
-    <Section className="antialiased border-b border-slate-200/90 border-dashed">
-      <Section.Wrapper className="py-32 border-0 md:border-x border-dashed border-inherit">
+    <Section>
+      <Section.Wrapper className="py-32">
         <Section.Content>
-          <Typography variant={'h3'}>
-            Impressum{' '}
-            <span className="text-slate-600 text-base leading-7 font-normal">
-              <br />
-              Angaben gemäß § 5 TMG:{' '}
-            </span>
-          </Typography>
+          <p className="text-slate-600 text-base leading-7 font-normal">
+            Angaben gemäß § 5 TMG:{' '}
+          </p>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-8 rounded-lg border border-slate-200">
               <p className="mb-6 text-slate-600 text-base leading-7">
