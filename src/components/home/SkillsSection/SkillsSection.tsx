@@ -1,11 +1,14 @@
 import { Section, Typography } from '@/components/common';
+import classNames from 'classnames';
 import { SkillCard } from '..';
 import { SkillsSectionProps } from './SkillsSection.types';
 
-const SkillsSection: React.FC<SkillsSectionProps> = () => {
+const SkillsSection: React.FC<SkillsSectionProps> = (props) => {
+  const { className, ...other } = props;
+
   return (
-    <Section className="antialiased border-y border-slate-200/90 border-dashed">
-      <Section.Wrapper className="py-52 border-0 md:border-x border-dashed border-inherit">
+    <Section {...other} className={classNames('', className)}>
+      <Section.Wrapper>
         <Section.Content>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Typography variant={'h3'}>

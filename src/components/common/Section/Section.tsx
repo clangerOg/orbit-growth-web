@@ -11,7 +11,7 @@ const SectionComponent: React.FC<SectionProps> = forwardRef<
   const { className, ...otherProps } = props;
 
   return (
-    <div
+    <section
       {...otherProps}
       ref={ref}
       className={classNames(
@@ -20,7 +20,7 @@ const SectionComponent: React.FC<SectionProps> = forwardRef<
       )}
     >
       {props.children}
-    </div>
+    </section>
   );
 });
 

@@ -21,8 +21,8 @@ const StepCard: React.FC<
 
 const ProcessSection: React.FC<ProcessSectionProps> = () => {
   return (
-    <Section className="antialiased border-b border-slate-200/90 border-dashed">
-      <Section.Wrapper className="py-52 border-0 md:border-x border-dashed border-inherit">
+    <Section>
+      <Section.Wrapper className="py-52">
         <Section.Content>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
             <div className="h-full">

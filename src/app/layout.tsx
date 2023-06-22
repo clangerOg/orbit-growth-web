@@ -1,4 +1,4 @@
-import { Footer, Header, HeaderLink } from '@/components/layout';
+import { Footer, HeaderLink } from '@/components/layout';
 import { BASE_URL } from '@/lib/consts';
 import {
   ClipboardDocumentIcon,
@@ -86,9 +86,9 @@ export const metadata: Metadata = {
 };
 
 // Header Links
-const HeaderLinks: HeaderLink[] = [
+export const HeaderLinks: HeaderLink[] = [
   {
-    target: '/',
+    target: '/test',
     title: 'Home',
     icon: <HomeIcon className="w-full" />,
   },
@@ -132,7 +132,7 @@ export default function RootLayout({
         />
         <main>
           {/* <CookieBanner /> */}
-          <Header links={HeaderLinks} className="" />
+          {/* <Header links={HeaderLinks} className="hidden" /> */}
           {children}
           <Footer className="" />
           <Analytics />

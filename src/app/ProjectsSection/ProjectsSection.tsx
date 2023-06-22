@@ -8,7 +8,7 @@ import TECard3 from '../../../public/landing/TE_Card3.png';
 const ProjectsSection: React.FC = () => {
   return (
     <>
-      <Section>
+      <Section className="pt-52">
         <Section.Wrapper>
           <Section.Content>
             <div className="">
@@ -24,7 +24,7 @@ const ProjectsSection: React.FC = () => {
           </Section.Content>
         </Section.Wrapper>
       </Section>
-      <Section className="mt-12">
+      <Section className="mt-12 pb-52">
         <div className="absolute -z-30 top-0">
           <Image src={SkillsBG} alt="Hero Background Image" />
         </div>

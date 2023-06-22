@@ -4,28 +4,24 @@ import { AboutSectionProps } from './AboutSection.types';
 
 const AboutSection: React.FC<AboutSectionProps> = () => {
   return (
-    <Section className="antialiased border-b border-slate-200/90 border-dashed">
-      <Section.Wrapper className="py-52 border-0 md:border-x border-dashed border-inherit">
+    <Section className="">
+      <Section.Wrapper className="py-52">
         <Section.Content className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <Typography variant={'h3'}>Über uns</Typography>
 
             <Typography variant={'h4'} className="mt-4">
-              Entdecken Sie unsere beeindruckende Webdesign-Arbeit und lassen
-              Sie sich von unseren vielfältigen Projekten inspirieren. Von
-              eleganten Unternehmenswebsites bis hin zu benutzerfreundlichen
-              E-Commerce-Plattformen
+              Orbit Growth ist eine Webdesign Agentur aus Ratingen, die sich auf
+              lokale Unternehmen spezialisiert hat. Für uns steht immer die
+              Qualität im Vordergrund.
             </Typography>
 
             <Typography variant={'p'} className="mt-9">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-              soluta temporibus necessitatibus, rem consequatur magni ullam
-              debitis adipisci repellendus alias recusandae veniam impedit
-              aspernatur dicta tempora aliquid quasi nam vel! Lorem ipsum dolor
-              sit amet consectetur, adipisicing elit. Minus pariatur illo, sequi
-              fugiat consequuntur eum officiis! At possimus ut, tenetur eius
-              dicta error. Dolor, quo obcaecati? Dolorem repellendus aut
-              laboriosam?
+              Durch die Mitarbeit an verschiedensten Projekten im Bereich
+              Webdesign und Webentwicklung konnten wir umfangreiche Erfahrung
+              aufbauen. Mit unser expertise schaffen wir es, für dich eine
+              technisch einwandfreie Webseite zu entwickeln und gleichzeitig
+              immer einen einzigartigen Touch zu behalten.
             </Typography>
 
             <Button

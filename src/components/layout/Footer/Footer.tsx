@@ -81,17 +81,17 @@ const Footer: React.FC<FooterProps> = ({ className, ...props }) => {
       <Section
         {...props}
         className={classNames(
-          'antialiased border-slate-200/90 border-dashed',
+          'bg-slate-900 border-t border-slate-800',
           className
         )}
       >
-        <Section.Wrapper className="border-0 md:border-x border-dashed border-inherit !px-0">
+        <Section.Wrapper className="">
           <Section.Content className="py-16">
-            <div className="flex flex-wrap gap-8 text-base text-slate-500 mb-8 font-normal justify-center items-center px-6 border-b border-slate-200/90 border-dashed pb-8">
+            <div className="flex flex-wrap gap-8 text-base text-slate-200 mb-8 font-normal justify-center items-center px-6 border-b border-slate-800 pb-8">
               {footerLinks.map((link, key) => {
                 return (
                   <Link href={link.href} key={key}>
-                    <span className="hover:text-slate-700 transition-colors">
+                    <span className="hover:text-slate-400 transition-colors">
                       {link.title}
                     </span>
                   </Link>
@@ -99,7 +99,7 @@ const Footer: React.FC<FooterProps> = ({ className, ...props }) => {
               })}
             </div>
             <div className="px-6">
-              <p className="text-center text-sm text-slate-500">
+              <p className="text-center text-sm text-slate-400">
                 © 2023 Kosche Langer GbR, Webdesign Agentur. Alle Rechte
                 vorbehalten.
               </p>
