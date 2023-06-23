@@ -22,13 +22,13 @@ const Headings: React.FC<HeadingsProps> = forwardRef<
       {...other}
       ref={ref}
       className={classNames(
-        'flex justify-start md:justify-end items-start bg-slate-900 py-24 md:py-40 xl:py-52 relative',
+        'relative flex items-start justify-start bg-slate-900 py-24 md:justify-end md:py-40 xl:py-52',
         className
       )}
     >
       <Image src={ContactBG} alt="" fill className="object-contain" />
       {/* Left Side */}
-      <div className="md:max-w-xl w-full px-6 lg:pr-24 relative z-20">
+      <div className="relative z-20 w-full px-6 md:max-w-xl lg:pr-24">
         <Typography variant={'h3'} className="text-white">
           Vereinbare noch heute ein Gespräch zur kostenlosen Erstberatung.
         </Typography>
@@ -39,7 +39,7 @@ const Headings: React.FC<HeadingsProps> = forwardRef<
         <div className="mt-12 flex flex-col gap-6 text-white">
           <Link
             href="mailto:hello@orbitgrowth.de"
-            className="text-base inline-flex items-center gap-4 "
+            className="inline-flex items-center gap-4 text-base "
           >
             <span className="w-5 text-slate-400">
               <EnvelopeIcon className="w-full" />
@@ -48,18 +48,18 @@ const Headings: React.FC<HeadingsProps> = forwardRef<
           </Link>
           <Link
             href="https://google.com"
-            className="text-base inline-flex items-center gap-4 "
+            className="inline-flex items-center gap-4 text-base "
           >
             <span className="w-5 text-slate-400">
               <PhoneIcon className="w-full" />
             </span>
             +49 123 45678900
           </Link>
-          <div className="w-full justify-end items-center flex md:hidden">
+          <div className="flex w-full items-center justify-end md:hidden">
             <Button
               variant={'default'}
               href="/contact#contact-form"
-              className="w-fit border-slate-700 bg-slate-800 text-white border"
+              className="w-fit border border-slate-700 bg-slate-800 text-white"
             >
               Zum Kontaktformular
               <span className="w-4 shrink-0">

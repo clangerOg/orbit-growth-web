@@ -1,2 +1,2 @@
-export { default } from "./HeaderDropdown";
-export * from "./HeaderDropdown.types";
+export { default } from './HeaderDropdown';
+export * from './HeaderDropdown.types';

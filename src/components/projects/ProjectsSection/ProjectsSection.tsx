@@ -9,7 +9,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = (props) => {
   return (
     <Section>
       <Section.Wrapper className="py-52">
-        <Section.Content className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Section.Content className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects &&
             projects.map((p, index) => {
               return <ProjectCard project={p} key={index} />;

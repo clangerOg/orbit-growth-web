@@ -81,17 +81,17 @@ const Footer: React.FC<FooterProps> = ({ className, ...props }) => {
       <Section
         {...props}
         className={classNames(
-          'bg-slate-900 border-t border-slate-800',
+          'border-t border-slate-800 bg-slate-900',
           className
         )}
       >
         <Section.Wrapper className="">
           <Section.Content className="py-16">
-            <div className="flex flex-wrap gap-8 text-base text-slate-200 mb-8 font-normal justify-center items-center px-6 border-b border-slate-800 pb-8">
+            <div className="mb-8 flex flex-wrap items-center justify-center gap-8 border-b border-slate-800 px-6 pb-8 text-base font-normal text-slate-200">
               {footerLinks.map((link, key) => {
                 return (
                   <Link href={link.href} key={key}>
-                    <span className="hover:text-slate-400 transition-colors">
+                    <span className="transition-colors hover:text-slate-400">
                       {link.title}
                     </span>
                   </Link>

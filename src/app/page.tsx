@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <>
       <Section className="min-h-[80vh] py-24">
-        <div className="absolute -z-30 top-0">
+        <div className="absolute top-0 -z-30">
           <Image src={HeroBG} alt="Hero Background Image" />
         </div>
         <Section.Wrapper>
@@ -21,13 +21,13 @@ export default function Page() {
                 Herausragende Webseiten für lokale Unternehmen, zu fairen
                 Preisen.
               </Typography>
-              <Typography variant={'h2'} className="text-center mt-6">
+              <Typography variant={'h2'} className="mt-6 text-center">
                 OrbitGrowth ist eine Webdesign Agentur aus Ratingen, die sich
                 auf das Designen und Entwickeln von Webseiten für lokale
                 Unternehmen spezialisiert hat.
               </Typography>
 
-              <div className="mt-8 flex gap-8 items-center justify-center flex-col sm:flex-row w-full">
+              <div className="mt-8 flex w-full flex-col items-center justify-center gap-8 sm:flex-row">
                 <Button href="#" className="w-full sm:w-fit">
                   Kontakt aufnehmen
                 </Button>
@@ -53,11 +53,11 @@ export default function Page() {
       </Section>
       <Section>
         {' '}
-        <div className="absolute -z-30 top-0">
+        <div className="absolute top-0 -z-30">
           <Image src={SkillsBG} alt="Hero Background Image" />
         </div>
         <Section.Wrapper>
-          <Section.Content className="perspective-600 px-24">
+          <Section.Content className="px-24 perspective-600">
             {/* <div
               id="browser-preview"
               className={classNames(
@@ -93,11 +93,11 @@ export default function Page() {
         </Section.Wrapper>
       </Section>
       <Section className="mt-12">
-        <div className="absolute -z-30 top-0">
+        <div className="absolute top-0 -z-30">
           <Image src={SkillsBG} alt="Hero Background Image" />
         </div>
         <Section.Wrapper>
-          <Section.Content className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 pt-12">
+          <Section.Content className="grid grid-cols-1 gap-8 pt-12 md:grid-cols-2 md:grid-rows-2">
             {/* <div className="row-span-1 md:row-span-2 bg-white border border-slate-200 rounded-lg p-8 shadow-lg overflow-hidden relative pb-52 md:pb-0">
               <div className="absolute w-3/4 h-1/2 bottom-0 right-0 z-20">
                 <div className="relative z-20 w-full h-full">
@@ -119,13 +119,13 @@ export default function Page() {
               </Typography>
             </div> */}
             <Card />
-            <div className="md:col-start-2 bg-white border border-slate-200 rounded-lg p-8 shadow-lg">
+            <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-lg md:col-start-2">
               <Typography>
                 <span className="font-semibold text-slate-900">
                   High-End-Webentwicklung.
                 </span>{' '}
                 Wir setzen auf moderne Webtechnologien, wie{' '}
-                <span className="text-blue-600 underline-offset-4 underline">
+                <span className="text-blue-600 underline underline-offset-4">
                   <Link href="https://webflow.com/" target="_blank">
                     Webflow
                   </Link>
@@ -134,7 +134,7 @@ export default function Page() {
                 technisch einwandfreie und optimierte Webseite erhalten wirst.
               </Typography>
             </div>
-            <div className="md:col-start-2 bg-white border border-slate-200 rounded-lg p-8 shadow-lg">
+            <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-lg md:col-start-2">
               <Typography>
                 <span className="font-semibold text-slate-900">
                   Faire Preise.

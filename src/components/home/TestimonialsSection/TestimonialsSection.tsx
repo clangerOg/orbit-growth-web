@@ -4,23 +4,23 @@ import { TestimonialsSectionProps } from './TestimonialsSection.types';
 
 const TestimonialsSection: React.FC<TestimonialsSectionProps> = () => {
   return (
-    <Section className="antialiased bg-slate-100 border-b border-slate-200/90 border-dashed">
-      <Section.Wrapper className="border-0 md:border-x border-dashed border-slate-300/90 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-dashed divide-slate-300/90">
-        <div className="md:pr-6 py-20 md:py-52">
-          <p className="text-xl text-slate-600 leading-8">
+    <Section className="border-b border-dashed border-slate-200/90 bg-slate-100 antialiased">
+      <Section.Wrapper className="grid grid-cols-1 divide-y divide-dashed divide-slate-300/90 border-0 border-dashed border-slate-300/90 md:grid-cols-2 md:divide-x md:divide-y-0 md:border-x">
+        <div className="py-20 md:py-52 md:pr-6">
+          <p className="text-xl leading-8 text-slate-600">
             “Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua.”
           </p>
-          <div className="mt-6 flex gap-4 items-center">
-            <div className="w-9 aspect-square flex-shrink-0 relative">
+          <div className="mt-6 flex items-center gap-4">
+            <div className="relative aspect-square w-9 flex-shrink-0">
               <Image
                 src={
                   'https://images.pexels.com/photos/3771807/pexels-photo-3771807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
                 }
                 alt=""
                 fill
-                className="object-cover object-center rounded-full"
+                className="rounded-full object-cover object-center"
               />
             </div>
             <div className="text-sm text-slate-600">
@@ -29,8 +29,8 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = () => {
             </div>
           </div>
         </div>
-        <div className="md:pl-6 py-20 md:py-52">
-          <p className="text-xl text-slate-600 leading-8">
+        <div className="py-20 md:py-52 md:pl-6">
+          <p className="text-xl leading-8 text-slate-600">
             “Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua.”

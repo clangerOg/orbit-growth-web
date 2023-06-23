@@ -7,12 +7,12 @@ const Imprint: React.FC<ImprintProps> = () => {
     <Section>
       <Section.Wrapper className="py-32">
         <Section.Content>
-          <p className="text-slate-600 text-base leading-7 font-normal">
+          <p className="text-base font-normal leading-7 text-slate-600">
             Angaben gemäß § 5 TMG:{' '}
           </p>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 rounded-lg border border-slate-200">
-              <p className="mb-6 text-slate-600 text-base leading-7">
+          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="rounded-lg border border-slate-200 p-8">
+              <p className="mb-6 text-base leading-7 text-slate-600">
                 <span className="font-semibold text-slate-900">
                   Kosche und Langer GbR, Webdesign Agentur
                 </span>
@@ -26,8 +26,8 @@ const Imprint: React.FC<ImprintProps> = () => {
                 Mail an hello@orbitgrowth.de
               </Button>
             </div>
-            <div className="p-8 rounded-lg border border-slate-200">
-              <p className="mb-8 text-slate-600 text-base leading-7">
+            <div className="rounded-lg border border-slate-200 p-8">
+              <p className="mb-8 text-base leading-7 text-slate-600">
                 <span className="font-semibold text-slate-900">
                   Vertreten durch:
                 </span>
@@ -36,15 +36,15 @@ const Imprint: React.FC<ImprintProps> = () => {
                 Friedrich-List-Straße 4 <br />
                 40882 Ratingen
               </p>
-              <p className=" text-slate-600 text-base leading-7">
+              <p className=" text-base leading-7 text-slate-600">
                 <span className="font-semibold text-slate-900">Kontakt:</span>
                 <br />
                 Tel.: +49 176 42013555 <br />
                 Mail: hello@orbitgrowth.de
               </p>
             </div>
-            <div className="p-8 rounded-lg border border-slate-200">
-              <p className="text-slate-600 text-base leading-7">
+            <div className="rounded-lg border border-slate-200 p-8">
+              <p className="text-base leading-7 text-slate-600">
                 <span className="font-semibold text-slate-900">
                   Zuständige Aufsichtsbehörde:
                 </span>
@@ -56,8 +56,8 @@ const Imprint: React.FC<ImprintProps> = () => {
                 Postfach 20 04 44
               </p>
             </div>
-            <div className="p-8 rounded-lg border border-slate-200">
-              <p className="text-slate-600 text-base leading-7">
+            <div className="rounded-lg border border-slate-200 p-8">
+              <p className="text-base leading-7 text-slate-600">
                 <span className="font-semibold text-slate-900">
                   Kammerzugehörigkeit
                 </span>
@@ -67,8 +67,8 @@ const Imprint: React.FC<ImprintProps> = () => {
                 12345 Musterstadt
               </p>
             </div>
-            <div className="p-8 rounded-lg border border-slate-200">
-              <p className="text-slate-600 text-base leading-7">
+            <div className="rounded-lg border border-slate-200 p-8">
+              <p className="text-base leading-7 text-slate-600">
                 <span className="font-semibold text-slate-900">
                   Umsatzsteueridentifikationsnummer
                 </span>
@@ -76,11 +76,11 @@ const Imprint: React.FC<ImprintProps> = () => {
                 Noch nicht ausgestellt...
               </p>
             </div>
-            <div className="p-8 rounded-lg border border-slate-200 md:col-span-2 flex flex-col gap-y-8">
-              <p className="text-slate-900 font-semibold leading-7 text-lg">
+            <div className="flex flex-col gap-y-8 rounded-lg border border-slate-200 p-8 md:col-span-2">
+              <p className="text-lg font-semibold leading-7 text-slate-900">
                 Haftungsausschluss
               </p>
-              <p className="text-slate-600 text-base leading-7">
+              <p className="text-base leading-7 text-slate-600">
                 <span className="font-semibold text-slate-900">
                   Haftung für Inhalte
                 </span>
@@ -101,7 +101,7 @@ const Imprint: React.FC<ImprintProps> = () => {
                 Bekanntwerden von entsprechenden Rechtsverletzungen werden wir
                 diese Inhalte umgehend entfernen.
               </p>
-              <p className="text-slate-600 text-base leading-7">
+              <p className="text-base leading-7 text-slate-600">
                 <span className="font-semibold text-slate-900">
                   Haftung für Links
                 </span>
@@ -119,7 +119,7 @@ const Imprint: React.FC<ImprintProps> = () => {
                 Bekanntwerden von Rechtsverletzungen werden wir derartige Links
                 umgehend entfernen.
               </p>
-              <p className="text-slate-600 text-base leading-7">
+              <p className="text-base leading-7 text-slate-600">
                 <span className="font-semibold text-slate-900">
                   Urheberrecht
                 </span>
@@ -138,7 +138,7 @@ const Imprint: React.FC<ImprintProps> = () => {
                 entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen
                 werden wir derartige Inhalte umgehend entfernen.
               </p>
-              <p className="text-slate-600 text-base leading-7">
+              <p className="text-base leading-7 text-slate-600">
                 <span className="font-semibold text-slate-900">
                   Alternative Streitbeilegung gemäß Art. 14 Abs. 1 ODR-VO und §
                   36 VSBG:

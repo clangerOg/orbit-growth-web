@@ -1,5 +1,6 @@
 import { ContentSection, TeamSection } from '@/components/about';
-import { PageHeader, Section } from '@/components/common';
+import { Section } from '@/components/common';
+import Header from '@/components/header';
 import { TEAM } from '@/lib/consts';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -23,25 +24,30 @@ export default async function Page() {
   return (
     <>
       {/* Page Header */}
-      <PageHeader
+      <Header
         title="Über uns"
         desc="Erfahre mehr über unsere Agentur und das Team, das hinter den Kulissen arbeitet."
       />
+
+      {/* <PageHeader
+        title="Über uns"
+        desc="Erfahre mehr über unsere Agentur und das Team, das hinter den Kulissen arbeitet."
+      /> */}
 
       {/* Content Section */}
       <ContentSection />
 
       {/* Image Section */}
       <Section>
-        <Section.Wrapper className="h-96 relative">
-          <div className="relative w-full h-full">
+        <Section.Wrapper className="relative h-96">
+          <div className="relative h-full w-full">
             <Image
               src={
                 'https://images.pexels.com/photos/361527/pexels-photo-361527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
               }
               fill
               alt=""
-              className="object-cover object-center shadow-lg rounded-lg"
+              className="rounded-lg object-cover object-center shadow-lg"
             />
           </div>
         </Section.Wrapper>

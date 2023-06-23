@@ -36,7 +36,7 @@ const BrowserWindow: React.FC = () => {
   return (
     <div
       className={classNames(
-        'max-w-full w-full rounded-lg bg-slate-300 aspect-video shadow-lg',
+        'aspect-video w-full max-w-full rounded-lg bg-slate-300 shadow-lg',
         styles.browserPreview
       )}
     >

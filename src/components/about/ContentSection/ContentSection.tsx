@@ -9,7 +9,7 @@ const ContentSection: React.FC<ContentSectionProps> = (props) => {
       <Section.Wrapper className="py-52">
         <Section.Content>
           <Typography variant={'h3'}>Unsere Mission</Typography>
-          <div className="grid grid-cols-1 lg:grid-cols-4 mt-6 gap-x-16 gap-y-24">
+          <div className="mt-6 grid grid-cols-1 gap-x-16 gap-y-24 lg:grid-cols-4">
             <div className="lg:col-span-3">
               <Typography variant={'h4'}>
                 {/* Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
@@ -52,20 +52,20 @@ const ContentSection: React.FC<ContentSectionProps> = (props) => {
                 immer einen einzigartigen Touch zu behalten.
               </Typography>
             </div>
-            <div className="gap-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-1">
               <div>
-                <p className="text-5xl text-slate-900 font-medium">2023</p>
-                <p className="mt-1 text-slate-500 text-base">gegründet</p>
+                <p className="text-5xl font-medium text-slate-900">2023</p>
+                <p className="mt-1 text-base text-slate-500">gegründet</p>
               </div>
               <div>
-                <p className="text-5xl text-slate-900 font-medium">+50</p>
-                <p className="mt-1 text-slate-500 text-base">
+                <p className="text-5xl font-medium text-slate-900">+50</p>
+                <p className="mt-1 text-base text-slate-500">
                   beeinflußte Projekte
                 </p>
               </div>
               <div>
-                <p className="text-5xl text-slate-900 font-medium">46,000</p>
-                <p className="mt-1 text-slate-500 text-base">
+                <p className="text-5xl font-medium text-slate-900">46,000</p>
+                <p className="mt-1 text-base text-slate-500">
                   Erreichte Kunden
                 </p>
               </div>

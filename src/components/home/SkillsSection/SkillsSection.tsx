@@ -10,7 +10,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = (props) => {
     <Section {...other} className={classNames('', className)}>
       <Section.Wrapper>
         <Section.Content>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <Typography variant={'h3'}>
               Gute Webseiten waren noch nie so einfach.
             </Typography>
@@ -20,7 +20,7 @@ const SkillsSection: React.FC<SkillsSectionProps> = (props) => {
               Webseiten für jeden zu ermöglichen.
             </Typography>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-8">
+          <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <SkillCard
               highlighted
               title="Pixelperfect Design."

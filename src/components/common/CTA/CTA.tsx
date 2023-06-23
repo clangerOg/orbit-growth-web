@@ -10,11 +10,11 @@ const CTA: React.FC<CTAProps> = () => {
     <Section className="overflow-hidden">
       <Section.Wrapper>
         <Section.Content>
-          <div className="max-w-6xl bg-slate-900 rounded-lg shadow-lg px-8 py-12 md:p-14 flex flex-col items-center justify-center relative">
-            <div className="absolute bottom-0 left-0 rounded-bl-lg overflow-hidden z-0 opacity-20 md:opacity-30">
+          <div className="relative flex max-w-6xl flex-col items-center justify-center rounded-lg bg-slate-900 px-8 py-12 shadow-lg md:p-14">
+            <div className="absolute bottom-0 left-0 z-0 overflow-hidden rounded-bl-lg opacity-20 md:opacity-30">
               <CircleLeft />
             </div>
-            <div className="absolute bottom-0 right-0 rounded-br-lg overflow-hidden z-0 opacity-10 sm:opacity-20 md:opacity-30">
+            <div className="absolute bottom-0 right-0 z-0 overflow-hidden rounded-br-lg opacity-10 sm:opacity-20 md:opacity-30">
               <CircleRight />
             </div>
             <div className="relative z-20">
@@ -23,14 +23,14 @@ const CTA: React.FC<CTAProps> = () => {
               </Typography>
               <Typography
                 variant={'h4'}
-                className="text-center text-slate-400 mt-4 text-base sm:text-lg"
+                className="mt-4 text-center text-base text-slate-400 sm:text-lg"
               >
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod tempor invidunt ut labore et dolore magna
                 aliquyam erat, sed diam voluptua.{' '}
               </Typography>
 
-              <div className="flex flex-row justify-center items-center w-full mt-14 gap-8 flex-wrap">
+              <div className="mt-14 flex w-full flex-row flex-wrap items-center justify-center gap-8">
                 <Button href="/contact" variant={'tertiary'}>
                   Get in touch
                 </Button>

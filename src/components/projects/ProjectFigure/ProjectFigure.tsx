@@ -8,7 +8,7 @@ const ProjectFigure: React.FC<ProjectFigureProps> = (props) => {
 
   return (
     <div {...other} className={classNames(className)}>
-      <Section className="border-y border-slate-200 bg-slate-100 overflow-hidden mt-52">
+      <Section className="mt-52 overflow-hidden border-y border-slate-200 bg-slate-100">
         <Section.Wrapper>
           <Section.Content className="overflow-hidden shadow-lg shadow-slate-300">
             <Image
@@ -23,7 +23,7 @@ const ProjectFigure: React.FC<ProjectFigureProps> = (props) => {
         <Section>
           <Section.Wrapper>
             <Section.Content>
-              <div className="pl-6 border-l border-slate-200 py-6">
+              <div className="border-l border-slate-200 py-6 pl-6">
                 <small className="prose prose-slate">{caption} </small>
               </div>
             </Section.Content>

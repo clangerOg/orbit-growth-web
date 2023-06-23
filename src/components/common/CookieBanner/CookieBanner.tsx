@@ -55,8 +55,8 @@ const CookieBanner: React.FC = () => {
   };
 
   return (
-    <div className="fixed w-full left-0 right-0 z-50 bg-transparent flex justify-center items-center bottom-14 px-6">
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-4xl left-20 right-20 w-full border border-slate-200 flex gap-8 items-center justify-between">
+    <div className="fixed bottom-14 left-0 right-0 z-50 flex w-full items-center justify-center bg-transparent px-6">
+      <div className="left-20 right-20 flex w-full max-w-4xl items-center justify-between gap-8 rounded-lg border border-slate-200 bg-white p-6 shadow-lg">
         <p>Accept all cookies?</p>
         <div className=" flex flex-wrap gap-6">
           <button

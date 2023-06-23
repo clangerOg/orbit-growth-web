@@ -55,15 +55,15 @@ const Card: React.FC = () => {
       onMouseMove={onMouseMove}
       onMouseOut={onMouseOut}
       id="custom-card"
-      className="transition-transform duration-75 cursor-default row-span-1 md:row-span-2 bg-white border border-slate-200 rounded-lg p-8 shadow-lg overflow-hidden relative pb-52 md:pb-0"
+      className="relative row-span-1 cursor-default overflow-hidden rounded-lg border border-slate-200 bg-white p-8 pb-52 shadow-lg transition-transform duration-75 md:row-span-2 md:pb-0"
     >
-      <div className="absolute w-3/4 h-1/2 bottom-0 right-0 z-20">
-        <div className="relative z-20 w-full h-full">
+      <div className="absolute bottom-0 right-0 z-20 h-1/2 w-3/4">
+        <div className="relative z-20 h-full w-full">
           <Image
             fill
             src={SkillsBrowserWindow}
             alt="Example Design made by Orbitgrowth.de"
-            className=" w-full h-full object-left-top object-cover z-20 shadow-lg border-l border-t border-slate-200 rounded-tl-lg"
+            className=" z-20 h-full w-full rounded-tl-lg border-l border-t border-slate-200 object-cover object-left-top shadow-lg"
           />
         </div>
       </div>

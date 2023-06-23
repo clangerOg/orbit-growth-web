@@ -12,7 +12,7 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
     <Section
       {...other}
       className={classNames(
-        'bg-slate-900 border-b border-slate-200',
+        'border-b border-slate-200 bg-slate-900',
         className
       )}
     >

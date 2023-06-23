@@ -20,7 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = forwardRef<
         {...other}
         ref={ref}
         className={classNames(
-          'rounded-xl p-4 bg-slate-50 hover:bg-slate-100 transition-colors ',
+          'rounded-xl bg-slate-50 p-4 transition-colors hover:bg-slate-100 ',
           className
         )}
       >
@@ -33,9 +33,9 @@ const ProjectCard: React.FC<ProjectCardProps> = forwardRef<
           <p className="text-base font-semibold text-slate-900">
             {project.title}
           </p>
-          <p className="mt-1 text-sm text-slate-500 inline-flex items-center gap-3">
+          <p className="mt-1 inline-flex items-center gap-3 text-sm text-slate-500">
             {project.date}{' '}
-            <span className="text-slate-400 shrink-0 text-xs">●</span>
+            <span className="shrink-0 text-xs text-slate-400">●</span>
             {project.company}
           </p>
         </div>

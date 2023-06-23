@@ -23,7 +23,7 @@ const HeaderDropdown: React.FC<HeaderDropdownProps> = ({ links }) => {
                   <Menu.Item key={key}>
                     <Link href={link.target}>
                       <div className="flex items-center gap-6">
-                        <div className="flex-shrink-0 w-10 p-2 bg-slate-100 rounded-md text-slate-600">
+                        <div className="w-10 flex-shrink-0 rounded-md bg-slate-100 p-2 text-slate-600">
                           {link.icon}
                         </div>
                         <div className="cursor-pointer font-medium text-slate-500">
@@ -35,7 +35,7 @@ const HeaderDropdown: React.FC<HeaderDropdownProps> = ({ links }) => {
                 );
               })}
           </div>
-          <div className="mt-12 bg-slate-100 p-6 flex justify-between items-center">
+          <div className="mt-12 flex items-center justify-between bg-slate-100 p-6">
             <p className="text-base font-medium text-slate-900">
               Ready for takeoff?
             </p>

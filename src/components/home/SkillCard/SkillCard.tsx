@@ -12,7 +12,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
     <div
       {...props}
       className={classNames(
-        'p-6 rounded-md h-fit',
+        'h-fit rounded-md p-6',
         highlighted ? 'bg-slate-50' : 'bg-slate-50',
         className
       )}

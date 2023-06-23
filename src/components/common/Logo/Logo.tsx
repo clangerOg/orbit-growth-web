@@ -10,7 +10,7 @@ const Logo: React.FC<LogoProps> = ({ woodmark, light = false }) => {
         viewBox="0 0 512 512"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full bg-yellow-400"
+        className="h-full w-full bg-yellow-400"
       >
         <g clip-path="url(#clip0_6_245)">
           <circle

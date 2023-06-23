@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, createContext, useContext } from "react";
+import React, { PropsWithChildren, createContext, useContext } from 'react';
 
 type SectionContextProps = {};
 
@@ -19,7 +19,7 @@ const useSectionContext = (): SectionContextProps => {
 
   if (context == null) {
     throw new Error(
-      "StepperContext can only be used within a Section component."
+      'StepperContext can only be used within a Section component.'
     );
   }
 

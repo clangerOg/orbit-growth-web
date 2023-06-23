@@ -11,21 +11,21 @@ const Header: React.FC<HeaderProps> = ({ links, className, ...props }) => {
     <Section
       {...props}
       className={classNames(
-        'border-b border-slate-200 sticky top-0 bg-white z-40',
+        'sticky top-0 z-40 border-b border-slate-200 bg-white',
         className
       )}
     >
       <Section.Wrapper>
-        <Section.Content className="py-6 flex justify-between items-center ">
-          <div className="h-8 w-fit block">
+        <Section.Content className="flex items-center justify-between py-6 ">
+          <div className="block h-8 w-fit">
             <Logo woodmark />
           </div>
-          <div className="items-center gap-x-8 hidden md:flex">
+          <div className="hidden items-center gap-x-8 md:flex">
             {links &&
               links.map((link, key) => {
                 return (
                   <Link href={link.target} key={key}>
-                    <p className="text-sm leading-6 font-semibold text-slate-900">
+                    <p className="text-sm font-semibold leading-6 text-slate-900">
                       {link.title}
                     </p>
                   </Link>

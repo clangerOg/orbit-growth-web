@@ -25,12 +25,12 @@ const ProjectsSection: React.FC = () => {
         </Section.Wrapper>
       </Section>
       <Section className="mt-12 pb-52">
-        <div className="absolute -z-30 top-0">
+        <div className="absolute top-0 -z-30">
           <Image src={SkillsBG} alt="Hero Background Image" />
         </div>
         <Section.Wrapper>
-          <Section.Content className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-12">
-            <div className="p-8 bg-white shadow-lg rounded-lg border border-slate-200 group overflow-hidden relative">
+          <Section.Content className="grid grid-cols-1 gap-8 pt-12 md:grid-cols-2">
+            <div className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-8 shadow-lg">
               <Typography variant={'h5'}>
                 Travel Explorer Website Redesign
               </Typography>
@@ -39,9 +39,9 @@ const ProjectsSection: React.FC = () => {
                 lässt auf sich warten. Damit das Layout nun nicht nackt im Raume
                 steht und sich klein und leer vorkommt, springe ich ein.
               </Typography>
-              <div className="h-72 w-full mt-14" />
+              <div className="mt-14 h-72 w-full" />
 
-              <div className="flex gap-8 h-72 absolute bottom-8 -left-1/3">
+              <div className="absolute -left-1/3 bottom-8 flex h-72 gap-8">
                 <Image
                   src={TECard}
                   alt=""
@@ -50,7 +50,7 @@ const ProjectsSection: React.FC = () => {
                 <Image
                   src={TECard2}
                   alt=""
-                  className="rounded-lg border border-slate-200 group-hover:shadow-lg transition-shadow"
+                  className="rounded-lg border border-slate-200 transition-shadow group-hover:shadow-lg"
                 />
                 <Image
                   src={TECard3}

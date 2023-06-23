@@ -49,23 +49,23 @@ export const Header: React.FC = () => {
     <div
       ref={ref}
       className={classNames(
-        ' flex w-full flex-col items-center justify-center z-40 sticky md:fixed top-0 bg-white border-b border-slate-200 md:border-0 transition-colors',
+        ' sticky top-0 z-40 flex w-full flex-col items-center justify-center border-b border-slate-200 bg-white transition-colors md:fixed md:border-0',
         scrolled ? 'md:bg-white' : 'md:bg-transparent'
       )}
     >
       <Section.Wrapper>
-        <Section.Content className="py-6 flex justify-between items-center ">
-          <div className="h-8 w-fit block">
+        <Section.Content className="flex items-center justify-between py-6 ">
+          <div className="block h-8 w-fit">
             <Logo woodmark light={!scrolled} />
           </div>
-          <div className="items-center gap-x-8 hidden md:flex">
+          <div className="hidden items-center gap-x-8 md:flex">
             {HeaderLinks &&
               HeaderLinks.map((link, key) => {
                 return (
                   <Link href={link.target} key={key}>
                     <p
                       className={classNames(
-                        'text-sm leading-6 font-semibold ',
+                        'text-sm font-semibold leading-6 ',
                         scrolled ? 'text-slate-900' : 'text-white'
                       )}
                     >

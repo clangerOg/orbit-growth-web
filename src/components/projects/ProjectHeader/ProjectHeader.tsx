@@ -14,7 +14,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = (props) => {
 
   return (
     <>
-      <Section className="border-b border-slate-200 bg-slate-100 overflow-hidden">
+      <Section className="overflow-hidden border-b border-slate-200 bg-slate-100">
         <Section.Wrapper>
           <Section.Content className="overflow-hidden shadow-lg shadow-slate-300">
             <Image
@@ -27,30 +27,30 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = (props) => {
       </Section>
       <Section className="mb-24 border-b border-slate-200">
         <Section.Wrapper>
-          <Section.Content className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-slate-200">
-            <div className="p-6 lg:p-8 border-l border-inherit">
-              <p className="text-sm text-slate-900 font-bold">Date</p>
-              <p className="text-slate-500 text-sm mt-1">{project.date}</p>
+          <Section.Content className="grid grid-cols-2 divide-x divide-slate-200 lg:grid-cols-4">
+            <div className="border-l border-inherit p-6 lg:p-8">
+              <p className="text-sm font-bold text-slate-900">Date</p>
+              <p className="mt-1 text-sm text-slate-500">{project.date}</p>
             </div>
-            <div className="p-6 lg:p-8 !border-r lg:!border-r-0">
-              <p className="text-sm text-slate-900 font-bold">URL</p>
+            <div className="!border-r p-6 lg:!border-r-0 lg:p-8">
+              <p className="text-sm font-bold text-slate-900">URL</p>
               {project.url ? (
                 <Link href={project.url}>
-                  <p className="text-slate-500 text-sm mt-1">{project.url}</p>
+                  <p className="mt-1 text-sm text-slate-500">{project.url}</p>
                 </Link>
               ) : (
                 <>
-                  <p className="text-slate-500 text-sm mt-1">
+                  <p className="mt-1 text-sm text-slate-500">
                     Nicht veröffentlicht
                   </p>
                 </>
               )}
             </div>
-            <div className="p-6 lg:p-8 border-t lg:border-t-0 border-inherit">
-              <p className="text-sm text-slate-900 font-bold">Unternehmen</p>
-              <p className="text-slate-500 text-sm mt-1">{project.company}</p>
+            <div className="border-t border-inherit p-6 lg:border-t-0 lg:p-8">
+              <p className="text-sm font-bold text-slate-900">Unternehmen</p>
+              <p className="mt-1 text-sm text-slate-500">{project.company}</p>
             </div>
-            <div className="p-4 lg:p-8 !border-r flex items-center justify-center border-t lg:border-t-0 border-inherit">
+            <div className="flex items-center justify-center !border-r border-t border-inherit p-4 lg:border-t-0 lg:p-8">
               {project.url ? (
                 <Button variant={'default'} href={project.url || '#'}>
                   Seite aufrufen

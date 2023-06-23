@@ -74,9 +74,9 @@ const ContactForm: React.FC<ContactFormProps> = () => {
           type="text"
           className="col-span-2"
         />
-        <Form.Field name="message" className="flex flex-col col-span-2">
-          <div className="flex justify-between items-center">
-            <Form.Label className="text-sm font-semibold text-neutral-900 mb-2.5">
+        <Form.Field name="message" className="col-span-2 flex flex-col">
+          <div className="flex items-center justify-between">
+            <Form.Label className="mb-2.5 text-sm font-semibold text-neutral-900">
               Ihre Nachricht
             </Form.Label>
             <p className="text-sm text-slate-500">Max. 500 Characters</p>
@@ -84,7 +84,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
           <Form.Control asChild maxLength={500}>
             <textarea
               required
-              className="bg-slate-50 block w-full rounded-md border-0 px-3.5 py-2 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 data-[invalid]:ring-2 data-[invalid]:ring-red-500 data-[valid]:ring-2 data-[valid]:ring-emerald-500"
+              className="block w-full rounded-md border-0 bg-slate-50 px-3.5 py-2 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 data-[invalid]:ring-2 data-[valid]:ring-2 data-[invalid]:ring-red-500 data-[valid]:ring-emerald-500 sm:text-sm sm:leading-6"
             />
           </Form.Control>
         </Form.Field>
@@ -92,12 +92,12 @@ const ContactForm: React.FC<ContactFormProps> = () => {
         {res && (
           <div
             className={classNames(
-              'col-span-2 p-4 rounded-lg',
+              'col-span-2 rounded-lg p-4',
               res.type == 'error' && 'bg-red-500',
               res.type == 'success' && 'bg-green-500'
             )}
           >
-            <p className="text-white font-medium inline-flex items-center">
+            <p className="inline-flex items-center font-medium text-white">
               <span className="mr-2 w-5 flex-shrink-0">
                 {res.type == 'error' && (
                   <ExclamationCircleIcon className="w-full" />
@@ -108,7 +108,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               </span>
               {res.title}
             </p>
-            <p className="mt-2 text-sm text-white font-light">{res.value}</p>
+            <p className="mt-2 text-sm font-light text-white">{res.value}</p>
           </div>
         )}
 
@@ -118,7 +118,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               variant: 'default',
               size: 'default',
               className:
-                'w-full col-span-2 disabled:opacity-75 disabled:cursor-not-allowed',
+                'col-span-2 w-full disabled:cursor-not-allowed disabled:opacity-75',
             })}
             disabled={isLoading}
           >
@@ -133,7 +133,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               <div role="status">
                 <svg
                   aria-hidden="true"
-                  className="w-4 h-4 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                  className="mr-2 h-4 w-4 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
                   viewBox="0 0 100 101"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -165,14 +165,14 @@ const FormField: React.FC<{
 }> = ({ name, label, type, className }) => {
   return (
     <Form.Field name={name} className={classNames('flex flex-col', className)}>
-      <Form.Label className="text-sm font-semibold text-neutral-900 mb-2.5">
+      <Form.Label className="mb-2.5 text-sm font-semibold text-neutral-900">
         {label}
       </Form.Label>
       <Form.Control asChild>
         <input
           required
           type={type}
-          className="bg-slate-50 block w-full rounded-md border-0 px-3.5 py-2 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 data-[invalid]:ring-2 data-[invalid]:ring-red-500 data-[valid]:ring-2 data-[valid]:ring-emerald-500"
+          className="block w-full rounded-md border-0 bg-slate-50 px-3.5 py-2 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 data-[invalid]:ring-2 data-[valid]:ring-2 data-[invalid]:ring-red-500 data-[valid]:ring-emerald-500 sm:text-sm sm:leading-6"
         />
       </Form.Control>
       <Form.Message match={'valueMissing'}>
