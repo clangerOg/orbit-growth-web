@@ -1,8 +1,8 @@
+import { ContentSection, TeamSection } from '@/components/about';
 import { PageHeader, Section } from '@/components/common';
+import { TEAM } from '@/lib/consts';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { Content, Team } from './_components';
-import { TEAM } from './_types/About.consts';
 
 // store values to prevent redundancies
 const title = 'Über uns';
@@ -29,7 +29,7 @@ export default async function Page() {
       />
 
       {/* Content Section */}
-      <Content />
+      <ContentSection />
 
       {/* Image Section */}
       <Section>
@@ -48,7 +48,7 @@ export default async function Page() {
       </Section>
 
       {/* Team Section */}
-      <Team team={TEAM} />
+      <TeamSection team={TEAM} />
     </>
   );
 }
