@@ -4,13 +4,12 @@ import Image from 'next/image';
 import CTABg from '../../../public/CTA_BG.png';
 import HeroBG from '../../../public/landing/HeroBG2.png';
 import ProjectsSection from '../ProjectsSection/ProjectsSection';
-import { Header } from './_components';
 
 export default async function Page() {
   return (
     <>
       {/* Header */}
-      <Header />
+      {/* <Header /> */}
       {/* Hero */}
       <Section className="h-[90vh] sm:h-[80vh] w-full overflow-hidden shadow-2xl">
         <Image
