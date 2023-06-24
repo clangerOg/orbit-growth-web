@@ -1,4 +1,4 @@
-import { PageHeader } from '@/components/common';
+import { Header } from '@/components/header';
 import { ProjectsSection } from '@/components/projects';
 import { PROJECTS } from '@/lib/consts';
 import { Metadata } from 'next';
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <PageHeader
+      <Header
         title="Projekte"
         desc="Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Necessitatibus ab corrupti doloribus, nihil officia dolorum quasi,"

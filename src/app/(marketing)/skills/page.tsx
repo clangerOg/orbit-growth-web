@@ -1,9 +1,9 @@
-import { PageHeader } from '@/components/common';
+import { Header } from '@/components/header';
 
 export default async function Page() {
   return (
     <>
-      <PageHeader
+      <Header
         title="Unsere Skills"
         desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit impedit illum nemo rerum facere, soluta earum dolore excepturi sit non, ipsam aperiam incidunt"
       />

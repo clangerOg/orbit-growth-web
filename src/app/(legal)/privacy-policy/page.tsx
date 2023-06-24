@@ -1,5 +1,6 @@
-import { PageHeader, Typography } from '@/components/common';
+import { Typography } from '@/components/common';
 import { Container } from '@/components/container';
+import { Header } from '@/components/header';
 import { Shell } from '@/components/shell';
 import { Metadata } from 'next';
 
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 export default async function Page() {
   return (
     <>
-      <PageHeader title="Datenschutzerklärung" desc="" />
+      <Header title="Datenschutzerklärung" desc="" />
 
       <Shell className="max-w-full break-words py-32">
         <Container className="prose prose-slate">

@@ -10,7 +10,7 @@ type HeaderProps = React.DetailedHTMLProps<
   HTMLDivElement
 > & { title: string; desc?: string };
 
-export default async function Header(props: HeaderProps) {
+export const Header: React.FC<HeaderProps> = (props) => {
   const { title, desc, className, ...other } = props;
 
   return (
@@ -31,4 +31,4 @@ export default async function Header(props: HeaderProps) {
       </Container>
     </Shell>
   );
-}
+};

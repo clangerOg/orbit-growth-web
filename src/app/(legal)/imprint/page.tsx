@@ -1,5 +1,6 @@
-import { Button, PageHeader } from '@/components/common';
+import { Button } from '@/components/common';
 import { Container } from '@/components/container';
+import { Header } from '@/components/header';
 import { Shell } from '@/components/shell';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 export default async function Page() {
   return (
     <>
-      <PageHeader title="Impressum" desc="" />
+      <Header title="Impressum" desc="" />
 
       <Shell className="py-32">
         <Container>

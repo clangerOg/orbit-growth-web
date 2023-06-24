@@ -1,6 +1,6 @@
 import { Typography } from '@/components/common';
 import { Container } from '@/components/container';
-import Header from '@/components/header';
+import { Header } from '@/components/header';
 import { Shell } from '@/components/shell';
 import { TeamCard } from '@/components/team-card';
 import { itemsConfig } from '@/config/items';
