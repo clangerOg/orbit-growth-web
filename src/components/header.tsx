@@ -2,8 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import BackgroundImage from '../../public/images/header-background.png';
 import { Typography } from './common';
-import Container from './container';
-import Shell from './shell';
+import { Container } from './container';
+import { Shell } from './shell';
 
 type HeaderProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,

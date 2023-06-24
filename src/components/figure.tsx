@@ -2,8 +2,8 @@ import { cn } from '@/lib/utils';
 import { PropsWithoutRef } from '@/types';
 import Image, { StaticImageData } from 'next/image';
 import React, { forwardRef } from 'react';
-import Container from './container';
-import Shell from './shell';
+import { Container } from './container';
+import { Shell } from './shell';
 
 type FigureProps = PropsWithoutRef<HTMLDivElement, HTMLDivElement> & {
   image: string | StaticImageData;
@@ -18,7 +18,7 @@ export const Figure: React.FC<FigureProps> = forwardRef<
   const { className, image, caption, alt, ...other } = props;
 
   return (
-    <Shell {...other} ref={ref} className={cn(className)}>
+    <Shell {...other} className={cn(className)}>
       <div className="w-full border-y overflow-hidden border-slate-200 bg-slate-100">
         <Container>
           <Image

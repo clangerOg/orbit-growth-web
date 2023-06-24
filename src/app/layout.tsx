@@ -1,4 +1,6 @@
-import { Footer, HeaderLink } from '@/components/layout';
+import Footer from '@/components/footer';
+import { HeaderLink } from '@/components/layout';
+import { siteConfig } from '@/config/site';
 import { BASE_URL } from '@/lib/consts';
 import {
   ClipboardDocumentIcon,
@@ -134,7 +136,8 @@ export default function RootLayout({
           {/* <CookieBanner /> */}
           {/* <Header links={HeaderLinks} className="hidden" /> */}
           {children}
-          <Footer className="" />
+          <Footer links={siteConfig.footerNav} />
+          {/* <Footer className="" /> */}
           <Analytics />
         </main>
       </body>

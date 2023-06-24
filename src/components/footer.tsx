@@ -1,21 +1,21 @@
 import { cn } from '@/lib/utils';
-import { NavLink } from '@/types';
+import { NavItem } from '@/types';
 import Link from 'next/link';
-import Container from './container';
-import Shell from './shell';
+import { Container } from './container';
+import { Shell } from './shell';
 
 type FooterProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 > & {
-  links?: NavLink[];
+  links?: NavItem[];
 };
 
 export default async function Footer(props: FooterProps) {
   const { className, links, ...other } = props;
 
   return (
-    <Shell {...other} className={cn(className)}>
+    <Shell {...other} className={cn('bg-slate-900', className)}>
       <Container className="py-16">
         <ul className="mb-8 flex flex-wrap items-center justify-center gap-8 border-b border-slate-800 px-6 pb-8 text-base font-normal text-slate-200">
           {links &&

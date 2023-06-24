@@ -18,10 +18,10 @@ export type TeamMember = {
   email: string;
 };
 
-export type NavLink = {
+export type NavItem = {
   title: string;
   target: string;
-  icon: React.JSX.Element;
+  icon?: React.JSX.Element;
 };
 
 export type PropsWithoutRef<T extends P, P> = Omit<

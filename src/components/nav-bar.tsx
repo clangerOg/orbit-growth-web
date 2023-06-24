@@ -1,12 +1,12 @@
 import { cn } from '@/lib/utils';
-import { NavLink, PropsWithoutRef } from '@/types';
+import { NavItem, PropsWithoutRef } from '@/types';
 import Link from 'next/link';
 import { Button, Logo } from './common';
 import { Container } from './container';
 import { Shell } from './shell';
 
 type NavBarProps = PropsWithoutRef<HTMLDivElement, HTMLDivElement> & {
-  links?: NavLink[];
+  links?: NavItem[];
 };
 
 export const NavBar: React.FC<NavBarProps> = (props) => {

@@ -1,8 +1,11 @@
 import { CallToAction } from '@/components/call-to-action';
 import { Button, Typography } from '@/components/common';
 import { Container } from '@/components/container';
-import { AboutSection, ProcessSection, SkillsSection } from '@/components/home';
+import { AboutSection } from '@/components/home';
+import { ProcessCard } from '@/components/process-card';
 import { Shell } from '@/components/shell';
+import { SkillCard } from '@/components/skill-card';
+import { itemsConfig } from '@/config/items';
 import Image from 'next/image';
 import HeroBackground from '../../../public/images/landing-hero-background.png';
 import ProjectsSection from '../ProjectsSection/ProjectsSection';
@@ -10,10 +13,7 @@ import ProjectsSection from '../ProjectsSection/ProjectsSection';
 export default async function Page() {
   return (
     <>
-      {/* Header */}
-      {/* <Header /> */}
       {/* Hero */}
-
       <Shell className="h-[90vh] w-full overflow-hidden shadow-2xl sm:h-[80vh]">
         <Image
           src={HeroBackground}
@@ -52,7 +52,31 @@ export default async function Page() {
       </Shell>
 
       {/* Skills */}
-      <SkillsSection className="mb-52 mt-[15vh]" />
+      <Shell className="mb-52 mt-[15vh]">
+        <Container>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <Typography variant={'h3'}>
+              Gute Webseiten waren noch nie so einfach.
+            </Typography>
+            <Typography variant={'h4'} className="mt-0.5">
+              Als eine junge Webdesign Agentur bieten wir Qualitäten, die andere
+              Agenturen nicht erreichen können. Unser Ziel ist es preiswerte
+              Webseiten für jeden zu ermöglichen.
+            </Typography>
+          </div>
+          <ul className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {itemsConfig.skillItems.map((card, index) => {
+              return (
+                <li key={`skills-${index}`}>
+                  <SkillCard title={card.title} className={card.className}>
+                    {card.description}
+                  </SkillCard>
+                </li>
+              );
+            })}
+          </ul>
+        </Container>
+      </Shell>
 
       {/* Projects */}
       <ProjectsSection />
@@ -61,55 +85,39 @@ export default async function Page() {
       <AboutSection />
 
       {/* Process */}
-      <ProcessSection />
-
-      <CallToAction />
-      {/* 
-      <svg
-        className="w-full max-w-full"
-        viewBox="0 0 1512 197"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M1512 0L0 197H1512V0Z" fill="#0F172A" />
-      </svg>
-
-      <Section className=" bg-slate-900">
-        <Section.Wrapper>
-          <Section.Content className="relative py-52">
-            <Image
-              src={CTABg}
-              alt=""
-              fill
-              className="z-10 object-contain object-center"
-            />
-            <div className="relative z-20 flex flex-wrap items-center justify-between gap-16">
-              <div>
-                <h3 className="max-w-md text-center text-3xl font-bold tracking-tight text-white sm:text-left sm:text-4xl">
-                  Wodrauf wartest du noch? Wir sind startklar!
-                </h3>
-              </div>
-              <div className="flex flex-wrap items-center gap-6 md:gap-8">
-                <Button
-                  href="/#contact"
-                  variant={'tertiary'}
-                  className="w-full sm:w-fit"
-                  useDefaultArrow
-                >
-                  Jetzt Kontakt aufnehmen
-                </Button>
-                <Button
-                  href="/projects"
-                  variant={'quaternary'}
-                  className="w-full sm:w-fit"
-                >
-                  Projekte betrachten
-                </Button>
+      <Shell className="py-52">
+        <Container>
+          <div className="relative grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="h-full">
+              <div className="sticky top-52">
+                <Typography variant={'h3'}>
+                  Ein klarer Plan, der immer zum Ziel führt.
+                </Typography>
+                <Typography variant={'h4'} className="mt-4">
+                  Unser Team arbeitet nach einem festen und stukturiertem
+                  Ablauf, damit am Ende alle deine Wünsche erfüllt werden. Ganz
+                  nach dem Motto &quot;Der Weg ist das Ziel&quot;.
+                </Typography>
               </div>
             </div>
-          </Section.Content>
-        </Section.Wrapper>
-      </Section> */}
+            <ul>
+              {itemsConfig.processItems.map((card, index) => {
+                return (
+                  <li key={`process-i-${index}`} className="group">
+                    <ProcessCard title={card.title}>
+                      {card.description}{' '}
+                    </ProcessCard>
+                    <div className="h-8 w-1/2 border-r-2 border-dashed border-slate-300 group-last:hidden" />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </Container>
+      </Shell>
+
+      {/* Call To Action */}
+      <CallToAction />
     </>
   );
 }
