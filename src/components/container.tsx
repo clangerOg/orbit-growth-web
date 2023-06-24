@@ -14,7 +14,7 @@ export default async function Container(props: ContainerProps) {
   return (
     <div
       {...other}
-      className={cn('container relative max-w-6xl px-6', className)}
+      className={cn('container relative max-w-6xl px-6 mx-auto', className)}
     >
       {children}
     </div>
