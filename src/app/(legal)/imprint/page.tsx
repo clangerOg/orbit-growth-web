@@ -1,7 +1,23 @@
 import { Button, PageHeader } from '@/components/common';
 import { Container } from '@/components/container';
 import { Shell } from '@/components/shell';
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+// store values to prevent redundancies
+const title = 'Impressum';
+const description =
+  'Impressum der Kosche und Langer GbR, Webdesign Agentur (https://orbitgrowth.de)';
+
+// export metadata object
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+  },
+};
 
 export default async function Page() {
   return (

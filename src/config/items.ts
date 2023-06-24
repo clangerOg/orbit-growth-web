@@ -1,4 +1,21 @@
-export type ItemsConfig = typeof itemsConfig;
+import { TeamMember } from '@/types';
+import ChrisPB from '../../public/people/Chris.jpg';
+import PaulPB from '../../public/people/Paul.jpg';
+
+const teamMembers: TeamMember[] = [
+  {
+    email: 'p.kosche@orbitgrowth.de',
+    imageSrc: PaulPB,
+    name: 'Paul Kosche',
+    position: 'Kundenbetreuung, Projektleitung',
+  },
+  {
+    email: 'c.langer@orbitgrowth.de',
+    imageSrc: ChrisPB,
+    name: 'Christoph Langer',
+    position: 'Design, Frontendentwicklung',
+  },
+];
 
 export const itemsConfig = {
   skillItems: [
@@ -53,4 +70,7 @@ export const itemsConfig = {
         'Wir bieten dir kontinuierlichen Support und stehen dir auch nach dem Launch mit Updates, Wartung und technischem Support zur Seite.',
     },
   ],
+  teamMembers: teamMembers,
 };
+
+export type ItemsConfig = typeof itemsConfig;
