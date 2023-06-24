@@ -1,22 +1,23 @@
 import { cn } from '@/lib/utils';
+import { PropsWithoutRef } from '@/types';
+import React, { forwardRef } from 'react';
 
-type ContainerProps = React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
-> & {
-  children?: React.ReactNode;
-  layout?: 'default';
-};
+type ContainerProps = PropsWithoutRef<HTMLDivElement, HTMLDivElement> & {};
 
-export default async function Container(props: ContainerProps) {
-  const { className, layout = 'default', children, ...other } = props;
+export const Container: React.FC<ContainerProps> = forwardRef<
+  HTMLDivElement,
+  ContainerProps
+>((props, ref) => {
+  const { className, children, ...other } = props;
 
   return (
     <div
       {...other}
+      ref={ref}
       className={cn('container relative max-w-6xl px-6 mx-auto', className)}
     >
       {children}
     </div>
   );
-}
+});
+Container.displayName = 'Container';

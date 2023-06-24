@@ -1,8 +1,10 @@
-import { Button, Section, Typography } from '@/components/common';
+import { CallToAction } from '@/components/call-to-action';
+import { Button, Typography } from '@/components/common';
+import { Container } from '@/components/container';
 import { AboutSection, ProcessSection, SkillsSection } from '@/components/home';
+import { Shell } from '@/components/shell';
 import Image from 'next/image';
-import CTABg from '../../../public/CTA_BG.png';
-import HeroBG from '../../../public/landing/HeroBG2.png';
+import HeroBackground from '../../../public/images/landing-hero-background.png';
 import ProjectsSection from '../ProjectsSection/ProjectsSection';
 
 export default async function Page() {
@@ -11,58 +13,43 @@ export default async function Page() {
       {/* Header */}
       {/* <Header /> */}
       {/* Hero */}
-      <Section className="h-[90vh] w-full overflow-hidden shadow-2xl sm:h-[80vh]">
+
+      <Shell className="h-[90vh] w-full overflow-hidden shadow-2xl sm:h-[80vh]">
         <Image
-          src={HeroBG}
-          alt=""
+          src={HeroBackground}
+          alt="Background Image for Hero section on landing page."
           className="z-10 object-cover object-center"
           fill
           quality={100}
         />
-        <Section.Wrapper>
-          <Section.Content>
-            <div className="relative z-30 flex flex-col items-center justify-center">
-              <Typography variant={'h1'} className="text-center text-white">
-                Herausragende Webseiten für lokale Unternehmen, zu fairen
-                Preisen.
-              </Typography>
-              <Typography
-                variant={'h2'}
-                className="mt-6 text-center text-slate-100"
-              >
-                OrbitGrowth ist eine Webdesign Agentur aus Ratingen, die sich
-                auf das Designen und Entwickeln von Webseiten für lokale
-                Unternehmen spezialisiert hat.
-              </Typography>
+        <Container className="relative z-30 flex flex-col items-center justify-center">
+          <Typography variant={'h1'} className="text-center text-white">
+            Herausragende Webseiten für lokale Unternehmen, zu fairen Preisen.
+          </Typography>
+          <Typography
+            variant={'h2'}
+            className="mt-6 text-center text-slate-100"
+          >
+            OrbitGrowth ist eine Webdesign Agentur aus Ratingen, die sich auf
+            das Designen und Entwickeln von Webseiten für lokale Unternehmen
+            spezialisiert hat.
+          </Typography>
 
-              <div className="mt-8 flex w-full flex-col items-center justify-center gap-8 sm:flex-row">
-                <Button
-                  href="#"
-                  className="w-full sm:w-fit"
-                  variant={'tertiary'}
-                >
-                  Kontakt aufnehmen
-                </Button>
-                {/* <a
-                  className="justify-center rounded-lg text-sm font-semibold transition-colors inline-flex items-center gap-2 bg-slate-900 text-white hover:bg-slate-700 py-3 px-4 w-full sm:w-fit"
-                  href="#"
-                >
-                  Kontakt aufnehmen
-                </a> */}
-
-                <Button
-                  href="#"
-                  className="w-full sm:w-fit"
-                  variant={'quaternary'}
-                  useDefaultArrow
-                >
-                  Projekte betrachten
-                </Button>
-              </div>
-            </div>
-          </Section.Content>
-        </Section.Wrapper>
-      </Section>
+          <div className="mt-8 flex w-full flex-col items-center justify-center gap-8 sm:flex-row">
+            <Button href="#" className="w-full sm:w-fit" variant={'tertiary'}>
+              Kontakt aufnehmen
+            </Button>
+            <Button
+              href="#"
+              className="w-full sm:w-fit"
+              variant={'quaternary'}
+              useDefaultArrow
+            >
+              Projekte betrachten
+            </Button>
+          </div>
+        </Container>
+      </Shell>
 
       {/* Skills */}
       <SkillsSection className="mb-52 mt-[15vh]" />
@@ -76,6 +63,8 @@ export default async function Page() {
       {/* Process */}
       <ProcessSection />
 
+      <CallToAction />
+      {/* 
       <svg
         className="w-full max-w-full"
         viewBox="0 0 1512 197"
@@ -120,7 +109,7 @@ export default async function Page() {
             </div>
           </Section.Content>
         </Section.Wrapper>
-      </Section>
+      </Section> */}
     </>
   );
 }

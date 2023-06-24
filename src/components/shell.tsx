@@ -1,19 +1,19 @@
 import { cn } from '@/lib/utils';
+import { PropsWithoutRef } from '@/types';
+import { forwardRef } from 'react';
 
-type ShellProps = React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
-> & {
-  children?: React.ReactNode;
-  layout?: 'default';
-};
+type ShellProps = PropsWithoutRef<HTMLDivElement, HTMLDivElement> & {};
 
-export default async function Shell(props: ShellProps) {
-  const { className, layout = 'default', children, ...other } = props;
+export const Shell: React.FC<ShellProps> = forwardRef<
+  HTMLDivElement,
+  ShellProps
+>((props, ref) => {
+  const { className, children, ...other } = props;
 
   return (
     <section
       {...other}
+      ref={ref}
       className={cn(
         'relative flex flex-col items-center justify-center',
         className
@@ -22,4 +22,5 @@ export default async function Shell(props: ShellProps) {
       {children}
     </section>
   );
-}
+});
+Shell.displayName = 'Shell';

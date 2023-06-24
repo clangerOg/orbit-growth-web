@@ -1,4 +1,4 @@
-import { Header } from '@/components/layout';
+import { NavBar } from '@/components/nav-bar';
 import React from 'react';
 import { HeaderLinks } from '../layout';
 
@@ -11,7 +11,7 @@ export default async function MarketingLayout({
 }: MarketingLayoutProps) {
   return (
     <>
-      <Header links={HeaderLinks} />
+      <NavBar links={HeaderLinks} />
       {children}
     </>
   );

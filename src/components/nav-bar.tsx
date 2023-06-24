@@ -1,18 +1,15 @@
 import { cn } from '@/lib/utils';
-import { NavLink } from '@/types';
+import { NavLink, PropsWithoutRef } from '@/types';
 import Link from 'next/link';
 import { Button, Logo } from './common';
-import Container from './container';
-import Shell from './shell';
+import { Container } from './container';
+import { Shell } from './shell';
 
-type NavBarProps = React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLDivElement>,
-  HTMLDivElement
-> & {
+type NavBarProps = PropsWithoutRef<HTMLDivElement, HTMLDivElement> & {
   links?: NavLink[];
 };
 
-export default async function NavBar(props: NavBarProps) {
+export const NavBar: React.FC<NavBarProps> = (props) => {
   const { className, links, ...other } = props;
 
   return (
@@ -44,4 +41,5 @@ export default async function NavBar(props: NavBarProps) {
       </Container>
     </Shell>
   );
-}
+};
+NavBar.displayName = 'NavBar';
