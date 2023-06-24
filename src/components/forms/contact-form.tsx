@@ -54,17 +54,17 @@ export const ContactForm: React.FC = forwardRef<
     if (response.ok) {
       setIsLoading(false);
       setRes({
-        title: 'Your message went through!',
+        title: 'Wir haben deine Nachricht erhlaten!',
         type: 'success',
-        value: `Your message was sent out successfully! We'll get back to you as soon as possible!`,
+        value: `Deine Nachricht wurde erfolgreich versendet! Wir werden und so schnell wie möglich bei dir zurück melden.`,
       });
     }
     if (!response.ok) {
       setIsLoading(false);
       setRes({
-        title: 'Something went wrong!',
+        title: 'Es ist ein Felher aufgetreten!',
         type: 'error',
-        value: `An unexpected error ocurred: ${response.statusText}`,
+        value: `Ein unerwarteter Fehler ist aufgetreten: ${response.statusText}`,
       });
     }
   }
