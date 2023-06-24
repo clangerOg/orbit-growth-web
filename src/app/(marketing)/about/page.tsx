@@ -1,4 +1,3 @@
-import { TeamSection } from '@/components/about';
 import { Typography } from '@/components/common';
 import { Container } from '@/components/container';
 import Header from '@/components/header';
@@ -93,7 +92,7 @@ export default async function Page() {
       </Shell>
 
       {/* Team Section */}
-      <TeamSection team={itemsConfig.teamMembers} />
+      {/* <TeamSection team={itemsConfig.teamMembers} /> */}
 
       <Shell>
         <Container className="pb-52 pt-72 grid grid-cols-1 gap-16 lg:grid-cols-5">
