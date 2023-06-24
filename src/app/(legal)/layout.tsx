@@ -1,4 +1,4 @@
-import NavBar from '@/components/nav-bar';
+import { NavBar } from '@/components/nav-bar';
 import React from 'react';
 import { HeaderLinks } from '../layout';
 
