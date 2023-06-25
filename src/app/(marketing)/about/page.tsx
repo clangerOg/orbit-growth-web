@@ -29,7 +29,7 @@ export default async function Page() {
       {/* Page Header */}
       <Header
         title="Über uns"
-        desc="Erfahre mehr über unsere Agentur und das Team, das hinter den Kulissen arbeitet."
+        desc="Erfahre mehr über unsere Agentur und das Team, das hinter den Kulissen arbeitet und was uns besonders macht."
       />
 
       {/* Content Section */}
@@ -92,8 +92,6 @@ export default async function Page() {
       </Shell>
 
       {/* Team Section */}
-      {/* <TeamSection team={itemsConfig.teamMembers} /> */}
-
       <Shell>
         <Container className="pb-52 pt-72 grid grid-cols-1 gap-16 lg:grid-cols-5">
           <div className="lg:col-span-2">

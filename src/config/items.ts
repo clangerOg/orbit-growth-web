@@ -22,7 +22,7 @@ const projects: Project[] = [
   {
     date: 'Januar 2023',
     title: 'Travel Explorer Website Redesign',
-    desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, reprehenderit in? Eligendi eaque ex nobis provident, iusto, sint eos quasi officia ipsam voluptate fugit nihil commodi. Dicta, perspiciatis! Numquam, mollitia.',
+    desc: 'Eine Reiseagentur, die sich an junge, reise-begeisterte Personen orientiert, braucht eine neue Webseite, um Kunden im digitalen Zeitalter besser erreichen zu können.',
     id: 'travel-explorer',
     company: 'Konzept Projekt',
     url: null,

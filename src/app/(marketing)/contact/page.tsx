@@ -110,10 +110,8 @@ export default async function Page() {
                 &quot;
               </p>
               <p className="text-2xl font-medium leading-9 text-slate-900">
-                &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ducimus ullam cumque illum debitis distinctio totam, a expedita
-                nulla, iste, natus eaque. Repellendus modi velit similique rerum
-                consectetur maiores aliquid&quot;
+                &quot;Je schneller wir in Kontak treten, umso schneller können
+                wir Unternehmen Web-berühmt machen!&quot;
               </p>
               <p className="mt-6 text-base font-semibold text-slate-900">
                 Paul Kosche

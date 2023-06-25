@@ -2,11 +2,13 @@ import { CallToAction } from '@/components/call-to-action';
 import { Button, Typography } from '@/components/common';
 import { Container } from '@/components/container';
 import { FAQDisclosure } from '@/components/faq-disclosure';
+import { NavBar } from '@/components/nav-bar';
 import { ProcessCard } from '@/components/process-card';
 import { ProjectThumbnail } from '@/components/project-thumbnail';
 import { Shell } from '@/components/shell';
 import { SkillCard } from '@/components/skill-card';
 import { itemsConfig } from '@/config/items';
+import { siteConfig } from '@/config/site';
 import Image from 'next/image';
 import Link from 'next/link';
 import HeroBackground from '../../public/images/landing-hero-background.png';
@@ -14,8 +16,9 @@ import HeroBackground from '../../public/images/landing-hero-background.png';
 export default async function Page() {
   return (
     <>
+      <NavBar links={siteConfig.mainNav} />
       {/* Hero */}
-      <Shell className="h-[90vh] w-full overflow-hidden shadow-2xl sm:h-[80vh]">
+      <Shell className="h-[80vh] w-full overflow-hidden shadow-2xl sm:h-[70vh]">
         <Image
           src={HeroBackground}
           alt="Background Image for Hero section on landing page."

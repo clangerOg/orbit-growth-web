@@ -1,7 +1,7 @@
 import { CallToAction } from '@/components/call-to-action';
 import { NavBar } from '@/components/nav-bar';
+import { siteConfig } from '@/config/site';
 import React from 'react';
-import { HeaderLinks } from '../layout';
 
 export type MarketingLayoutProps = {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ export default async function MarketingLayout({
 }: MarketingLayoutProps) {
   return (
     <>
-      <NavBar links={HeaderLinks} />
+      <NavBar links={siteConfig.mainNav} />
       {children}
       <CallToAction />
     </>

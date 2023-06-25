@@ -13,7 +13,13 @@ export const NavBar: React.FC<NavBarProps> = (props) => {
   const { className, links, ...other } = props;
 
   return (
-    <Shell {...other} className={cn(className)}>
+    <Shell
+      {...other}
+      className={cn(
+        'bg-white border-b border-slate-200 sticky top-0 z-50',
+        className
+      )}
+    >
       <Container className="flex items-center justify-between py-6">
         <div className="block h-8 w-fit">
           <Link href={'/'}>

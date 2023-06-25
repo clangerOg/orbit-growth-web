@@ -26,8 +26,7 @@ export default function Page() {
       {/* Page Header */}
       <Header
         title="Projekte"
-        desc="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Necessitatibus ab corrupti doloribus, nihil officia dolorum quasi,"
+        desc="Entdecke unsere Vorzeigeprojekte, mit denen wir verschiedenen Kunden bereits helfen konnten, ihre Webpräsenz zu verbessern."
       />
 
       {/* Projects Gallery */}
