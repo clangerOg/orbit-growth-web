@@ -39,7 +39,7 @@ export const CallToAction: React.FC<CallToActionProps> = (props) => {
           </div>
           <div className="flex flex-wrap items-center gap-6 md:gap-8">
             <Button
-              href="/#contact"
+              href="/contact"
               variant={'tertiary'}
               className="w-full sm:w-fit"
               useDefaultArrow
