@@ -1,158 +1,236 @@
-import { Button, Section, Typography } from '@/components/common';
+import { CallToAction } from '@/components/call-to-action';
+import { Button, Typography } from '@/components/common';
+import { Container } from '@/components/container';
+import { FAQDisclosure } from '@/components/faq-disclosure';
+import { ProcessCard } from '@/components/process-card';
+import { ProjectThumbnail } from '@/components/project-thumbnail';
+import { Shell } from '@/components/shell';
+import { SkillCard } from '@/components/skill-card';
+import { itemsConfig } from '@/config/items';
 import Image from 'next/image';
 import Link from 'next/link';
-import HeroBG from '../../public/landing/Hero_Grid_Bg.png';
-import SkillsBG from '../../public/landing/Skills_Grid_Bg.png';
-import BrowserWindow from './BrowserWindow';
-import Card from './Card';
-import ProjectsSection from './ProjectsSection/ProjectsSection';
+import HeroBackground from '../../public/images/landing-hero-background.png';
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       {/* Hero */}
-      <Section className="min-h-[80vh] py-24">
-        <div className="absolute top-0 -z-30">
-          <Image src={HeroBG} alt="Hero Background Image" />
-        </div>
-        <Section.Wrapper>
-          <Section.Content>
-            <div className="flex flex-col items-center justify-center">
-              <Typography variant={'h1'} className="text-center">
-                Herausragende Webseiten für lokale Unternehmen, zu fairen
-                Preisen.
-              </Typography>
-              <Typography variant={'h2'} className="mt-6 text-center">
-                OrbitGrowth ist eine Webdesign Agentur aus Ratingen, die sich
-                auf das Designen und Entwickeln von Webseiten für lokale
-                Unternehmen spezialisiert hat.
-              </Typography>
+      <Shell className="h-[90vh] w-full overflow-hidden shadow-2xl sm:h-[80vh]">
+        <Image
+          src={HeroBackground}
+          alt="Background Image for Hero section on landing page."
+          className="z-10 object-cover object-center"
+          fill
+          quality={100}
+        />
+        <Container className="relative z-30 flex flex-col items-center justify-center">
+          <Typography variant={'h1'} className="text-center text-white">
+            Herausragende Webseiten für lokale Unternehmen, zu fairen Preisen.
+          </Typography>
+          <Typography
+            variant={'h2'}
+            className="mt-6 text-center text-slate-100"
+          >
+            OrbitGrowth ist eine Webdesign Agentur aus Ratingen, die sich auf
+            das Designen und Entwickeln von Webseiten für lokale Unternehmen
+            spezialisiert hat.
+          </Typography>
 
-              <div className="mt-8 flex w-full flex-col items-center justify-center gap-8 sm:flex-row">
-                <Button href="#" className="w-full sm:w-fit">
-                  Kontakt aufnehmen
-                </Button>
-                {/* <a
-                  className="justify-center rounded-lg text-sm font-semibold transition-colors inline-flex items-center gap-2 bg-slate-900 text-white hover:bg-slate-700 py-3 px-4 w-full sm:w-fit"
-                  href="#"
-                >
-                  Kontakt aufnehmen
-                </a> */}
-
-                <Button
-                  href="#"
-                  className="w-full sm:w-fit"
-                  variant={'secondary'}
-                  useDefaultArrow
-                >
-                  Projekte betrachten
-                </Button>
-              </div>
-            </div>
-          </Section.Content>
-        </Section.Wrapper>
-      </Section>
-      <Section>
-        {' '}
-        <div className="absolute top-0 -z-30">
-          <Image src={SkillsBG} alt="Hero Background Image" />
-        </div>
-        <Section.Wrapper>
-          <Section.Content className="px-24 perspective-600">
-            {/* <div
-              id="browser-preview"
-              className={classNames(
-                'max-w-full w-full rounded-lg bg-slate-300 aspect-video',
-                styles.browserPreview
-              )}
+          <div className="mt-8 flex w-full flex-col items-center justify-center gap-8 sm:flex-row">
+            <Button href="#" className="w-full sm:w-fit" variant={'tertiary'}>
+              Kontakt aufnehmen
+            </Button>
+            <Button
+              href="#"
+              className="w-full sm:w-fit"
+              variant={'quaternary'}
+              useDefaultArrow
             >
-              <p>Hello World</p>
-            </div> */}
-            <BrowserWindow />
-          </Section.Content>
-        </Section.Wrapper>
-      </Section>
+              Projekte betrachten
+            </Button>
+          </div>
+        </Container>
+      </Shell>
 
-      <div className="h-96 w-full" />
-      <div className="h-96 w-full" />
-      <div className="h-96 w-full" />
+      {/* Skills */}
+      <Shell className="mb-52 mt-[15vh]">
+        <Container>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <Typography variant={'h3'}>
+              Gute Webseiten waren noch nie so einfach.
+            </Typography>
+            <Typography variant={'h4'} className="mt-0.5">
+              Als eine junge Webdesign Agentur bieten wir Qualitäten, die andere
+              Agenturen nicht erreichen können. Unser Ziel ist es preiswerte
+              Webseiten für jeden zu ermöglichen.
+            </Typography>
+          </div>
+          <ul className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {itemsConfig.skillItems.map((card, index) => {
+              return (
+                <li key={`skills-${index}`}>
+                  <SkillCard title={card.title} className={card.className}>
+                    {card.description}
+                  </SkillCard>
+                </li>
+              );
+            })}
+          </ul>
+        </Container>
+      </Shell>
 
-      <Section>
-        <Section.Wrapper>
-          <Section.Content>
-            <div className="">
-              <Typography variant={'h3'}>
-                Gute Webseiten waren noch nie so einfach.
-              </Typography>
-              <Typography variant={'h4'} className="mt-6">
-                Als eine junge Webdesign Agentur bieten wir Qualitäten, die
-                andere Agenturen nicht erreichen können. Unser Ziel ist es
-                preiswerte Webseiten für jeden zu ermöglichen.
-              </Typography>
+      {/* Projects */}
+      <Shell className="py-52">
+        <Container>
+          <Typography variant={'h3'}>
+            Projekte, mit denen wir überzeugen können
+          </Typography>
+          <Typography variant={'h4'} className="mt-6">
+            Entdecke unsere Vorzeigeprojekte, mit denen wir verschiedenen Kunden
+            bereits helfen konnten, ihre Webpräsenz zu verbessern. Von eleganten
+            Unternehmenswebsites bis hin zu benutzerfreundlichen
+            E-Commerce-Plattformen Weitere Projekte
+          </Typography>
+        </Container>
+        <Container className="mt-24">
+          <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full">
+            {itemsConfig.projects.slice(0, 6).map((project, index) => {
+              return (
+                <li key={`projects-i-${index}`}>
+                  <ProjectThumbnail project={project} />
+                </li>
+              );
+            })}
+          </ul>
+        </Container>
+        <Container className="flex justify-center items-center mt-24">
+          <Button href="/projects" useDefaultArrow size="sm">
+            Weitere Projekte
+          </Button>
+        </Container>
+      </Shell>
+
+      {/* About */}
+      <Shell className="py-52 bg-slate-50">
+        <Container className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+          <div>
+            <Typography variant={'h3'}>Über uns</Typography>
+
+            <Typography variant={'h4'} className="mt-4">
+              Orbit Growth ist eine Webdesign Agentur aus Ratingen, die sich auf
+              lokale Unternehmen spezialisiert hat. Für uns steht immer die
+              Qualität im Vordergrund.
+            </Typography>
+
+            <Typography variant={'p'} className="mt-9">
+              Durch die Mitarbeit an verschiedensten Projekten im Bereich
+              Webdesign und Webentwicklung konnten wir umfangreiche Erfahrung
+              aufbauen. Mit unser expertise schaffen wir es, für dich eine
+              technisch einwandfreie Webseite zu entwickeln und gleichzeitig
+              immer einen einzigartigen Touch zu behalten.
+            </Typography>
+
+            <Button
+              href="/about"
+              variant={'secondary'}
+              className="mt-6 px-0"
+              useDefaultArrow
+            >
+              Mehr Über uns
+            </Button>
+          </div>
+          <div className="grid h-full w-full grid-cols-2 items-center justify-end gap-6">
+            <div className="relative col-span-2 h-52 w-full">
+              <Image
+                src={
+                  'https://images.pexels.com/photos/3183159/pexels-photo-3183159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                }
+                fill
+                alt=""
+                className="rounded-lg object-cover object-center"
+              />
             </div>
-          </Section.Content>
-        </Section.Wrapper>
-      </Section>
-      <Section className="mt-12">
-        <div className="absolute top-0 -z-30">
-          <Image src={SkillsBG} alt="Hero Background Image" />
-        </div>
-        <Section.Wrapper>
-          <Section.Content className="grid grid-cols-1 gap-8 pt-12 md:grid-cols-2 md:grid-rows-2">
-            {/* <div className="row-span-1 md:row-span-2 bg-white border border-slate-200 rounded-lg p-8 shadow-lg overflow-hidden relative pb-52 md:pb-0">
-              <div className="absolute w-3/4 h-1/2 bottom-0 right-0 z-20">
-                <div className="relative z-20 w-full h-full">
-                  <Image
-                    fill
-                    src={SkillsBrowserWindow}
-                    alt="Example Design made by Orbitgrowth.de"
-                    className=" w-full h-full object-left-top object-cover z-20 shadow-lg border-l border-t border-slate-200 rounded-tl-lg"
-                  />
-                </div>
+            <div className="relative h-96 w-full">
+              <Image
+                src={
+                  'https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                }
+                fill
+                alt=""
+                className="rounded-lg object-cover object-center"
+              />
+            </div>
+            <div className="relative h-72 w-full self-start">
+              <Image
+                src="https://images.pexels.com/photos/8117466/pexels-photo-8117466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                fill
+                alt=""
+                className="rounded-lg object-cover object-center"
+              />
+            </div>
+          </div>
+        </Container>
+      </Shell>
+
+      {/* Process */}
+      <Shell className="py-52">
+        <Container>
+          <div className="relative grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="h-full">
+              <div className="sticky top-52">
+                <Typography variant={'h3'}>
+                  Ein klarer Plan, der immer zum Ziel führt.
+                </Typography>
+                <Typography variant={'h4'} className="mt-4">
+                  Unser Team arbeitet nach einem festen und stukturiertem
+                  Ablauf, damit am Ende alle deine Wünsche erfüllt werden. Ganz
+                  nach dem Motto &quot;Der Weg ist das Ziel&quot;.
+                </Typography>
               </div>
-              <Typography>
-                <span className="font-semibold text-slate-900">
-                  Pixelperfect Design.
-                </span>{' '}
-                Als junges Team sind wir in der Lage, frische und kreative Ideen
-                zu entwicklen, die sich von der Masse abheben und auf deine
-                Bedürfnisse maßgeschneidert sind.
-              </Typography>
-            </div> */}
-            <Card />
-            <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-lg md:col-start-2">
-              <Typography>
-                <span className="font-semibold text-slate-900">
-                  High-End-Webentwicklung.
-                </span>{' '}
-                Wir setzen auf moderne Webtechnologien, wie{' '}
-                <span className="text-blue-600 underline underline-offset-4">
-                  <Link href="https://webflow.com/" target="_blank">
-                    Webflow
-                  </Link>
-                </span>
-                , mit denen wir sicherstellen können, dass du immer eine
-                technisch einwandfreie und optimierte Webseite erhalten wirst.
-              </Typography>
             </div>
-            <div className="rounded-lg border border-slate-200 bg-white p-8 shadow-lg md:col-start-2">
-              <Typography>
-                <span className="font-semibold text-slate-900">
-                  Faire Preise.
-                </span>{' '}
-                Wir glauben, dass jedes Unternehmen Zugang zu einer
-                einwandfreien Webseite haben und dass Kosten keine Blockade sein
-                sollten.
-              </Typography>
-            </div>
-          </Section.Content>
-        </Section.Wrapper>
-      </Section>
-      <div className="h-96 w-full" />
-      <div className="h-96 w-full" />
-      <ProjectsSection />
-      <div className="h-96 w-full" />
-      <div className="h-96 w-full" />
+            <ul>
+              {itemsConfig.processItems.map((card, index) => {
+                return (
+                  <li key={`process-i-${index}`} className="group">
+                    <ProcessCard title={card.title}>
+                      {card.description}{' '}
+                    </ProcessCard>
+                    <div className="h-8 w-1/2 border-r-2 border-dashed border-slate-300 group-last:hidden" />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </Container>
+      </Shell>
+
+      <Shell className="py-52">
+        <Container>
+          <Typography variant={'h3'}>Oft gestellte Fragen</Typography>
+          <Typography variant={'h4'} className="mt-4">
+            Hier sind ein paar Fragen, die wir oft zu hören bekommen. Falls du
+            keine Antwort auf deine Frage finden konntest, hinterlasse uns{' '}
+            <span className="text-blue-600 font-medium underline underline-offset-2">
+              <Link href={'/contact'}>hier</Link>
+            </span>{' '}
+            einfach eine Nachricht und wir melden uns so schnell wie möglich bei
+            dir.
+          </Typography>
+        </Container>
+        <Container className="max-w-4xl mt-24">
+          <ul>
+            {itemsConfig.faqs.map((faq, index) => {
+              return (
+                <li key={`faq-${index}`}>
+                  <FAQDisclosure question={faq.question} answer={faq.answer} />
+                </li>
+              );
+            })}
+          </ul>
+        </Container>
+      </Shell>
+      {/* Call To Action */}
+      <CallToAction />
     </>
   );
 }
