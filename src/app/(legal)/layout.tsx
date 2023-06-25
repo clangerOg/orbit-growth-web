@@ -1,3 +1,4 @@
+import { CallToAction } from '@/components/call-to-action';
 import { NavBar } from '@/components/nav-bar';
 import React from 'react';
 import { HeaderLinks } from '../layout';
@@ -13,6 +14,7 @@ export default async function MarketingLayout({
     <>
       <NavBar links={HeaderLinks} />
       {children}
+      <CallToAction />
     </>
   );
 }

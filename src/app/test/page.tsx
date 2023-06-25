@@ -1,14 +1,13 @@
 import { CallToAction } from '@/components/call-to-action';
 import { Button, Typography } from '@/components/common';
 import { Container } from '@/components/container';
-import { AboutSection } from '@/components/home';
 import { ProcessCard } from '@/components/process-card';
+import { ProjectThumbnail } from '@/components/project-thumbnail';
 import { Shell } from '@/components/shell';
 import { SkillCard } from '@/components/skill-card';
 import { itemsConfig } from '@/config/items';
 import Image from 'next/image';
 import HeroBackground from '../../../public/images/landing-hero-background.png';
-import ProjectsSection from '../ProjectsSection/ProjectsSection';
 
 export default async function Page() {
   return (
@@ -79,10 +78,97 @@ export default async function Page() {
       </Shell>
 
       {/* Projects */}
-      <ProjectsSection />
+      <Shell className="py-52">
+        <Container>
+          <Typography variant={'h3'}>
+            Projekte, mit denen wir überzeugen können
+          </Typography>
+          <Typography variant={'h4'} className="mt-6">
+            Entdecke unsere Vorzeigeprojekte, mit denen wir verschiedenen Kunden
+            bereits helfen konnten, ihre Webpräsenz zu verbessern. Von eleganten
+            Unternehmenswebsites bis hin zu benutzerfreundlichen
+            E-Commerce-Plattformen Weitere Projekte
+          </Typography>
+        </Container>
+        <Container className="mt-24">
+          <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full">
+            {itemsConfig.projects.slice(0, 6).map((project, index) => {
+              return (
+                <li key={`projects-i-${index}`}>
+                  <ProjectThumbnail project={project} />
+                </li>
+              );
+            })}
+          </ul>
+        </Container>
+        <Container className="flex justify-center items-center mt-24">
+          <Button href="/projects" useDefaultArrow size="sm">
+            Weitere Projekte
+          </Button>
+        </Container>
+      </Shell>
 
       {/* About */}
-      <AboutSection />
+      <Shell className="py-52 bg-slate-50">
+        <Container className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+          <div>
+            <Typography variant={'h3'}>Über uns</Typography>
+
+            <Typography variant={'h4'} className="mt-4">
+              Orbit Growth ist eine Webdesign Agentur aus Ratingen, die sich auf
+              lokale Unternehmen spezialisiert hat. Für uns steht immer die
+              Qualität im Vordergrund.
+            </Typography>
+
+            <Typography variant={'p'} className="mt-9">
+              Durch die Mitarbeit an verschiedensten Projekten im Bereich
+              Webdesign und Webentwicklung konnten wir umfangreiche Erfahrung
+              aufbauen. Mit unser expertise schaffen wir es, für dich eine
+              technisch einwandfreie Webseite zu entwickeln und gleichzeitig
+              immer einen einzigartigen Touch zu behalten.
+            </Typography>
+
+            <Button
+              href="/about"
+              variant={'secondary'}
+              className="mt-6 px-0"
+              useDefaultArrow
+            >
+              Mehr Über uns
+            </Button>
+          </div>
+          <div className="grid h-full w-full grid-cols-2 items-center justify-end gap-6">
+            <div className="relative col-span-2 h-52 w-full">
+              <Image
+                src={
+                  'https://images.pexels.com/photos/3183159/pexels-photo-3183159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                }
+                fill
+                alt=""
+                className="rounded-lg object-cover object-center"
+              />
+            </div>
+            <div className="relative h-96 w-full">
+              <Image
+                src={
+                  'https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                }
+                fill
+                alt=""
+                className="rounded-lg object-cover object-center"
+              />
+            </div>
+            <div className="relative h-72 w-full self-start">
+              <Image
+                src="https://images.pexels.com/photos/8117466/pexels-photo-8117466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                fill
+                alt=""
+                className="rounded-lg object-cover object-center"
+              />
+            </div>
+          </div>
+        </Container>
+      </Shell>
 
       {/* Process */}
       <Shell className="py-52">

@@ -10,6 +10,7 @@ import ProjectsSection from './ProjectsSection/ProjectsSection';
 export default function Page() {
   return (
     <>
+      {/* Hero */}
       <Section className="min-h-[80vh] py-24">
         <div className="absolute top-0 -z-30">
           <Image src={HeroBG} alt="Hero Background Image" />
