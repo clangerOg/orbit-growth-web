@@ -40,11 +40,15 @@ export default async function Page() {
           </Typography>
 
           <div className="mt-8 flex w-full flex-col items-center justify-center gap-8 sm:flex-row">
-            <Button href="#" className="w-full sm:w-fit" variant={'tertiary'}>
+            <Button
+              href="/contact"
+              className="w-full sm:w-fit"
+              variant={'tertiary'}
+            >
               Kontakt aufnehmen
             </Button>
             <Button
-              href="#"
+              href="/projects"
               className="w-full sm:w-fit"
               variant={'quaternary'}
               useDefaultArrow

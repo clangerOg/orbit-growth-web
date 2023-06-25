@@ -3,6 +3,7 @@ import { NavItem, PropsWithoutRef } from '@/types';
 import Link from 'next/link';
 import { Button, Logo } from './common';
 import { Container } from './container';
+import { HeaderDropdown } from './header-dropdown';
 import { Shell } from './shell';
 
 type NavBarProps = PropsWithoutRef<HTMLDivElement, HTMLDivElement> & {
@@ -44,6 +45,14 @@ export const NavBar: React.FC<NavBarProps> = (props) => {
             Kontakt aufnehmen
           </Button>
         </ul>
+        <div className="flex items-center gap-x-4 md:hidden">
+          <Button href="/contact" size={'sm'}>
+            Kontakt
+          </Button>
+          <div className="mt-1">
+            <HeaderDropdown links={links} />
+          </div>
+        </div>
       </Container>
     </Shell>
   );
