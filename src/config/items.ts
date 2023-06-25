@@ -1,6 +1,7 @@
-import { TeamMember } from '@/types';
+import { Project, TeamMember } from '@/types';
 import ChrisPB from '../../public/people/Chris.jpg';
 import PaulPB from '../../public/people/Paul.jpg';
+import TravelExplorerHeader from '../../public/projects/travel-explorer/SomeImage.png';
 
 const teamMembers: TeamMember[] = [
   {
@@ -14,6 +15,19 @@ const teamMembers: TeamMember[] = [
     imageSrc: ChrisPB,
     name: 'Christoph Langer',
     position: 'Design, Frontendentwicklung',
+  },
+];
+
+const projects: Project[] = [
+  {
+    date: 'Januar 2023',
+    title: 'Travel Explorer Website Redesign',
+    desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, reprehenderit in? Eligendi eaque ex nobis provident, iusto, sint eos quasi officia ipsam voluptate fugit nihil commodi. Dicta, perspiciatis! Numquam, mollitia.',
+    id: 'travel-explorer',
+    company: 'Konzept Projekt',
+    url: null,
+    headerImage: TravelExplorerHeader,
+    thumbnailImage: TravelExplorerHeader,
   },
 ];
 
@@ -71,6 +85,7 @@ export const itemsConfig = {
     },
   ],
   teamMembers: teamMembers,
+  projects: projects,
 };
 
 export type ItemsConfig = typeof itemsConfig;

@@ -30,7 +30,7 @@ export const Figure: React.FC<FigureProps> = forwardRef<
       </div>
       <Container>
         <div className="border-l border-slate-200 py-6 pl-6">
-          <small className="prose prose-slate">Hello {caption} </small>
+          <small className="prose prose-slate">{caption} </small>
         </div>
       </Container>
     </Shell>

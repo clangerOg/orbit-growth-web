@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
 import ChrisPB from '../../public/people/Chris.jpg';
 import PaulPB from '../../public/people/Paul.jpg';
 
-export const TEAM: TeamMember[] = [
+const TEAM: TeamMember[] = [
   {
     email: 'p.kosche@orbitgrowth.de',
     imageSrc: PaulPB,

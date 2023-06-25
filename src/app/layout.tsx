@@ -133,11 +133,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <main>
-          {/* <CookieBanner /> */}
-          {/* <Header links={HeaderLinks} className="hidden" /> */}
           {children}
           <Footer links={siteConfig.footerNav} />
-          {/* <Footer className="" /> */}
           <Analytics />
         </main>
       </body>

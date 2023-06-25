@@ -1,6 +1,8 @@
+import { Container } from '@/components/container';
 import { Header } from '@/components/header';
-import { ProjectsSection } from '@/components/projects';
-import { PROJECTS } from '@/lib/consts';
+import { ProjectThumbnail } from '@/components/project-thumbnail';
+import { Shell } from '@/components/shell';
+import { itemsConfig } from '@/config/items';
 import { Metadata } from 'next';
 
 // store values to prevent redundancies
@@ -21,12 +23,28 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      {/* Page Header */}
       <Header
         title="Projekte"
         desc="Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Necessitatibus ab corrupti doloribus, nihil officia dolorum quasi,"
       />
-      <ProjectsSection projects={PROJECTS} />
+
+      {/* Projects Gallery */}
+
+      <Shell className="py-52">
+        <Container>
+          <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 w-full">
+            {itemsConfig.projects.map((project, index) => {
+              return (
+                <li key={`projects-i-${index}`}>
+                  <ProjectThumbnail project={project} />
+                </li>
+              );
+            })}
+          </ul>
+        </Container>
+      </Shell>
     </>
   );
 }
