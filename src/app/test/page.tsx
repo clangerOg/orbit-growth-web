@@ -1,12 +1,14 @@
 import { CallToAction } from '@/components/call-to-action';
 import { Button, Typography } from '@/components/common';
 import { Container } from '@/components/container';
+import { FAQDisclosure } from '@/components/faq-disclosure';
 import { ProcessCard } from '@/components/process-card';
 import { ProjectThumbnail } from '@/components/project-thumbnail';
 import { Shell } from '@/components/shell';
 import { SkillCard } from '@/components/skill-card';
 import { itemsConfig } from '@/config/items';
 import Image from 'next/image';
+import Link from 'next/link';
 import HeroBackground from '../../../public/images/landing-hero-background.png';
 
 export default async function Page() {
@@ -202,6 +204,31 @@ export default async function Page() {
         </Container>
       </Shell>
 
+      <Shell className="py-52">
+        <Container>
+          <Typography variant={'h3'}>Oft gestellte Fragen</Typography>
+          <Typography variant={'h4'} className="mt-4">
+            Hier sind ein paar Fragen, die wir oft zu hören bekommen. Falls du
+            keine Antwort auf deine Frage finden konntest, hinterlasse uns{' '}
+            <span className="text-blue-600 font-medium underline underline-offset-2">
+              <Link href={'/contact'}>hier</Link>
+            </span>{' '}
+            einfach eine Nachricht und wir melden uns so schnell wie möglich bei
+            dir.
+          </Typography>
+        </Container>
+        <Container className="max-w-4xl mt-24">
+          <ul>
+            {itemsConfig.faqs.map((faq, index) => {
+              return (
+                <li key={`faq-${index}`}>
+                  <FAQDisclosure question={faq.question} answer={faq.answer} />
+                </li>
+              );
+            })}
+          </ul>
+        </Container>
+      </Shell>
       {/* Call To Action */}
       <CallToAction />
     </>

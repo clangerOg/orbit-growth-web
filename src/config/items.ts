@@ -31,6 +31,55 @@ const projects: Project[] = [
   },
 ];
 
+const faqs: { question: string; answer: string }[] = [
+  {
+    question:
+      'Welche Art von Unternehmen können von Ihrer Webdesign-Agentur profitieren?',
+    answer:
+      'Unsere Webdesign-Agentur ist darauf spezialisiert, Webseiten für lokale Unternehmen zu erstellen. Egal ob Restaurants, Einzelhändler, Dienstleister oder andere lokale Unternehmen - wir helfen Ihnen gerne dabei, eine herausragende Online-Präsenz aufzubauen.',
+  },
+  {
+    question:
+      'Welche Informationen benötigen Sie von mir, um mit der Erstellung meiner Webseite zu beginnen?',
+    answer:
+      'Um mit der Erstellung Ihrer Webseite zu beginnen, benötigen wir grundlegende Informationen über Ihr Unternehmen, wie z.B. Ihr Logo, Ihre Farbpräferenzen, den gewünschten Umfang der Webseite und den Inhalt, den Sie bereitstellen möchten. Je mehr Informationen Sie uns zur Verfügung stellen, desto besser können wir Ihre Anforderungen erfüllen.',
+  },
+  {
+    question:
+      'Können Sie auch ein Logo oder Grafiken für meine Webseite entwerfen?',
+    answer:
+      'Ja, wir bieten auch Logo-Design und Grafikdesign-Services an. Unsere talentierten Designer können ein einzigartiges und professionelles Logo für Ihr Unternehmen erstellen und bei Bedarf auch andere Grafiken für Ihre Webseite gestalten.',
+  },
+  {
+    question:
+      'Bieten Sie auch Suchmaschinenoptimierung (SEO) für Webseiten an?',
+    answer:
+      'Ja, wir legen großen Wert auf eine suchmaschinenoptimierte Webseitenentwicklung. Wir optimieren Ihre Webseite für Suchmaschinen, indem wir relevante Keywords, gut strukturierten Code und andere bewährte SEO-Praktiken verwenden. Dadurch wird Ihre Webseite besser in den Suchergebnissen sichtbar und kann mehr potenzielle Kunden erreichen.',
+  },
+  {
+    question:
+      'Kann ich meine Webseite nach der Fertigstellung selbst aktualisieren?',
+    answer:
+      'Ja, wir können Ihre Webseite so konfigurieren, dass Sie sie nach der Fertigstellung selbst aktualisieren können. Wir verwenden intuitive Content-Management-Systeme (CMS), die es Ihnen ermöglichen, Inhalte, Bilder und andere Elemente Ihrer Webseite ohne Programmierkenntnisse zu bearbeiten und zu aktualisieren.',
+  },
+  {
+    question: 'Bieten Sie auch Webhosting und Domain-Registrierung an?',
+    answer:
+      'Wir bieten keine Webhosting- oder Domain-Registrierungsdienste direkt an. Allerdings können wir Ihnen bei der Auswahl eines zuverlässigen Webhosting-Unternehmens und bei der Registrierung Ihrer Domain helfen. Wir beraten Sie gerne zu den besten Optionen, die Ihren Anforderungen entsprechen.',
+  },
+  {
+    question:
+      'Was passiert, wenn ich mit dem Design meiner Webseite nicht zufrieden bin?',
+    answer:
+      'Unser Ziel ist es, sicherzustellen, dass Sie mit dem Design Ihrer Webseite vollständig zufrieden sind. Wir arbeiten eng mit Ihnen zusammen und berücksichtigen Ihr Feedback während des gesamten Entwicklungsprozesses. Falls Sie dennoch mit dem Design nicht zufrieden sind, werden wir unser Bestes tun, um Anpassungen vorzunehmen und sicherzustellen, dass Ihre Vision umgesetzt wird.',
+  },
+  {
+    question: 'Wie lange dauert es, bis meine Webseite online geht?',
+    answer:
+      'Die Zeit, die benötigt wird, um Ihre Webseite online zu bringen, hängt von verschiedenen Faktoren ab, einschließlich des Umfangs des Projekts und der Zusammenarbeit bei der Bereitstellung von Inhalten und Feedback. Wir bemühen uns jedoch, den Prozess effizient zu gestalten und Ihre Webseite so schnell wie möglich online zu stellen, ohne die Qualität zu beeinträchtigen.',
+  },
+];
+
 export const itemsConfig = {
   skillItems: [
     {
@@ -86,6 +135,7 @@ export const itemsConfig = {
   ],
   teamMembers: teamMembers,
   projects: projects,
+  faqs: faqs,
 };
 
 export type ItemsConfig = typeof itemsConfig;
