@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 import BackgroundImage from '../../public/images/header-background.png';
@@ -14,7 +15,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
   const { title, desc, className, ...other } = props;
 
   return (
-    <Shell {...other}>
+    <Shell {...other} className={cn('bg-slate-900', className)}>
       <Image
         src={BackgroundImage}
         alt="Background Image for Page Header"

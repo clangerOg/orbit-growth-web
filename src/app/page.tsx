@@ -18,7 +18,7 @@ export default async function Page() {
     <>
       <NavBar links={siteConfig.mainNav} />
       {/* Hero */}
-      <Shell className="h-[80vh] w-full overflow-hidden shadow-2xl sm:h-[70vh]">
+      <Shell className="h-[80vh] w-full overflow-hidden shadow-2xl sm:h-[70vh] bg-slate-900">
         <Image
           src={HeroBackground}
           alt="Background Image for Hero section on landing page."
