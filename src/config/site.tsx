@@ -31,6 +31,7 @@ const mainNav: NavItem[] = [
 ];
 
 export const siteConfig = {
+  baseUrl: 'https://orbitgrowth.de',
   mainNav: mainNav,
   footerNav: [
     ...mainNav,

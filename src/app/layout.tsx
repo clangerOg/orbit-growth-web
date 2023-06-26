@@ -1,6 +1,5 @@
 import { Footer } from '@/components/footer';
 import { siteConfig } from '@/config/site';
-import { BASE_URL } from '@/lib/consts';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -16,7 +15,7 @@ const jsonLd: WithContext<LocalBusiness> = {
   '@type': 'ProfessionalService',
   name: 'Orbitgrowth Webdesign Agentur',
   legalName: 'Kosche und Langer GbR, Webdesign Agentur',
-  url: BASE_URL,
+  url: siteConfig.baseUrl,
   description:
     'Webdesign Agentur aus Ratingen, die sich auf die Entwicklung von Webseiten für lokale Unternehmen spezialisiert hat.',
   address: {
@@ -52,7 +51,7 @@ const jsonLd: WithContext<LocalBusiness> = {
 
 // Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(siteConfig.baseUrl),
   title: {
     default: 'OrbitGrowth Webdesign Agentur aus Ratingen.',
     template: '%s | OrbitGrowth Webdesign Agentur',
@@ -68,7 +67,7 @@ export const metadata: Metadata = {
       template: '%s | OrbitGrowth Webdesign Agentur',
     },
     description: 'Webdesign Agentur aus Ratingen, NRW',
-    url: BASE_URL,
+    url: siteConfig.baseUrl,
     type: 'website',
     countryName: 'Germany',
     locale: 'DE',
