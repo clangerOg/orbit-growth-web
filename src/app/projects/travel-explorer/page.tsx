@@ -1,7 +1,7 @@
 import { Figure } from '@/components/figure';
 import { ProjectHeader } from '@/components/project-header';
 import { itemsConfig } from '@/config/items';
-import MainImage from '../../../../../public/projects/travel-explorer/MainImage.png';
+import MainImage from '../../../../public/projects/travel-explorer/MainImage.png';
 
 export default async function Page() {
   const project = itemsConfig.projects.find(

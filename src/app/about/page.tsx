@@ -6,7 +6,7 @@ import { TeamCard } from '@/components/team-card';
 import { itemsConfig } from '@/config/items';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import DetailImage from '../../../../public/images/about-dus-img.jpg';
+import DetailImage from '../../../public/images/about-dus-img.jpg';
 
 // store values to prevent redundancies
 const title = 'Über uns';

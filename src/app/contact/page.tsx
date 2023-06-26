@@ -10,8 +10,8 @@ import {
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import FormBackground from '../../../../public/images/contact-form-background.png';
-import ContactPersonPortrait from '../../../../public/people/Paul.jpg';
+import FormBackground from '../../../public/images/contact-form-background.png';
+import ContactPersonPortrait from '../../../public/people/Paul.jpg';
 
 // store values to prevent redundancies
 const title = 'Kontak';

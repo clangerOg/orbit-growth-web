@@ -1,6 +1,7 @@
+import { CallToAction } from '@/components/call-to-action';
 import { Footer } from '@/components/footer';
+import { NavBar } from '@/components/nav-bar';
 import { siteConfig } from '@/config/site';
-import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { LocalBusiness, WithContext } from 'schema-dts';
@@ -101,9 +102,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <main>
+          <NavBar links={siteConfig.mainNav} />
           {children}
+          <CallToAction />
           <Footer links={siteConfig.footerNav} />
-          <Analytics />
         </main>
       </body>
     </html>
