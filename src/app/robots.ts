@@ -1,4 +1,4 @@
-import { BASE_URL } from '@/lib/consts';
+import { siteConfig } from '@/config/site';
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/studio/',
     },
-    sitemap: `${BASE_URL}/sitemap.xml`,
+    sitemap: `${siteConfig.baseUrl}/sitemap.xml`,
   };
 }
