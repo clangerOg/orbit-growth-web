@@ -3,7 +3,6 @@
 import { cn } from '@/lib/utils';
 import { Disclosure } from '@headlessui/react';
 import { PlusIcon } from '@heroicons/react/24/solid';
-import classNames from 'classnames';
 import React from 'react';
 
 type FAQDisclosureProps = React.DetailedHTMLProps<
@@ -28,7 +27,7 @@ export const FAQDisclosure: React.FC<FAQDisclosureProps> = (props) => {
                   {question}
                 </p>
                 <div
-                  className={classNames(
+                  className={cn(
                     'w-8 flex-shrink-0 text-slate-600 transition-transform duration-150',
                     open ? 'rotate-45' : 'rotate-0'
                   )}
