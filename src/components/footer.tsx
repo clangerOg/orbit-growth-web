@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import { NavItem } from '@/types';
 import Link from 'next/link';
+import React from 'react';
 import { Container } from './container';
 import { Shell } from './shell';
 
@@ -11,7 +12,7 @@ type FooterProps = React.DetailedHTMLProps<
   links?: NavItem[];
 };
 
-export default async function Footer(props: FooterProps) {
+export const Footer: React.FC<FooterProps> = (props) => {
   const { className, links, ...other } = props;
 
   return (
@@ -40,4 +41,4 @@ export default async function Footer(props: FooterProps) {
       </Container>
     </Shell>
   );
-}
+};

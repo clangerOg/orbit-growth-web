@@ -1,13 +1,6 @@
-import Footer from '@/components/footer';
-import { HeaderLink } from '@/components/layout';
+import { Footer } from '@/components/footer';
 import { siteConfig } from '@/config/site';
 import { BASE_URL } from '@/lib/consts';
-import {
-  ClipboardDocumentIcon,
-  FireIcon,
-  HomeIcon,
-  UserIcon,
-} from '@heroicons/react/24/solid';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -86,30 +79,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
   },
 };
-
-// Header Links
-export const HeaderLinks: HeaderLink[] = [
-  {
-    target: '/test',
-    title: 'Home',
-    icon: <HomeIcon className="w-full" />,
-  },
-  {
-    target: '/about',
-    title: 'Über uns',
-    icon: <UserIcon className="w-full" />,
-  },
-  {
-    target: '/projects',
-    title: 'Projekte',
-    icon: <ClipboardDocumentIcon className="w-full" />,
-  },
-  {
-    target: '/skills',
-    title: 'Kompetenzen',
-    icon: <FireIcon className="w-full" />,
-  },
-];
 
 // Route Segment Configuration
 export const dynamic = 'auto'; // cache as much as possible
