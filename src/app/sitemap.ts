@@ -1,26 +1,26 @@
-import { BASE_URL } from '@/lib/consts';
+import { siteConfig } from '@/config/site';
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: `${BASE_URL}`,
+      url: `${siteConfig.baseUrl}`,
       lastModified: new Date(),
     },
     {
-      url: `${BASE_URL}/about`,
+      url: `${siteConfig.baseUrl}/about`,
       lastModified: new Date(),
     },
     {
-      url: `${BASE_URL}/legal`,
+      url: `${siteConfig.baseUrl}/legal`,
       lastModified: new Date(),
     },
     {
-      url: `${BASE_URL}/projects`,
+      url: `${siteConfig.baseUrl}/projects`,
       lastModified: new Date(),
     },
     {
-      url: `${BASE_URL}/skills`,
+      url: `${siteConfig.baseUrl}/skills`,
       lastModified: new Date(),
     },
   ];
